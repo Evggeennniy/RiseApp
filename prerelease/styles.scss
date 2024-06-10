@@ -10,7 +10,7 @@ $theme-gradient: linear-gradient(
   $theme-first-color 0%,
   $theme-second-color 100%
 );
-$theme-gradient-mobile: linear-gradient(
+$theme-gradient-second: linear-gradient(
   to bottom,
   $theme-first-color 0%,
   $theme-second-color 50%
@@ -278,7 +278,7 @@ a {
 
   @media (max-width: 575px) {
     & {
-      background: $theme-gradient-mobile;
+      background: $theme-gradient-second;
     }
 
     .intro__wrapper {
@@ -353,7 +353,7 @@ a {
     }
 
     .services__item {
-      min-width: 105px;
+      min-width: 80px;
       padding: 20px;
       text-align: center;
     }
@@ -369,7 +369,7 @@ a {
 .dev-steps {
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: $theme-first-color;
+  background: $theme-gradient;
 
   .dev-steps__subtitle {
     margin-bottom: 50px;
@@ -546,7 +546,7 @@ a {
     }
 
     .why-us__fact-item {
-      justify-content: center;
+      justify-content: start;
     }
 
     .why-us__fact-img {
