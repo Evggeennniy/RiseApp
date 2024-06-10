@@ -297,7 +297,7 @@ a {
 .dev-steps {
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: #170c59;
+  background: linear-gradient(to bottom, #170c59 0%, #060024 100%);
 }
 .dev-steps .dev-steps__subtitle {
   margin-bottom: 50px;
@@ -470,4 +470,4 @@ a {
   .footer {
     height: 100%;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
