@@ -283,7 +283,7 @@ a {
     gap: 6px;
   }
   .services .services__item {
-    min-width: 105px;
+    min-width: 80px;
     padding: 20px;
     text-align: center;
   }
@@ -442,7 +442,7 @@ a {
     gap: 25px;
   }
   .why-us .why-us__fact-item {
-    justify-content: center;
+    justify-content: start;
   }
   .why-us .why-us__fact-img {
     width: 31px;
