@@ -16,6 +16,7 @@ $theme-gradient-second: linear-gradient(
   $theme-second-color 50%
 );
 $theme-border-color: #1c1a42;
+$theme-second-border-color: #454099;
 
 h1 {
   font-size: 45px;
@@ -95,6 +96,51 @@ a {
   &--highlight {
     color: #6b87e6;
   }
+}
+
+.circle {
+  width: 6px;
+  height: 6px;
+  background-color: #6272a4; /* Circle color */
+  border-radius: 50%; /* Makes the dot round */
+}
+
+.animated-slide {
+  position: relative;
+  transition: all 400ms ease-in-out;
+  opacity: 0;
+}
+
+.animated-slide.active {
+  opacity: 1;
+}
+
+.slide-left-right {
+  left: -220px;
+}
+.slide-left-right.active {
+  left: 0;
+}
+
+.slide-right-left {
+  right: -220px;
+}
+.slide-right-left.active {
+  right: 0;
+}
+
+.slide-bottom-top {
+  bottom: -220px;
+}
+.slide-bottom-top.active {
+  bottom: 0;
+}
+
+.slide-top-bottom {
+  top: -220px;
+}
+.slide-top-bottom.active {
+  top: 0;
 }
 
 .header {
@@ -192,6 +238,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+
+  .intro__title {
+    line-height: 50px;
   }
 
   .intro__img {
@@ -335,6 +385,12 @@ a {
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
+    transition: scale 200ms ease-in-out, border 200ms ease-in-out;
+  }
+
+  .services__item:hover {
+    scale: 1.04;
+    border: 5px solid $theme-second-border-color;
   }
 
   .services__img {
@@ -459,25 +515,59 @@ a {
   }
 }
 
+.portfolio {
+  background-color: $theme-second-color;
+
+  .portfolio__logo {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 15px;
+  }
+
+  .portfolio__intro {
+    text-align: center;
+  }
+
+  .portfolio__title {
+    margin-bottom: 38px;
+  }
+
+  .portfolio__subtitle {
+    margin-bottom: 66px;
+    padding: 14px 30px;
+    display: inline-block;
+    border-radius: 52px;
+    background: linear-gradient(92.29deg, #0f0057 -9.95%, #0053d1 100%);
+  }
+
+  .portfolio__img {
+    width: 100%;
+  }
+}
+
 .why-us {
-  padding-top: 75px;
+  padding-top: 105px;
   padding-bottom: 75px;
   background-color: $theme-second-color;
 
   .why-us__subtitle {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
   }
 
   .why-us__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 90px;
   }
 
   .why-us__title {
     line-height: 45px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   .why-us__second-subtitle {
@@ -485,10 +575,16 @@ a {
     margin-bottom: 70px;
   }
 
+  .why-us__subtitle,
+  .why-us__title,
+  .why-us__second-subtitle {
+    text-align: center;
+  }
+
   .why-us__facts-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 75px;
+    margin-bottom: 75px;
   }
 
   .why-us__fact-item {
@@ -496,7 +592,8 @@ a {
     align-items: center;
     gap: 12px;
     flex: 1;
-    min-width: 200px;
+    min-width: 300px;
+    line-height: 22px;
   }
 
   .why-us__fact-img-wrapper {
@@ -510,13 +607,25 @@ a {
     height: 43px;
   }
 
-  .why-us__img {
-    height: 500px;
-    width: 500px;
-  }
-
   .why-us__fact-title {
     margin-bottom: 10px;
+  }
+
+  .why-us__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-us__button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    font-size: 21px;
+    padding: 15px 35px;
+    border-radius: 5px 25px 5px 25px;
+    background-color: #0aaef2;
   }
 
   @media (max-width: 575px) {
@@ -535,32 +644,19 @@ a {
       margin-bottom: 40px;
     }
 
-    .why-us__subtitle,
-    .why-us__title,
-    .why-us__second-subtitle {
-      text-align: center;
-    }
-
     .why-us__facts-list {
       gap: 25px;
+      flex-direction: column;
+      align-items: center;
     }
 
     .why-us__fact-item {
-      justify-content: start;
+      justify-content: center;
     }
 
     .why-us__fact-img {
       width: 31px;
       height: 31px;
-    }
-
-    .why-us__img-wrapper {
-      text-align: center;
-    }
-
-    .why-us__img {
-      width: 70%;
-      height: auto;
     }
   }
 }

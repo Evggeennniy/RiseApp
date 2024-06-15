@@ -6,6 +6,7 @@
     <title>RiseApp</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./scripts.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -22,7 +23,7 @@
           <div class="header__mobnav-stick"></div>
         </div>
         <nav class="header__nav">
-          <a href="#" class="nav__link nav__link--white">Buy now</a>
+          <a href="#" class="nav__link nav__link--white">Portfolio</a>
           <a href="#" class="nav__link">
             EU
             <img
@@ -37,15 +38,17 @@
     <main>
       <section class="intro">
         <div class="intro__wrapper container">
-          <div class="intro__main">
+          <div class="intro__main animated-slide slide-left-right">
             <h1 class="intro__title">
               Service
-              <span class="font--highlight font--bold">number 1</span> for
-              unique<br />offers for your business
+              <span class="font--highlight font--bold">№ 1</span><br />for
+              web-business development
             </h1>
             <img src="./intro_img.png" alt="intro_img" class="intro__img" />
           </div>
-          <div class="intro__discounts font--bold">
+          <div
+            class="intro__discounts font--bold animated-slide slide-right-left"
+          >
             <h4 class="discounts__time-title">discounts of -15% will apply</h4>
             <div class="discounts__time-wrapper">
               <div class="discounts__time-item">
@@ -80,7 +83,7 @@
         </div>
       </section>
       <section class="services">
-        <div class="services__wrapper container">
+        <div class="services__wrapper animated-slide container">
           <ul class="services__list">
             <li class="services__item">
               <div class="services__info">
@@ -169,11 +172,11 @@
       </section>
       <section class="dev-steps">
         <div class="dev-steps__wrapper container">
-          <h4 class="dev-steps__subtitle font--bold">
-            ______ DEVELOPMENT PATH
-          </h4>
-          <div class="dev-steps__content">
+          <div class="dev-steps__content animated-slide slide-bottom-top">
             <div class="dev-steps__actions">
+              <h4 class="dev-steps__subtitle font--bold">
+                ______ DEVELOPMENT PATH
+              </h4>
               <h2 class="dev-steps__title font--bold">
                 Creating your website from concept to launch.
               </h2>
@@ -248,16 +251,39 @@
           </div>
         </div>
       </section>
+      <section class="portfolio">
+        <div class="portfolio__wrapper container">
+          <div class="portfolio__intro animated-slide slide-top-bottom">
+            <div class="portfolio__logo-wrapper">
+              <img src="./logo.png" alt="logo" class="portfolio__logo" />
+            </div>
+            <h2 class="portfolio__title">RISE APP</h2>
+            <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
+          </div>
+          <div class="portfolio__img-wrapper animated-slide">
+            <img
+              src="./portfolio-imgs.png"
+              alt="portfolio__img"
+              class="portfolio__img"
+            />
+          </div>
+        </div>
+      </section>
       <section class="why-us">
-        <div class="why-us__wrapper container">
-          <h4 class="why-us__subtitle">WHY US</h4>
+        <div class="why-us__wrapper animated-slide slide-top-bottom container">
+          <h4 class="why-us__subtitle styled-heading">
+            <div class="circle"></div>
+            WHY US
+            <div class="circle"></div>
+          </h4>
           <div class="why-us__content">
             <div class="why-us__facts">
               <h2 class="why-us__title">
-                Why should you choose our company's services?
+                Why should you choose <br />
+                <span class="font--highlight">our company's services</span>?
               </h2>
               <h4 class="why-us__second-subtitle">
-                A company that will help you develop a website that will be the
+                A company that will help you develop a website that will be<br />the
                 best according to all criteria.
               </h4>
               <ul class="why-us__facts-list">
@@ -272,7 +298,8 @@
                   <div class="why-us__fact-info">
                     <h3 class="why-us__fact-title">Easy payment</h3>
                     <p class="why-us__fact-desc">
-                      Easy step-by-step payment, safe for you
+                      Easy step-by-step <br />
+                      payment, safe for you
                     </p>
                   </div>
                 </li>
@@ -287,7 +314,7 @@
                   <div class="why-us__fact-info">
                     <h3 class="why-us__fact-title">All inclusive</h3>
                     <p class="why-us__fact-desc">
-                      The service provides a full range of services
+                      The service provides a<br />full range of services
                     </p>
                   </div>
                 </li>
@@ -302,33 +329,16 @@
                   <div class="why-us__fact-info">
                     <h3 class="why-us__fact-title">Unique offer</h3>
                     <p class="why-us__fact-desc">
-                      What will set you apart from your competitors
-                    </p>
-                  </div>
-                </li>
-                <li class="why-us__fact-item">
-                  <div class="why-us__fact-img-wrapper">
-                    <img
-                      src="./whyus-fact-easy-pay.png"
-                      alt="fact-img"
-                      class="why-us__fact-img"
-                    />
-                  </div>
-                  <div class="why-us__fact-info">
-                    <h3 class="why-us__fact-title">Support 24/7</h3>
-                    <p class="why-us__fact-desc">
-                      Client support throughout the entire development
+                      What will set you apart<br />from your competitors
                     </p>
                   </div>
                 </li>
               </ul>
-            </div>
-            <div class="why-us__img-wrapper">
-              <img
-                src="./whyus-img.PNG"
-                alt="why-us__img"
-                class="why-us__img"
-              />
+              <div class="why-us__button-wrapper">
+                <a href="#" class="why-us__button"
+                  >Go to projects <img src="./arrow-right.svg" alt=""
+                /></a>
+              </div>
             </div>
           </div>
         </div>
