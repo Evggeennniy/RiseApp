@@ -534,15 +534,49 @@ a {
   }
 
   .portfolio__subtitle {
-    margin-bottom: 66px;
+    margin-bottom: 30px;
     padding: 14px 30px;
     display: inline-block;
     border-radius: 52px;
     background: linear-gradient(92.29deg, #0f0057 -9.95%, #0053d1 100%);
   }
 
+  .portfolio__imgs {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "itemone itemtwo itemthree itemfour";
+    gap: 25px;
+  }
+
+  .portfolio__banking {
+    margin-top: 100px;
+  }
+  .portfolio__banking-wrapper {
+    grid-area: itemone;
+  }
+
+  .portfolio__smarthouse-wrapper {
+    grid-area: itemtwo;
+  }
+
+  .portfolio__football {
+    margin-top: 220px;
+  }
+  .portfolio__football-wrapper {
+    grid-area: itemthree;
+  }
+
+  .portfolio__greeksite {
+    margin-top: 85px;
+  }
+  .portfolio__greeksite-wrapper {
+    grid-area: itemfour;
+  }
+
   .portfolio__img {
-    width: 100%;
+    width: 230px;
   }
 
   @media (max-width: 575px) {
@@ -557,6 +591,30 @@ a {
 
     .portfolio__subtitle {
       background: linear-gradient(92.29deg, #0f0057 100%, #0053d1 100%);
+    }
+
+    .portfolio__img {
+      width: 100%;
+    }
+
+    .portfolio__banking {
+      margin-top: 55px;
+    }
+
+    .portfolio__football {
+      margin-top: 0;
+    }
+
+    .portfolio__greeksite {
+      margin-top: 55px;
+    }
+
+    .portfolio__imgs {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "itemfour itemthree"
+        "itemone itemtwo";
     }
   }
 }
