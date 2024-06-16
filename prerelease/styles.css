@@ -289,6 +289,7 @@ a {
   }
   .intro .intro__title {
     order: 2;
+    line-height: 30px;
   }
   .intro .intro__title,
   .intro .intro__subtitle {
@@ -450,6 +451,18 @@ a {
 }
 .portfolio .portfolio__img {
   width: 100%;
+}
+@media (max-width: 575px) {
+  .portfolio .portfolio__logo {
+    width: 35px;
+    height: 35px;
+  }
+  .portfolio .portfolio__title {
+    margin-bottom: 8px;
+  }
+  .portfolio .portfolio__subtitle {
+    background: linear-gradient(92.29deg, #0f0057 100%, #0053d1 100%);
+  }
 }
 
 .why-us {
