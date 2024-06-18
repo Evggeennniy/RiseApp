@@ -107,7 +107,8 @@ a {
 
 .animated-slide {
   position: relative;
-  transition: all 400ms ease-in-out;
+  transition: opacity 700ms ease-in-out, left 400ms ease-in-out,
+    right 400ms ease-in-out, top 400ms ease-in-out, bottom 400ms ease-in-out;
   opacity: 0;
 }
 
@@ -315,15 +316,6 @@ a {
   .discounts__progressbar,
   .discounts__progressbar-done {
     border-radius: 5px;
-  }
-
-  .discounts__button {
-    display: inline-block;
-    font-size: 17px;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #416ef3;
-    border-radius: 15px;
   }
 
   @media (max-width: 575px) {
@@ -789,7 +781,6 @@ a {
 }
 
 .footer {
-  // background-image: url("./web-site-bottom.png");
   background-color: $theme-second-color;
   height: 350px;
   background-repeat: repeat-x;
