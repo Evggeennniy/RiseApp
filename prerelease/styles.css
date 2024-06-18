@@ -47,14 +47,11 @@ p {
 body {
   font-family: "Montserrat", sans-serif;
   color: white;
+  background-color: #060024;
 }
 
 a {
   color: white;
-}
-
-.page {
-  background-color: #060024;
 }
 
 .container {
@@ -83,7 +80,7 @@ a {
 
 .animated-slide {
   position: relative;
-  transition: opacity 700ms ease-in-out, left 400ms ease-in-out, right 400ms ease-in-out, top 400ms ease-in-out, bottom 400ms ease-in-out;
+  transition: opacity 700ms ease-in-out, transform 400ms ease-in-out;
   opacity: 0;
 }
 
@@ -92,35 +89,35 @@ a {
 }
 
 .slide-left-right {
-  left: -220px;
+  transform: translateX(-220px);
 }
 
 .slide-left-right.active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .slide-right-left {
-  right: -220px;
+  transform: translateX(220px);
 }
 
 .slide-right-left.active {
-  right: 0;
+  transform: translateX(0);
 }
 
 .slide-bottom-top {
-  bottom: -220px;
+  transform: translateY(220px);
 }
 
 .slide-bottom-top.active {
-  bottom: 0;
+  transform: translateY(0);
 }
 
 .slide-top-bottom {
-  top: -220px;
+  transform: translateY(-220px);
 }
 
 .slide-top-bottom.active {
-  top: 0;
+  transform: translateY(0);
 }
 
 .header {
