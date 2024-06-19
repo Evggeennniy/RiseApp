@@ -721,67 +721,78 @@ a {
   }
 }
 
-.popup {
-  .popup__button-outside {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 12px;
-    font-size: 21px;
-    padding: 15px 35px;
-    border-radius: 5px 25px 5px 25px;
-    background-color: #0aaef2;
-  }
+.popup__button-outside {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+  font-size: 21px;
+  padding: 15px 35px;
+  border-radius: 5px 25px 5px 25px;
+  background-color: #0aaef2;
+  cursor: pointer;
+}
 
-  .popup__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-  }
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
 
-  .popup__message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 500px;
-    padding: 20px;
-    background: $theme-first-color;
-    border: 3px solid #c8c8c8;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
+.popup__message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  background: $theme-first-color;
+  border: 3px solid #c8c8c8;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
 
-  .popup__overlay,
-  .popup__message {
-    display: none;
-  }
+.popup__contact-img {
+  height: 40px;
+}
 
-  .popup__overlay.active,
-  .popup__message.active {
-    display: flex;
-  }
+.popup__overlay,
+.popup__message {
+  display: none;
+}
 
-  .popup__contacts {
-    display: flex;
-    gap: 30px;
-  }
+.popup__message.active {
+  display: flex;
+}
 
-  .popup__button-inside {
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-weight: 600;
-  }
+.popup__overlay.active {
+  display: block;
+}
+
+.popup__contacts {
+  display: flex;
+  gap: 30px;
+}
+
+.popup__button-inside {
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .footer {
