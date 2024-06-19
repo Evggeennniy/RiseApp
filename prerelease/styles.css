@@ -597,7 +597,7 @@ a {
   }
 }
 
-.popup .popup__button-outside {
+.popup__button-outside {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -606,8 +606,10 @@ a {
   padding: 15px 35px;
   border-radius: 5px 25px 5px 25px;
   background-color: #0aaef2;
+  cursor: pointer;
 }
-.popup .popup__overlay {
+
+.popup__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -616,7 +618,8 @@ a {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
-.popup .popup__message {
+
+.popup__message {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -634,22 +637,38 @@ a {
   gap: 20px;
   align-items: center;
 }
-.popup .popup__overlay,
-.popup .popup__message {
+
+.popup__contact-img {
+  height: 40px;
+}
+
+.popup__overlay,
+.popup__message {
   display: none;
 }
-.popup .popup__overlay.active,
-.popup .popup__message.active {
+
+.popup__message.active {
   display: flex;
 }
-.popup .popup__contacts {
+
+.popup__overlay.active {
+  display: block;
+}
+
+.popup__contacts {
   display: flex;
   gap: 30px;
 }
-.popup .popup__button-inside {
+
+.popup__button-inside {
   padding: 10px 30px;
   border-radius: 20px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .footer {

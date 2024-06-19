@@ -18,12 +18,16 @@ navLinkToPortfolio.addEventListener("click", () => {
   portfolioIntro.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-const popup = document.querySelector(".popup");
+const popupButtonOutside = document.querySelector(".popup__button-outside");
+const popupButtonInside = document.querySelector(".popup__button-inside");
 const popupOverlay = document.querySelector(".popup__overlay");
 const popupMessage = document.querySelector(".popup__message");
-popup.addEventListener("click", (event) => {
+function togglePopup(event) {
   if (event.target.classList.contains("popup__toggle")) {
     popupOverlay.classList.toggle("active");
     popupMessage.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
   }
-});
+}
+popupButtonOutside.addEventListener("click", togglePopup);
+popupButtonInside.addEventListener("click", togglePopup);
