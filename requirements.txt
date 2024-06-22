@@ -1,3 +1,2 @@
-#PRERELEASE
-flask
+quart
 uvicorn

@@ -1,11 +1,11 @@
-from flask import Flask, send_from_directory
+from quart import Quart, send_from_directory
 
-app = Flask(__name__)
+app = Quart(__name__)
 
 
 @app.route('/')
 async def index():
-    return send_from_directory('templates', 'index.html')
+    return await send_from_directory('templates', 'index.html')
 
 
 if __name__ == '__main__':
