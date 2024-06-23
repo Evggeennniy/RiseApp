@@ -178,12 +178,6 @@ a {
 .header .nav__link:hover {
   scale: 0.95;
 }
-.header .nav__switcher-img {
-  rotate: 90deg;
-}
-.header .nav__switcher-img.active {
-  rotate: -90deg;
-}
 .header .company-name {
   font-size: 30px;
 }
@@ -268,17 +262,27 @@ a {
 }
 .intro .discounts__progressbar {
   background-color: #1e1e3a;
-  height: 15px;
+  height: 22px;
   margin-bottom: 50px;
 }
 .intro .discounts__progressbar-done {
-  width: 55%;
+  width: 0%;
   height: 100%;
   background-color: #3361d1;
+  text-align: end;
+  transition: width 1s ease-in-out;
 }
 .intro .discounts__progressbar,
 .intro .discounts__progressbar-done {
   border-radius: 5px;
+}
+.intro .discounts__progressbar-value {
+  display: inline-block;
+  padding: 2px 5px;
+  position: relative;
+  letter-spacing: 1px;
+  bottom: -25px;
+  right: -20px;
 }
 @media (max-width: 575px) {
   .intro {
