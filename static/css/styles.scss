@@ -374,6 +374,10 @@ a {
       padding: 15px 35px;
     }
 
+    .discounts__time-wrapper {
+      gap: 10px;
+    }
+
     .discounts__time-value {
       min-width: 45px;
     }
@@ -774,6 +778,7 @@ a {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  text-align: center;
 }
 
 .popup__contact-img {
