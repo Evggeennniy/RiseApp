@@ -4,8 +4,9 @@ app = Quart(__name__)
 
 
 @app.route('/')
-async def index():
-    return await send_from_directory('templates', 'index.html')
+@app.route('/<string:lang>')
+async def index_eu(lang='ru'):
+    return await send_from_directory('templates', f'index_{lang}.html')
 
 
 if __name__ == '__main__':
