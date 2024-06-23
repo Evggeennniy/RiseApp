@@ -12,11 +12,42 @@ function checkFade() {
 window.addEventListener("scroll", checkFade);
 window.addEventListener("load", checkFade);
 
-const navLinkToPortfolio = document.querySelector(".nav__link-portfolio");
-const portfolioIntro = document.querySelector(".portfolio__intro");
-navLinkToPortfolio.addEventListener("click", () => {
-  portfolioIntro.scrollIntoView({ behavior: "smooth", block: "start" });
+const navLinkToContact = document.querySelector(".nav__link-contactus");
+const contactUsButton = document.querySelector(".why-us__contactus");
+navLinkToContact.addEventListener("click", () => {
+  contactUsButton.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
+// const langSwitcher = document.querySelector(".nav__switcher");
+// const langSwitcherImg = document.querySelector(".nav__switcher-img");
+// langSwitcher.addEventListener("click", () => {
+//   langSwitcherImg.classList.toggle("active");
+// });
+
+const discountBlock = document.querySelector(".discounts__content");
+const discountDays = document.querySelector(".discounts__time-days");
+const discountHours = document.querySelector(".discounts__time-hours");
+const discountMinutes = document.querySelector(".discounts__time-minutes");
+const discountSeconds = document.querySelector(".discounts__time-seconds");
+function updateTextContent(element, value) {
+  if (element.textContent != value) {
+    element.textContent = value;
+  }
+}
+
+function changeTime() {
+  const dateNow = new Date();
+  const discountsEnd = new Date(2024, 6, 6);
+  const diff = discountsEnd - dateNow;
+
+  updateTextContent(discountDays, Math.floor(diff / (1000 * 60 * 60 * 24)));
+  updateTextContent(discountHours, Math.floor((diff / (1000 * 60 * 60)) % 24));
+  updateTextContent(discountMinutes, Math.floor((diff / (1000 * 60)) % 60));
+  updateTextContent(discountSeconds, Math.floor((diff / 1000) % 60));
+
+  setTimeout(changeTime, 1000);
+}
+setTimeout(changeTime, 1000);
 
 const popupButtonOutside = document.querySelector(".popup__button-outside");
 const popupButtonInside = document.querySelector(".popup__button-inside");
