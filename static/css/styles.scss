@@ -213,14 +213,6 @@ a {
     }
   }
 
-  .nav__switcher-img {
-    rotate: 90deg;
-  }
-
-  .nav__switcher-img.active {
-    rotate: -90deg;
-  }
-
   .company-name {
     font-size: 30px;
   }
@@ -322,19 +314,30 @@ a {
 
   .discounts__progressbar {
     background-color: #1e1e3a;
-    height: 15px;
+    height: 22px;
     margin-bottom: 50px;
   }
 
   .discounts__progressbar-done {
-    width: 55%;
+    width: 0%;
     height: 100%;
     background-color: #3361d1;
+    text-align: end;
+    transition: width 1s ease-in-out;
   }
 
   .discounts__progressbar,
   .discounts__progressbar-done {
     border-radius: 5px;
+  }
+
+  .discounts__progressbar-value {
+    display: inline-block;
+    padding: 2px 5px;
+    position: relative;
+    letter-spacing: 1px;
+    bottom: -25px;
+    right: -20px;
   }
 
   @media (max-width: 575px) {
