@@ -1,12 +1,12 @@
-from quart import Quart, send_from_directory
+from flask import Flask, send_from_directory
 
-app = Quart(__name__)
+app = Flask(__name__)
 
 
 @app.route('/')
 @app.route('/<string:lang>')
-async def index_eu(lang='ru'):
-    return await send_from_directory('templates', f'index_{lang}.html')
+def index(lang='ru'):
+    return send_from_directory('templates', f'index_{lang}.html')
 
 
 if __name__ == '__main__':
