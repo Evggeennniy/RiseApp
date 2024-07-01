@@ -4,9 +4,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-@app.route('/<string:lang>')
-def index(lang='ru'):
-    return send_from_directory('templates', f'index_{lang}.html')
+def index():
+    return send_from_directory('templates', 'index.html')
 
 
 if __name__ == '__main__':
