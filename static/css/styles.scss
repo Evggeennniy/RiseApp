@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 $logo-size: 40px;
 $default-font: "Montserrat", sans-serif;
@@ -288,7 +292,6 @@ a {
     border-radius: 13px;
     margin-bottom: 5px;
     text-align: center;
-    letter-spacing: 3px;
   }
 
   .discounts__time-desc {
@@ -380,6 +383,10 @@ a {
 
     .discounts__time-value {
       min-width: 45px;
+    }
+
+    .discounts__offer-title {
+      display: none;
     }
   }
 }
@@ -483,6 +490,7 @@ a {
 
   .dev-steps__item-title {
     margin-bottom: 10px;
+    font-weight: 600;
   }
 
   .dev-steps__item-desc {
@@ -511,6 +519,7 @@ a {
 
     .dev-steps__subtitle {
       margin-bottom: 15px;
+      text-align: center;
     }
 
     .dev-steps__title {
@@ -712,6 +721,10 @@ a {
       gap: 20px;
     }
 
+    .why-us__subtitle {
+      margin-bottom: 5px;
+    }
+
     .why-us__title {
       line-height: 30px;
       margin-bottom: 10px;
@@ -725,11 +738,6 @@ a {
     .why-us__facts-list {
       gap: 25px;
       flex-direction: column;
-      align-items: center;
-    }
-
-    .why-us__fact-item {
-      justify-content: center;
     }
 
     .why-us__fact-img {
