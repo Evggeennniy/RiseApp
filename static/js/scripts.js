@@ -18,11 +18,43 @@ navLinkToContact.addEventListener("click", () => {
   contactUsButton.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// const langSwitcher = document.querySelector(".nav__switcher");
-// const langSwitcherImg = document.querySelector(".nav__switcher-img");
-// langSwitcher.addEventListener("click", () => {
-//   langSwitcherImg.classList.toggle("active");
-// });
+const dynamicTitleChoices = [
+  "Индивидуальный сайт",
+  "Адаптивный дизайн",
+  "Обученые специалисты",
+];
+const delayBetweenTitles = 2000;
+const letterChangeDelay = 70;
+const dynamicTitle = document.querySelector(".intro__dynamic-title");
+function changeTitle(index = 0) {
+  if (index < dynamicTitleChoices.length) {
+    const currentTitle = dynamicTitleChoices[index];
+    animateTitleChange(currentTitle, () => {
+      setTimeout(() => {
+        changeTitle(index + 1);
+      }, delayBetweenTitles);
+    });
+  }
+}
+
+function animateTitleChange(title, callback) {
+  dynamicTitle.textContent = "";
+  let charIndex = 0;
+
+  function addNextChar() {
+    if (charIndex < title.length) {
+      dynamicTitle.textContent += title[charIndex];
+      charIndex++;
+      setTimeout(addNextChar, letterChangeDelay);
+    } else {
+      callback();
+    }
+  }
+
+  addNextChar();
+}
+
+changeTitle();
 
 const discountBlock = document.querySelector(".discounts__content");
 const discountDays = document.querySelector(".discounts__time-days");
