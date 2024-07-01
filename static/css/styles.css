@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
   font-size: 45px;
 }
@@ -241,7 +245,6 @@ a {
   border-radius: 13px;
   margin-bottom: 5px;
   text-align: center;
-  letter-spacing: 3px;
 }
 .intro .discounts__time-desc {
   font-size: 10px;
@@ -316,6 +319,9 @@ a {
   }
   .intro .discounts__time-value {
     min-width: 45px;
+  }
+  .intro .discounts__offer-title {
+    display: none;
   }
 }
 
@@ -404,6 +410,7 @@ a {
 }
 .dev-steps .dev-steps__item-title {
   margin-bottom: 10px;
+  font-weight: 600;
 }
 .dev-steps .dev-steps__item-desc {
   line-height: 20px;
@@ -426,6 +433,7 @@ a {
   }
   .dev-steps .dev-steps__subtitle {
     margin-bottom: 15px;
+    text-align: center;
   }
   .dev-steps .dev-steps__title {
     margin-bottom: 27px;
@@ -591,6 +599,9 @@ a {
     flex-direction: column;
     gap: 20px;
   }
+  .why-us .why-us__subtitle {
+    margin-bottom: 5px;
+  }
   .why-us .why-us__title {
     line-height: 30px;
     margin-bottom: 10px;
@@ -602,10 +613,6 @@ a {
   .why-us .why-us__facts-list {
     gap: 25px;
     flex-direction: column;
-    align-items: center;
-  }
-  .why-us .why-us__fact-item {
-    justify-content: center;
   }
   .why-us .why-us__fact-img {
     width: 31px;
