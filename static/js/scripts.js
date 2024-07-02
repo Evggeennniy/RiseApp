@@ -25,20 +25,39 @@ const introDynamicTitle = document.querySelector(".intro__dynamic-title");
 let introTitleChoices = document.querySelector(
   ".intro__title-choices"
 ).textContent;
-introTitleChoices = new Object(introTitleChoices.split(","));
-function loopTitleChanger(titleObj, textChoices, delay) {
-  titleObj.textContent = textChoices[0];
-  let nextIndex = 1;
-  const lastIndex = textChoices.length - 1;
+introTitleChoices = introTitleChoices.split(","); // Исправлено создание массива
 
-  setInterval(() => {
-    nextIndex > lastIndex ? (nextIndex = 0) : "";
-    let nextTextContent = textChoices[nextIndex];
-    titleObj.textContent = nextTextContent;
-    nextIndex++;
-  }, delay);
+const delayBetweenTitles = 2000;
+const letterChangeDelay = 50;
+
+function changeTitle(index = 0) {
+  const currentTitle = introTitleChoices[index];
+  animateTitleChange(currentTitle, () => {
+    setTimeout(() => {
+      // Циклически переходит к следующему индексу
+      changeTitle((index + 1) % introTitleChoices.length);
+    }, delayBetweenTitles);
+  });
 }
-loopTitleChanger(introDynamicTitle, introTitleChoices, 2000);
+
+function animateTitleChange(title, callback) {
+  introDynamicTitle.textContent = "";
+  let charIndex = 0;
+
+  function addNextChar() {
+    if (charIndex < title.length) {
+      introDynamicTitle.textContent += title[charIndex];
+      charIndex++;
+      setTimeout(addNextChar, letterChangeDelay);
+    } else {
+      callback();
+    }
+  }
+
+  addNextChar();
+}
+
+changeTitle();
 
 // INTRODUCTION RIGHTSIDE
 const discountBlock = document.querySelector(".discounts__content");
