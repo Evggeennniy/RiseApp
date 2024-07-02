@@ -317,6 +317,9 @@ a {
     order: 2;
     line-height: 30px;
   }
+  .intro .intro__subtitle {
+    order: 3;
+  }
   .intro .intro__title,
   .intro .intro__subtitle {
     text-align: center;
