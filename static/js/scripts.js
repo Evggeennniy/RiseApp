@@ -1,3 +1,4 @@
+// ANIMANIONS
 const animatedSlideItem = document.querySelectorAll(".animated-slide");
 function checkFade() {
   animatedSlideItem.forEach((item) => {
@@ -12,50 +13,34 @@ function checkFade() {
 window.addEventListener("scroll", checkFade);
 window.addEventListener("load", checkFade);
 
+// NAVIGATION
 const navLinkToContact = document.querySelector(".nav__link-contactus");
 const contactUsButton = document.querySelector(".why-us__contactus");
 navLinkToContact.addEventListener("click", () => {
   contactUsButton.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-const dynamicTitleChoices = [
-  "Индивидуальный сайт",
-  "Адаптивный дизайн",
-  "Обученые специалисты",
-];
-const delayBetweenTitles = 2000;
-const letterChangeDelay = 70;
-const dynamicTitle = document.querySelector(".intro__dynamic-title");
-function changeTitle(index = 0) {
-  if (index < dynamicTitleChoices.length) {
-    const currentTitle = dynamicTitleChoices[index];
-    animateTitleChange(currentTitle, () => {
-      setTimeout(() => {
-        changeTitle(index + 1);
-      }, delayBetweenTitles);
-    });
-  }
+// INTRODUCTION LEFTSIDE
+const introDynamicTitle = document.querySelector(".intro__dynamic-title");
+let introTitleChoices = document.querySelector(
+  ".intro__title-choices"
+).textContent;
+introTitleChoices = new Object(introTitleChoices.split(","));
+function loopTitleChanger(titleObj, textChoices, delay) {
+  titleObj.textContent = textChoices[0];
+  let nextIndex = 1;
+  const lastIndex = textChoices.length - 1;
+
+  setInterval(() => {
+    nextIndex > lastIndex ? (nextIndex = 0) : "";
+    let nextTextContent = textChoices[nextIndex];
+    titleObj.textContent = nextTextContent;
+    nextIndex++;
+  }, delay);
 }
+loopTitleChanger(introDynamicTitle, introTitleChoices, 2000);
 
-function animateTitleChange(title, callback) {
-  dynamicTitle.textContent = "";
-  let charIndex = 0;
-
-  function addNextChar() {
-    if (charIndex < title.length) {
-      dynamicTitle.textContent += title[charIndex];
-      charIndex++;
-      setTimeout(addNextChar, letterChangeDelay);
-    } else {
-      callback();
-    }
-  }
-
-  addNextChar();
-}
-
-changeTitle();
-
+// INTRODUCTION RIGHTSIDE
 const discountBlock = document.querySelector(".discounts__content");
 const discountDays = document.querySelector(".discounts__time-days");
 const discountHours = document.querySelector(".discounts__time-hours");
@@ -90,6 +75,7 @@ function changeTime() {
 }
 setTimeout(changeTime, 300);
 
+// POPUP
 const popupButtonOutside = document.querySelector(".popup__button-outside");
 const popupButtonInside = document.querySelector(".popup__button-inside");
 const popupOverlay = document.querySelector(".popup__overlay");
