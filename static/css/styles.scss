@@ -112,7 +112,7 @@ a {
 
 .animated-slide {
   position: relative;
-  transition: opacity 700ms ease-in-out, transform 400ms ease-in-out;
+  transition: opacity 500ms ease-in-out, transform 300ms ease-in-out;
   opacity: 0;
 }
 
@@ -195,7 +195,7 @@ a {
     text-decoration: none;
     text-align: center;
     font-size: 16px;
-    transition: scale 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
     cursor: pointer;
 
     &--white {
@@ -208,13 +208,67 @@ a {
       color: white;
     }
 
-    &:last-child {
-      padding: 15px;
-    }
-
     &:hover {
-      scale: 0.95;
+      transform: scale(0.95);
     }
+  }
+
+  .nav__lang {
+    z-index: 5;
+  }
+
+  .nav__lang-switcher {
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 17px;
+    color: white;
+    padding: 15px;
+    display: block;
+    transition: transform 100ms ease-in-out;
+    box-shadow: none;
+  }
+
+  .nav__lang-switcher:focus,
+  .nav__lang-switcher:active {
+    transform: scale(0.93);
+  }
+
+  .nav__lang-menu-wrapper {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    scale: 0.65;
+    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out,
+      scale 200ms ease-in-out;
+  }
+
+  .nav__lang-menu {
+    display: flex;
+    position: relative;
+    left: -6px;
+    top: 9px;
+    gap: 4px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav__lang-link {
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    width: 50px;
+    background-color: #413680;
+    cursor: pointer;
+  }
+
+  .nav__lang-menu-wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+    scale: 1;
   }
 
   .company-name {
@@ -227,13 +281,24 @@ a {
       padding-bottom: 30px;
     }
 
-    .header__nav,
-    .header__company-name {
+    .nav__link {
       display: none;
     }
 
-    .header__mobnav-button {
-      display: flex;
+    .nav__link:last-child {
+      display: block;
+    }
+
+    .nav__lang-switcher {
+      padding: 10px 15px;
+    }
+
+    .nav__lang-link {
+      padding: 10px 11px;
+    }
+
+    .header__company-name {
+      display: none;
     }
   }
 }
@@ -271,6 +336,7 @@ a {
     text-align: center;
   }
 
+  .discounts__time-subtitle,
   .discounts__time-title {
     margin-bottom: 25px;
   }
@@ -352,6 +418,10 @@ a {
     font-weight: 700;
     color: white;
     cursor: pointer;
+  }
+
+  .discounts__offer-button:active {
+    transform: scale(0.96);
   }
 
   @media (max-width: 575px) {
@@ -617,6 +687,11 @@ a {
 
   .portfolio__img {
     width: 230px;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .portfolio__img:hover {
+    transform: scale(1.1);
   }
 
   @media (max-width: 575px) {
@@ -726,6 +801,24 @@ a {
     align-items: center;
   }
 
+  .why-us__button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    font-size: 21px;
+    padding: 15px 35px;
+    border-radius: 5px 25px 5px 25px;
+    background-color: #0aaef2;
+    cursor: pointer;
+    transition: transform 70ms ease-in-out;
+  }
+
+  .why-us__button:active,
+  .why-us__button:focus {
+    transform: scale(0.95);
+  }
+
   @media (max-width: 575px) {
     .why-us__content {
       flex-direction: column;
@@ -756,18 +849,6 @@ a {
       height: 31px;
     }
   }
-}
-
-.popup__button-outside {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 12px;
-  font-size: 21px;
-  padding: 15px 35px;
-  border-radius: 5px 25px 5px 25px;
-  background-color: #0aaef2;
-  cursor: pointer;
 }
 
 .popup__overlay {
@@ -802,6 +883,10 @@ a {
 
 .popup__contact-img {
   height: 40px;
+  transition: transform 200ms ease-in-out;
+}
+.popup__contact-img:hover {
+  transform: scale(1.3);
 }
 
 .popup__overlay,
