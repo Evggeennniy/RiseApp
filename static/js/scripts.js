@@ -5,7 +5,7 @@ function checkFade() {
     const rect = item.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top <= windowHeight * 0.8) {
+    if (rect.top <= windowHeight * 0.75) {
       item.classList.add("active");
     }
   });
@@ -14,10 +14,15 @@ window.addEventListener("scroll", checkFade);
 window.addEventListener("load", checkFade);
 
 // NAVIGATION
-const navLinkToContact = document.querySelector(".nav__link-contactus");
-const contactUsButton = document.querySelector(".why-us__contactus");
-navLinkToContact.addEventListener("click", () => {
-  contactUsButton.scrollIntoView({ behavior: "smooth", block: "start" });
+const navButton = document.querySelector(".nav__link-portfolio");
+const portfolioBlock = document.querySelector(".portfolio");
+navButton.addEventListener("click", () => {
+  portfolioBlock.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+const langButton = document.querySelector(".lang-toggle");
+const langMenu = document.querySelector(".nav__lang-menu-wrapper");
+langButton.addEventListener("click", () => {
+  langMenu.classList.toggle("visible");
 });
 
 // INTRODUCTION LEFTSIDE
@@ -25,7 +30,7 @@ const introDynamicTitle = document.querySelector(".intro__dynamic-title");
 let introTitleChoices = document.querySelector(
   ".intro__title-choices"
 ).textContent;
-introTitleChoices = introTitleChoices.split(","); // Исправлено создание массива
+introTitleChoices = introTitleChoices.split(", "); // Исправлено создание массива
 
 const delayBetweenTitles = 2000;
 const letterChangeDelay = 50;
@@ -77,8 +82,8 @@ function updateTextContent(element, value) {
 
 function changeTime() {
   const dateNow = new Date();
-  const discountStart = new Date(2024, 5, 20);
-  const discountsEnd = new Date(2024, 6, 6);
+  const discountStart = new Date(2024, 6, 1);
+  const discountsEnd = new Date(2024, 7, 1);
   const diff = discountsEnd - dateNow;
   const percents = Math.floor(diff / ((discountsEnd - discountStart) / 100));
 
@@ -95,16 +100,16 @@ function changeTime() {
 setTimeout(changeTime, 300);
 
 // POPUP
-const popupButtonOutside = document.querySelector(".popup__button-outside");
-const popupButtonInside = document.querySelector(".popup__button-inside");
+const popupToggleOutside = document.querySelectorAll(".popup-toggle");
+const popupToggleInside = document.querySelector(".popup-toggle");
 const popupOverlay = document.querySelector(".popup__overlay");
 const popupMessage = document.querySelector(".popup__message");
 function togglePopup(event) {
-  if (event.target.classList.contains("popup__toggle")) {
-    popupOverlay.classList.toggle("active");
-    popupMessage.classList.toggle("active");
-    document.body.classList.toggle("no-scroll");
-  }
+  popupOverlay.classList.toggle("active");
+  popupMessage.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 }
-popupButtonOutside.addEventListener("click", togglePopup);
-popupButtonInside.addEventListener("click", togglePopup);
+popupToggleOutside.forEach((item) => {
+  item.addEventListener("click", togglePopup);
+});
+popupToggleInside.addEventListener("click", togglePopup);

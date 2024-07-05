@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RiseApp Сompany</title>
-    <link rel="stylesheet" href="/static/css/reset.css" />
-    <link rel="stylesheet" href="/static/css/styles.css" />
-    <script src="/static/js/scripts.js" defer></script>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script
+      src="{{ url_for('static', filename='js/scripts.js') }}"
+      defer
+    ></script>
   </head>
   <body>
     <div class="page">
@@ -14,7 +28,7 @@
         <div class="header__wrapper container">
           <div class="header__company">
             <img
-              src="/static/img/logotype.png"
+              src="{{ url_for('static', filename='img/logotype.png') }}"
               alt="logotype"
               class="header__logo"
             />
@@ -28,11 +42,24 @@
             <div class="header__mobnav-stick"></div>
           </div>
           <nav class="header__nav">
-            <a class="nav__link nav__link-contactus nav__link--white"
-              >Контакты</a
+            <a class="nav__link nav__link-portfolio nav__link--white"
+              >Портфолио</a
             >
-            <div class="nav__link nav__switcher">
-              <span class="nav__swither-option" value="ENG">RU</span>
+            <div class="nav__lang">
+              <a class="nav__lang-switcher lang-toggle" ontouchstart="">RU</a>
+              <div class="nav__lang-menu-wrapper">
+                <ul class="nav__lang-menu">
+                  <li class="nav__lang-item">
+                    <a class="nav__lang-link">RU</a>
+                  </li>
+                  <li class="nav__lang-item">
+                    <a class="nav__lang-link">--</a>
+                  </li>
+                  <li class="nav__lang-item">
+                    <a class="nav__lang-link">--</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -42,18 +69,18 @@
           <div class="intro__wrapper container">
             <div class="intro__main animated-slide slide-left-right">
               <h1 class="intro__title font--bold">
-                Наш сервис предоставляет: <br /><span
+                Наш сервис предоставляет:<br /><span
                   class="font--highlight intro__dynamic-title"
                 ></span>
                 <!-- prettier-ignore -->
                 <span class="intro__title-choices" style="display: none"
-                  >Индивидуальный сайт,Адаптивный дизайн,Обученые специалисты</span>
+                  >Индивидуальный сайт, Адаптивный дизайн, Стильный интерфейс, Обширный функционал, Персональный хост</span>
               </h1>
               <h4 class="intro__subtitle">
                 Компания Rise.app предоставляет услуги с 2022 года
               </h4>
               <img
-                src="/static/img/intro_img.png"
+                src="{{ url_for('static', filename='img/intro_img.png') }}"
                 alt="intro_img"
                 class="intro__img"
               />
@@ -65,7 +92,7 @@
                 <h4 class="discounts__time-title">
                   <span class="font--highlight">Скидка </span>в 16%
                 </h4>
-                <h4 class="discounts__time-title">Бесплатная консультация</h4>
+                <p class="discounts__time-subtitle">Бесплатная консультация</p>
                 <div class="discounts__time-wrapper">
                   <div class="discounts__time-item">
                     <h4 class="discounts__time-value discounts__time-days">
@@ -93,7 +120,9 @@
                   </div>
                 </div>
                 <div class="line"></div>
-                <p class="discounts__offer-subtitle">Осталось промокодов</p>
+                <p class="discounts__offer-subtitle">
+                  Осталось промокодов (Всего 15шт.)
+                </p>
                 <div class="discounts__progressbar">
                   <div class="discounts__progressbar-done">
                     <span class="discounts__progressbar-value">
@@ -102,7 +131,9 @@
                     </span>
                   </div>
                 </div>
-                <button class="discounts__offer-button">Контакты</button>
+                <button class="discounts__offer-button popup-toggle">
+                  Контакты
+                </button>
               </div>
             </div>
           </div>
@@ -114,7 +145,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-planning.png"
+                      src="{{ url_for('static', filename='img/services-planning.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -127,7 +158,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-design.png"
+                      src="{{ url_for('static', filename='img/services-design.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -141,7 +172,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-front-end.png"
+                      src="{{ url_for('static', filename='img/services-front-end.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -154,7 +185,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-backend.png"
+                      src="{{ url_for('static', filename='img/services-backend.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -167,7 +198,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-devops.png"
+                      src="{{ url_for('static', filename='img/services-devops.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -180,7 +211,7 @@
                 <li class="services__item">
                   <div class="services__info">
                     <img
-                      src="/static/img/services-hosting.png"
+                      src="{{ url_for('static', filename='img/services-hosting.png') }}"
                       alt="services-icon"
                       class="services__img"
                     />
@@ -209,7 +240,7 @@
                   <li class="dev-steps__item animated-slide slide-left-right">
                     <div class="dev-steps__item-img-wrapper">
                       <img
-                        src="/static/img/dev-steps-design.png"
+                        src="{{ url_for('static', filename='img/dev-steps-design.png') }}"
                         alt="item_img"
                         class="dev-steps__item-img"
                       />
@@ -227,7 +258,7 @@
                   <li class="dev-steps__item animated-slide slide-left-right">
                     <div class="dev-steps__item-img-wrapper">
                       <img
-                        src="/static/img/dev-steps-programming.png"
+                        src="{{ url_for('static', filename='img/dev-steps-programming.png') }}"
                         alt="item_img"
                         class="dev-steps__item-img"
                       />
@@ -245,7 +276,7 @@
                   <li class="dev-steps__item animated-slide slide-left-right">
                     <div class="dev-steps__item-img-wrapper">
                       <img
-                        src="/static/img/dev-steps-hosting.png"
+                        src="{{ url_for('static', filename='img/dev-steps-hosting.png') }}"
                         alt="item_img"
                         class="dev-steps__item-img"
                       />
@@ -264,7 +295,7 @@
               </div>
               <div class="dev-steps__img-wrapper">
                 <img
-                  src="/static/img/devsteps-img.png"
+                  src="{{ url_for('static', filename='img/devsteps-img.png') }}"
                   alt="devsteps-img"
                   class="dev-steps__img"
                 />
@@ -280,7 +311,7 @@
               <div class="portfolio__intro">
                 <div class="portfolio__logo-wrapper">
                   <img
-                    src="/static/img/logo.png"
+                    src="{{ url_for('static', filename='img/logotype.png') }}"
                     alt="logo"
                     class="portfolio__logo"
                   />
@@ -293,7 +324,7 @@
                   class="portfolio__img-wrapper animated-slide portfolio__banking-wrapper"
                 >
                   <img
-                    src="/static/img/portfolio-banking.png"
+                    src="{{ url_for('static', filename='img/portfolio-banking.png') }}"
                     alt="portfolio__img"
                     class="portfolio__img portfolio__banking"
                   />
@@ -302,7 +333,7 @@
                   class="portfolio__img-wrapper animated-slide portfolio__smarthouse-wrapper"
                 >
                   <img
-                    src="/static/img/portfolio-smarthouse.png"
+                    src="{{ url_for('static', filename='img/portfolio-smarthouse.png') }}"
                     alt="portfolio__img"
                     class="portfolio__img portfolio__smarthouse"
                   />
@@ -311,7 +342,7 @@
                   class="portfolio__img-wrapper animated-slide portfolio__football-wrapper"
                 >
                   <img
-                    src="/static/img/portfolio-football.png"
+                    src="{{ url_for('static', filename='img/portfolio-football.png') }}"
                     alt="portfolio__img"
                     class="portfolio__img portfolio__football"
                   />
@@ -320,7 +351,7 @@
                   class="portfolio__img-wrapper animated-slide portfolio__greeksite-wrapper"
                 >
                   <img
-                    src="/static/img/portfolio-greeksite.png"
+                    src="{{ url_for('static', filename='img/portfolio-greeksite.png') }}"
                     alt="portfolio__img"
                     class="portfolio__img portfolio__greeksite"
                   />
@@ -351,7 +382,7 @@
                   <li class="why-us__fact-item animated-slide slide-right-left">
                     <div class="why-us__fact-img-wrapper">
                       <img
-                        src="/static/img/whyus-fact-easy-pay.png"
+                        src="{{ url_for('static', filename='img/whyus-fact-easy-pay.png') }}"
                         alt="fact-img"
                         class="why-us__fact-img"
                       />
@@ -364,7 +395,7 @@
                   <li class="why-us__fact-item animated-slide slide-right-left">
                     <div class="why-us__fact-img-wrapper">
                       <img
-                        src="/static/img/whyus-all-inclusive.png"
+                        src="{{ url_for('static', filename='img/whyus-all-inclusive.png') }}"
                         alt="fact-img"
                         class="why-us__fact-img"
                       />
@@ -377,7 +408,7 @@
                   <li class="why-us__fact-item animated-slide slide-right-left">
                     <div class="why-us__fact-img-wrapper">
                       <img
-                        src="/static/img/whyus-unique-offers.png"
+                        src="{{ url_for('static', filename='img/whyus-unique-offers.png') }}"
                         alt="fact-img"
                         class="why-us__fact-img"
                       />
@@ -389,7 +420,7 @@
                   </li>
                 </ul>
                 <div class="why-us__button-wrapper why-us__contactus">
-                  <a class="popup__button-outside popup__toggle">Связаться</a>
+                  <a class="why-us__button popup-toggle">Связаться</a>
                 </div>
               </div>
             </div>
@@ -406,7 +437,7 @@
           <div class="popup__contact-item">
             <a href="https://t.me/Yehor_rt" class="popup__contact-link"
               ><img
-                src="/static/img/telegram_icon.svg"
+                src="{{ url_for('static', filename='img/telegram_icon.svg') }}"
                 alt="telegram_icon"
                 class="popup__contact-img"
             /></a>
@@ -416,19 +447,19 @@
               href="https://www.instagram.com/rise.web.development?igsh=MWdjbHExc2dvZzhueQ=="
               class="popup__contact-link"
               ><img
-                src="/static/img/instagram_icon.svg"
+                src="{{ url_for('static', filename='img/instagram_icon.svg') }}"
                 alt="instagram_icon"
                 class="popup__contact-img"
             /></a>
           </div>
         </div>
-        <button class="popup__button-inside popup__toggle">Закрыть</button>
+        <button class="popup__button-inside popup-toggle">Закрыть</button>
       </div>
       <footer class="footer">
         <div class="footer__img-wrapper">
           <img
             class="footer__img"
-            src="/static/img/web-site-bottom.svg"
+            src="{{ url_for('static', filename='img/web-site-bottom.svg') }}"
             alt=""
           />
         </div>
