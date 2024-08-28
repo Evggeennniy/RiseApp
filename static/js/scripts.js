@@ -82,8 +82,8 @@ function updateTextContent(element, value) {
 
 function changeTime() {
   const dateNow = new Date();
-  const discountStart = new Date(2024, 6, 1);
-  const discountsEnd = new Date(2024, 7, 1);
+  const discountStart = new Date(2024, 7, 28);
+  const discountsEnd = new Date(2024, 9, 28);
   const diff = discountsEnd - dateNow;
   const percents = Math.floor(diff / ((discountsEnd - discountStart) / 100));
 
