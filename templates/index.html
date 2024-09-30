@@ -23,6 +23,10 @@
     ></script>
   </head>
   <body>
+    <img
+      src="{{ url_for('static', filename='img/ellipse-top.png') }}"
+      class="bg-ellipse-top"
+    />
     <div class="page">
       <header class="header">
         <div class="header__wrapper container">
@@ -43,20 +47,14 @@
           </div>
           <nav class="header__nav">
             <a class="nav__link nav__link-portfolio nav__link--white"
-              >Портфолио</a
+              >Портфоліо</a
             >
             <div class="nav__lang">
-              <a class="nav__lang-switcher lang-toggle" ontouchstart="">RU</a>
+              <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
               <div class="nav__lang-menu-wrapper">
                 <ul class="nav__lang-menu">
                   <li class="nav__lang-item">
-                    <a class="nav__lang-link">RU</a>
-                  </li>
-                  <li class="nav__lang-item">
-                    <a class="nav__lang-link">--</a>
-                  </li>
-                  <li class="nav__lang-item">
-                    <a class="nav__lang-link">--</a>
+                    <a class="nav__lang-link">UA</a>
                   </li>
                 </ul>
               </div>
@@ -66,76 +64,23 @@
       </header>
       <main>
         <section class="intro">
-          <div class="intro__wrapper container">
-            <div class="intro__main animated-slide slide-left-right">
-              <h1 class="intro__title font--bold">
-                Наш сервис предоставляет:<br /><span
-                  class="font--highlight intro__dynamic-title"
-                ></span>
-                <!-- prettier-ignore -->
-                <span class="intro__title-choices" style="display: none"
-                  >Индивидуальный сайт, Адаптивный дизайн, Стильный интерфейс, Обширный функционал, Персональный хост</span>
+          <div class="intro__wrapper">
+            <img
+              src="{{ url_for('static', filename='img/intro_img.png') }}"
+              alt="image"
+              class="intro__img"
+            />
+            <div class="intro__wrapper">
+              <h1 class="intro__title">Наш сервіс надає:</h1>
+              <h1 class="intro__title font--highlight">
+                Унікальні Iнструменти
               </h1>
               <h4 class="intro__subtitle">
-                Компания Rise.app предоставляет услуги с 2022 года
+                Rise.app надає послуги з 2022 року
               </h4>
-              <img
-                src="{{ url_for('static', filename='img/intro_img.png') }}"
-                alt="intro_img"
-                class="intro__img"
-              />
-            </div>
-            <div
-              class="intro__discounts font--bold animated-slide slide-right-left"
-            >
-              <div class="discount__content">
-                <h4 class="discounts__time-title">
-                  <span class="font--highlight">Скидка </span>в 16%
-                </h4>
-                <p class="discounts__time-subtitle">Бесплатная консультация</p>
-                <div class="discounts__time-wrapper">
-                  <div class="discounts__time-item">
-                    <h4 class="discounts__time-value discounts__time-days">
-                      --
-                    </h4>
-                    <p class="discounts__time-desc">Дней</p>
-                  </div>
-                  <div class="discounts__time-item">
-                    <h4 class="discounts__time-value discounts__time-hours">
-                      --
-                    </h4>
-                    <p class="discounts__time-desc">Часов</p>
-                  </div>
-                  <div class="discounts__time-item">
-                    <h4 class="discounts__time-value discounts__time-minutes">
-                      --
-                    </h4>
-                    <p class="discounts__time-desc">Минут</p>
-                  </div>
-                  <div class="discounts__time-item">
-                    <h4 class="discounts__time-value discounts__time-seconds">
-                      --
-                    </h4>
-                    <p class="discounts__time-desc">Секунд</p>
-                  </div>
-                </div>
-                <div class="line"></div>
-                <p class="discounts__offer-subtitle">Осталось промокодов</p>
-                <div class="discounts__progressbar">
-                  <div class="discounts__progressbar-done">
-                    <span class="discounts__progressbar-value">
-                      <span class="discounts__progressbar-title">-</span
-                      >&nbsp<span>%</span>
-                    </span>
-                  </div>
-                </div>
-                <button
-                  class="discounts__offer-button popup-toggle"
-                  ontouchstart=""
-                >
-                  Контакты
-                </button>
-              </div>
+              <button class="intro__button" id="intro-contacts-btn">
+                Контакти
+              </button>
             </div>
           </div>
         </section>
@@ -152,7 +97,7 @@
                     />
                     <h3 class="services__title font--bold">План</h3>
                     <p class="services__desc">
-                      Разработаем подробный план исходя из ваших потребностей
+                      Розробимо докладний план виходячи з ваших потреб
                     </p>
                   </div>
                 </li>
@@ -165,8 +110,8 @@
                     />
                     <h3 class="services__title font--bold">Дизайн</h3>
                     <p class="services__desc">
-                      Наши дизайнеры умеют подобрать и разработать дизайн под
-                      клиента
+                      Наші дизайнери вміють підібрати та розробити дизайн під
+                      клієнта
                     </p>
                   </div>
                 </li>
@@ -179,7 +124,7 @@
                     />
                     <h3 class="services__title font--bold">Фронт-Енд</h3>
                     <p class="services__desc">
-                      Создание адаптивного интерфейса для любых устройств
+                      Створення адаптивного інтерфейсу для будь-яких пристроїв
                     </p>
                   </div>
                 </li>
@@ -190,9 +135,9 @@
                       alt="services-icon"
                       class="services__img"
                     />
-                    <h3 class="services__title font--bold">Бэк-Енд</h3>
+                    <h3 class="services__title font--bold">Бeк-Енд</h3>
                     <p class="services__desc">
-                      Мы разработаем серверные решения любой сложности
+                      Ми розробимо серверні рішення будь-якої складності
                     </p>
                   </div>
                 </li>
@@ -205,7 +150,7 @@
                     />
                     <h3 class="services__title font--bold">Девопс</h3>
                     <p class="services__desc">
-                      Настраиваем серверную безопасность и их связь между собой
+                      Налаштовуємо серверну безпеку та їх зв'язок між собою
                     </p>
                   </div>
                 </li>
@@ -218,8 +163,7 @@
                     />
                     <h3 class="services__title font--bold">Хостинг</h3>
                     <p class="services__desc">
-                      Качественный хостинг и эксклюзивные домены для вашего
-                      проекта.
+                      Якісний хостинг та ексклюзивні домени для вашого проекту
                     </p>
                   </div>
                 </li>
@@ -233,9 +177,9 @@
           >
             <div class="dev-steps__content">
               <div class="dev-steps__actions">
-                <h4 class="dev-steps__subtitle font--bold">Путь разработки</h4>
+                <h4 class="dev-steps__subtitle font--bold">eтапи створення</h4>
                 <h2 class="dev-steps__title font--bold">
-                  Поэтапная разработка вашего продукта и внимание к мелочам
+                  Створення вашого сайту від концепції до запуску
                 </h2>
                 <ul class="dev-steps__list">
                   <li class="dev-steps__item animated-slide slide-left-right">
@@ -248,11 +192,11 @@
                     </div>
                     <div class="dev-steps__item-text">
                       <h3 class="dev-steps__item-title">
-                        Разработка Интерфейса
+                        Проектування та розробка інтерфейсу
                       </h3>
                       <p class="dev-steps__item-desc">
-                        Проектирование и создание адаптивного дизайна для
-                        десктопов, планшетов и телефонов.
+                        Створення та затвердження прототипу дизайну. Адаптивна
+                        верстка під різні пристрої.
                       </p>
                     </div>
                   </li>
@@ -266,11 +210,11 @@
                     </div>
                     <div class="dev-steps__item-text">
                       <h3 class="dev-steps__item-title">
-                        Программирование и Интеграция
+                        Програмування та інтеграція
                       </h3>
                       <p class="dev-steps__item-desc">
-                        Разработка функционала, который поможет решать задачи и
-                        сэкономит ваше время.
+                        Розробка функціоналу та інтеграція сервісів.
+                        Налаштування API для повноцінної роботи програми.
                       </p>
                     </div>
                   </li>
@@ -284,11 +228,11 @@
                     </div>
                     <div class="dev-steps__item-text">
                       <h3 class="dev-steps__item-title">
-                        Тестирование, Хостинг и Запуск
+                        Тестування, хостинг та запуск
                       </h3>
                       <p class="dev-steps__item-desc">
-                        Тестирование для выявления ошибок, размещение на
-                        хостинге, настройка и контроль стабильности.
+                        Тестування виявлення помилок. Розміщення, налаштування
+                        та контроль стабільності програми на хостингу.
                       </p>
                     </div>
                   </li>
@@ -310,161 +254,118 @@
           >
             <div class="portfolio__content">
               <div class="portfolio__intro">
-                <div class="portfolio__logo-wrapper">
-                  <img
-                    src="{{ url_for('static', filename='img/logotype.png') }}"
-                    alt="logo"
-                    class="portfolio__logo"
-                  />
-                </div>
-                <h2 class="portfolio__title">ПОРТФОЛИО</h2>
+                <h2 class="portfolio__title">RISE APP</h2>
                 <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
               </div>
-              <div class="portfolio__imgs">
-                <div
-                  class="portfolio__img-wrapper animated-slide portfolio__banking-wrapper"
-                >
-                  <img
-                    src="{{ url_for('static', filename='img/portfolio-banking.png') }}"
-                    alt="portfolio__img"
-                    class="portfolio__img portfolio__banking"
-                  />
-                </div>
-                <div
-                  class="portfolio__img-wrapper animated-slide portfolio__smarthouse-wrapper"
-                >
-                  <img
-                    src="{{ url_for('static', filename='img/portfolio-smarthouse.png') }}"
-                    alt="portfolio__img"
-                    class="portfolio__img portfolio__smarthouse"
-                  />
-                </div>
-                <div
-                  class="portfolio__img-wrapper animated-slide portfolio__football-wrapper"
-                >
-                  <img
-                    src="{{ url_for('static', filename='img/portfolio-football.png') }}"
-                    alt="portfolio__img"
-                    class="portfolio__img portfolio__football"
-                  />
-                </div>
-                <div
-                  class="portfolio__img-wrapper animated-slide portfolio__greeksite-wrapper"
-                >
-                  <img
-                    src="{{ url_for('static', filename='img/portfolio-greeksite.png') }}"
-                    alt="portfolio__img"
-                    class="portfolio__img portfolio__greeksite"
-                  />
-                </div>
-              </div>
+              <img
+                src="{{ url_for('static', filename='img/portfolio-pc.png') }}"
+                class="portfolio__img portfolio__img-pc"
+              />
+              <img
+                src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
+                class="portfolio__img portfolio__img-mob"
+              />
             </div>
           </div>
         </section>
-        <section class="why-us">
-          <div
-            class="why-us__wrapper animated-slide slide-top-bottom container"
-          >
-            <div class="why-us__content">
-              <h4 class="why-us__subtitle styled-heading">
-                <div class="circle"></div>
-                Почему мы
-                <div class="circle"></div>
-              </h4>
-              <div class="why-us__facts">
-                <h2 class="why-us__title">
-                  Почему вам следует выбрать <br />
-                  <span class="font--highlight">услуги нашей компании?</span>
-                </h2>
-                <h4 class="why-us__second-subtitle">
-                  Мы именно те кому вы можете доверится.
-                </h4>
-                <ul class="why-us__facts-list">
-                  <li class="why-us__fact-item animated-slide slide-right-left">
-                    <div class="why-us__fact-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/whyus-fact-easy-pay.png') }}"
-                        alt="fact-img"
-                        class="why-us__fact-img"
-                      />
-                    </div>
-                    <div class="why-us__fact-info">
-                      <h3 class="why-us__fact-title">Удобная оплата</h3>
-                      <p class="why-us__fact-desc">Оплата шаг за шагом</p>
-                    </div>
-                  </li>
-                  <li class="why-us__fact-item animated-slide slide-right-left">
-                    <div class="why-us__fact-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/whyus-all-inclusive.png') }}"
-                        alt="fact-img"
-                        class="why-us__fact-img"
-                      />
-                    </div>
-                    <div class="why-us__fact-info">
-                      <h3 class="why-us__fact-title">Все включено</h3>
-                      <p class="why-us__fact-desc">Полный спектр услуг</p>
-                    </div>
-                  </li>
-                  <li class="why-us__fact-item animated-slide slide-right-left">
-                    <div class="why-us__fact-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/whyus-unique-offers.png') }}"
-                        alt="fact-img"
-                        class="why-us__fact-img"
-                      />
-                    </div>
-                    <div class="why-us__fact-info">
-                      <h3 class="why-us__fact-title">Качество</h3>
-                      <p class="why-us__fact-desc">Внимание к деталям</p>
-                    </div>
-                  </li>
-                </ul>
-                <div class="why-us__button-wrapper why-us__contactus">
-                  <a class="why-us__button popup-toggle" ontouchstart=""
-                    >Связаться</a
-                  >
+        <section class="facts">
+          <div class="facts__wrapper container">
+            <img
+              src="{{ url_for('static', filename='img/facts-pc.png') }}"
+              alt="img"
+              class="facts__img-pc facts__img"
+            />
+            <img
+              src="{{ url_for('static', filename='img/facts-mob.png') }}"
+              alt="img"
+              class="facts__img-mob facts__img"
+            />
+          </div>
+        </section>
+        <section class="aboutus">
+          <div class="aboutus__wrapper container">
+            <h2 class="aboutus__title">
+              Хто такi <span class="font--highlight">RiseApp?</span>
+            </h2>
+            <div class="aboutus__info">
+              <div class="aboutus__item">
+                <div class="aboutus__item__img-wrap">
+                  <img
+                    src="{{ url_for('static', filename='img/aboutus-1.png') }}"
+                    alt="icon"
+                    class="aboutus__item-icon"
+                  />
                 </div>
+                <h4 class="aboutus__item-title font--highlight">
+                  Досвід та надійність
+                </h4>
+                <p class="aboutus__item-subtitle">
+                  Працюємо на ринку веб-розробки понад два роки, знаходячи
+                  найкращі рішення для будь-яких завдань.
+                </p>
               </div>
+              <div class="aboutus__item">
+                <div class="aboutus__item__img-wrap">
+                  <img
+                    src="{{ url_for('static', filename='img/aboutus-2.png') }}"
+                    alt="icon"
+                    class="aboutus__item-icon"
+                  />
+                </div>
+                <h4 class="aboutus__item-title font--highlight">
+                  Індивідуальний підхід
+                </h4>
+                <p class="aboutus__item-subtitle">
+                  Кожному проекту ми підходимо з увагою до деталей та враховуємо
+                  всі потреби клієнта.
+                </p>
+              </div>
+              <div class="aboutus__item">
+                <div class="aboutus__item__img-wrap">
+                  <img
+                    src="{{ url_for('static', filename='img/aboutus-3.png') }}"
+                    alt="icon"
+                    class="aboutus__item-icon"
+                  />
+                </div>
+                <h4 class="aboutus__item-title font--highlight">
+                  Сучасні технології
+                </h4>
+                <p class="aboutus__item-subtitle">
+                  Ми використовуємо найсучасніші технології для створення
+                  актуальних сайтів.
+                </p>
+              </div>
+            </div>
+            <h4 class="aboutus__subtitle">контакти</h4>
+            <h2 class="aboutus__title">
+              Для <span class="font--highlight">безкоштовної</span> консультації
+            </h2>
+            <p class="aboutus__subtitle">
+              зв'яжіться з нами будь-яким зручним для вас методом
+            </p>
+            <div class="aboutus__contacts">
+              <a
+                href="https://www.instagram.com/rise.app.software?igsh=MWdjbHExc2dvZzhueQ=="
+                target="_blank"
+                class="aboutus__contact-link"
+                >Instagram</a
+              >
+              <a
+                href="https://t.me/riseapp_support"
+                target="_blank"
+                class="aboutus__contact-link"
+                >Telegram</a
+              >
             </div>
           </div>
         </section>
       </main>
-      <div class="popup__overlay"></div>
-      <div class="popup__message">
-        <h1 class="popup__title">Информация для контактов</h1>
-        <p class="popup__subtitle">
-          Выберите мессенджер где вам будет удобно связаться
-        </p>
-        <div class="popup__contacts">
-          <div class="popup__contact-item">
-            <a href="https://t.me/Yehor_rt" class="popup__contact-link"
-              ><img
-                src="{{ url_for('static', filename='img/telegram_icon.svg') }}"
-                alt="telegram_icon"
-                class="popup__contact-img"
-            /></a>
-          </div>
-          <div class="popup__contact-item">
-            <a
-              href="https://www.instagram.com/rise.web.development?igsh=MWdjbHExc2dvZzhueQ=="
-              class="popup__contact-link"
-              ><img
-                src="{{ url_for('static', filename='img/instagram_icon.svg') }}"
-                alt="instagram_icon"
-                class="popup__contact-img"
-            /></a>
-          </div>
-        </div>
-        <button class="popup__button-inside popup-toggle">Закрыть</button>
-      </div>
       <footer class="footer">
-        <div class="footer__img-wrapper">
-          <img
-            class="footer__img"
-            src="{{ url_for('static', filename='img/web-site-bottom.svg') }}"
-            alt=""
-          />
+        <div class="footer__wrapper">
+          <h2 class="footer__title font--highlight">RISE APP</h2>
+          <div class="footer__line"></div>
+          <p class="footer__subtitle">The company was founded in 2022.</p>
         </div>
       </footer>
     </div>
