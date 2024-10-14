@@ -15,7 +15,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
+      href="{{ url_for('static', filename='css/styles.css') }}?v=1.1"
     />
     <script
       src="{{ url_for('static', filename='js/scripts.js') }}"
@@ -71,10 +71,8 @@
               class="intro__img"
             />
             <div class="intro__wrapper">
-              <h1 class="intro__title">Наш сервіс надає:</h1>
-              <h1 class="intro__title font--highlight">
-                Унікальні Iнструменти
-              </h1>
+              <h1 class="intro__title">Розробимо сервіс який:</h1>
+              <h1 class="intro__title font--highlight">Економить ваш час</h1>
               <h4 class="intro__subtitle">
                 Rise.app надає послуги з 2022 року
               </h4>
@@ -285,7 +283,7 @@
         <section class="aboutus">
           <div class="aboutus__wrapper container">
             <h2 class="aboutus__title">
-              Хто такi <span class="font--highlight">RiseApp?</span>
+              Про <span class="font--highlight">RiseApp</span>
             </h2>
             <div class="aboutus__info">
               <div class="aboutus__item">
@@ -335,6 +333,172 @@
                   Ми використовуємо найсучасніші технології для створення
                   актуальних сайтів.
                 </p>
+              </div>
+            </div>
+            <h2 class="aboutus__title">
+              Відгуки <span class="font--highlight">клієнтів</span>
+            </h2>
+            <div class="aboutus__reviews">
+              <div class="aboutus__reviews-item">
+                <div class="aboutus__reviews-message">
+                  <img
+                    src="{{ url_for('static', filename='img/logotype.png') }}"
+                    alt="icon"
+                    class="aboutus__reviews-icon"
+                  />
+                  <p class="aboutus__reviews-text">
+                    Працювати з цією командою було легко та приємно. Вони дійсно
+                    розуміються на тому, що роблять. Мій сайт тепер виглядає
+                    стильно та функціонує на відмінно.
+                  </p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="24"
+                  viewBox="0 0 30 24"
+                  class="aboutus__reviews-triangle"
+                  fill="none"
+                >
+                  <path
+                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                    fill="url(#paint0_linear_3297_169)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3297_169"
+                      x1="30"
+                      y1="0"
+                      x2="0"
+                      y2="0"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#504BC9" />
+                      <stop offset="1" stop-color="#4E49C7" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="aboutus__reviews-user">
+                  <img
+                    src="{{ url_for('static', filename='img/client-img-1.png') }}"
+                    alt="user-img"
+                    class="aboutus__reviews-userimg"
+                  />
+                  <div class="aboutus__reviews-userinfo">
+                    <h4 class="aboutus__reviews-username">Анастасія Карпова</h4>
+                    <p class="aboutus__reviews-userorder">
+                      Замовлення укр. маркетплейс
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="aboutus__reviews-item">
+                <div class="aboutus__reviews-message">
+                  <img
+                    src="{{ url_for('static', filename='img/logotype.png') }}"
+                    alt="icon"
+                    class="aboutus__reviews-icon"
+                  />
+                  <p class="aboutus__reviews-text">
+                    Отличный сервис и великолепное отношение к клиентам! Все
+                    было сделано вовремя) Если вам нужен качественный сайт, не
+                    раздумывайте — заказывайте здесь!
+                  </p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="24"
+                  viewBox="0 0 30 24"
+                  class="aboutus__reviews-triangle"
+                  fill="none"
+                >
+                  <path
+                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                    fill="url(#paint0_linear_3297_169)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3297_169"
+                      x1="30"
+                      y1="0"
+                      x2="0"
+                      y2="0"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#504BC9" />
+                      <stop offset="1" stop-color="#4E49C7" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="aboutus__reviews-user">
+                  <img
+                    src="{{ url_for('static', filename='img/client-img-2.png') }}"
+                    alt="user-img"
+                    class="aboutus__reviews-userimg"
+                  />
+                  <div class="aboutus__reviews-userinfo">
+                    <h4 class="aboutus__reviews-username">Василь Корелин</h4>
+                    <p class="aboutus__reviews-userorder">
+                      Фото галерея міста Суми
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="aboutus__reviews-item">
+                <div class="aboutus__reviews-message">
+                  <img
+                    src="{{ url_for('static', filename='img/logotype.png') }}"
+                    alt="icon"
+                    class="aboutus__reviews-icon"
+                  />
+                  <p class="aboutus__reviews-text">
+                    Завдяки Rise клієнти легко знаходять товари та оформляють
+                    замовлення. Врахували всі побажання, завжди були на зв’язку
+                    і швидко вносили правки. Рекомендуемо.
+                  </p>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="24"
+                  viewBox="0 0 30 24"
+                  class="aboutus__reviews-triangle"
+                  fill="none"
+                >
+                  <path
+                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                    fill="url(#paint0_linear_3297_169)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3297_169"
+                      x1="30"
+                      y1="0"
+                      x2="0"
+                      y2="0"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#504BC9" />
+                      <stop offset="1" stop-color="#4E49C7" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="aboutus__reviews-user">
+                  <img
+                    src="{{ url_for('static', filename='img/client-img-3.png') }}"
+                    alt="user-img"
+                    class="aboutus__reviews-userimg"
+                  />
+                  <div class="aboutus__reviews-userinfo">
+                    <h4 class="aboutus__reviews-username">
+                      Компанія VerginCity
+                    </h4>
+                    <p class="aboutus__reviews-userorder">
+                      Сайт мережі буд. магазинів
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <h4 class="aboutus__subtitle">контакти</h4>
