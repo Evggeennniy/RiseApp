@@ -519,7 +519,7 @@ a {
 .aboutus .aboutus__title {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .aboutus .aboutus__title:nth-child(4) {
   margin-bottom: 15px;
@@ -543,7 +543,7 @@ a {
 .aboutus .aboutus__item-icon {
   margin-bottom: 18px;
   position: relative;
-  top: -50px;
+  top: -40px;
   height: 100px;
 }
 .aboutus .aboutus__item-title {
@@ -566,6 +566,46 @@ a {
   text-decoration: none;
   color: white;
 }
+.aboutus .aboutus__reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 130px;
+}
+.aboutus .aboutus__reviews-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.aboutus .aboutus__reviews-message {
+  border-radius: 15px;
+  background: linear-gradient(270deg, #6762e0 0%, #4a45c3 100%);
+  padding: 15px 25px;
+  width: 346px;
+  flex: 3;
+}
+.aboutus .aboutus__reviews-icon {
+  height: 20px;
+  margin-bottom: 10px;
+}
+.aboutus .aboutus__reviews-triangle {
+  position: relative;
+  right: -45px;
+  margin-bottom: 10px;
+}
+.aboutus .aboutus__reviews-userimg {
+  height: 60px;
+  margin-right: 10px;
+}
+.aboutus .aboutus__reviews-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.aboutus .aboutus__reviews-username {
+  margin-bottom: 7px;
+}
 @media (max-width: 575px) {
   .aboutus {
     padding: 25px 0 100px;
@@ -586,6 +626,23 @@ a {
   }
   .aboutus .aboutus__subtitle {
     margin-bottom: 20px;
+  }
+  .aboutus .aboutus__reviews {
+    justify-content: unset;
+    overflow-x: scroll;
+  }
+  .aboutus .aboutus__reviews-message {
+    width: 66vw;
+    padding: 15px 15px 30px;
+  }
+  .aboutus .aboutus__reviews-text {
+    font-size: 15px;
+  }
+  .aboutus .aboutus__reviews-username {
+    font-size: 15px;
+  }
+  .aboutus .aboutus__reviews-userorder {
+    font-size: 14px;
   }
 }
 
