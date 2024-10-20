@@ -99,7 +99,10 @@ a {
   }
 
   &--highlight {
-    color: #6b87e6;
+    background: linear-gradient(90deg, #5450e7 0%, #999 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -585,7 +588,7 @@ a {
 }
 
 .facts {
-  padding: 150px 0;
+  padding: 80px 0;
   background: linear-gradient(
     182deg,
     #000 1.37%,
@@ -738,6 +741,12 @@ a {
 
     .aboutus__item-icon {
       position: static;
+    }
+
+    .aboutus__item__img-wrap {
+      height: 70px;
+      position: relative;
+      top: -35px;
     }
 
     .aboutus__item-icon,
