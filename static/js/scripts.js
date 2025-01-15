@@ -5,7 +5,7 @@ function checkFade() {
     const rect = item.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top <= windowHeight * 0.75) {
+    if (rect.top <= windowHeight * 0.85) {
       item.classList.add("active");
     }
   });

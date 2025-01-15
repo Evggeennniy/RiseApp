@@ -256,6 +256,46 @@
                 <h2 class="portfolio__title font--highlight">RISE APP</h2>
                 <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
               </div>
+              <div class="portfolio__projects">
+                <a
+                  href="{{ url_for('project_1') }}"
+                  class="portfolio__project-item"
+                >
+                  <h4 class="project-item__header">ТрендСіті</h4>
+                  <p class="project-item__desc">
+                    Новий український маркетплейс
+                  </p>
+                  <img
+                    src="{{ url_for('static', filename='img/trendcity.png') }}"
+                    alt="project-img"
+                    class="project-item__img"
+                  />
+                </a>
+                <a
+                  href="{{ url_for('project_2') }}"
+                  class="portfolio__project-item"
+                >
+                  <h4 class="project-item__header">ProLearn</h4>
+                  <p class="project-item__desc">Українська онлайн школа</p>
+                  <img
+                    src="{{ url_for('static', filename='img/prolearn.png') }}"
+                    alt="project-img"
+                    class="project-item__img"
+                  />
+                </a>
+                <a
+                  href="{{ url_for('project_3') }}"
+                  class="portfolio__project-item"
+                >
+                  <h4 class="project-item__header">SkillPoint</h4>
+                  <p class="project-item__desc">Онлайн найм репетиторів</p>
+                  <img
+                    src="{{ url_for('static', filename='img/skillpoint.png') }}"
+                    alt="project-img"
+                    class="project-item__img"
+                  />
+                </a>
+              </div>
               <img
                 src="{{ url_for('static', filename='img/portfolio-pc.png') }}"
                 class="portfolio__img portfolio__img-pc"
