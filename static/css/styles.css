@@ -510,6 +510,10 @@ a {
   align-items: center;
   gap: 10px;
   background-color: rgb(103, 98, 224);
+  transition: scale 200ms ease-in-out;
+}
+.portfolio .portfolio__project-item:hover {
+  scale: 0.95;
 }
 .portfolio .project-item__header {
   font-weight: 500;
@@ -794,6 +798,12 @@ a {
   border: 3px solid #162340;
   flex: 1;
 }
+.advantages .advantages__item:hover {
+  border: 3px solid #5450e7;
+  scale: 1.04;
+  box-shadow: 0px 0px 22px 3px #454099;
+  transition: scale 200ms ease-in-out, border 200ms ease-in-out;
+}
 .advantages .advantages__title {
   margin-bottom: 15px;
   font-weight: 700;
@@ -801,6 +811,10 @@ a {
 @media (max-width: 575px) {
   .advantages {
     margin-bottom: 120px;
+  }
+  .advantages .advantages__list {
+    flex-direction: column;
+    gap: 20px;
   }
   .advantages .advantages__item {
     padding: 20px;
@@ -936,6 +950,11 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.contacts .contacts__button:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 22px 3px #454099;
 }
 @media (max-width: 575px) {
   .contacts .contacts__wrapper {
@@ -1040,6 +1059,9 @@ a {
   height: 1px;
   background-color: #fff;
   margin: 20px 0;
+}
+.footer .footer__subtitle {
+  color: gray;
 }
 @media (max-width: 575px) {
   .footer .footer__wrapper {

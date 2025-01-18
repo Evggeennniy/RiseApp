@@ -28,6 +28,29 @@ langButton.addEventListener("click", () => {
 // INTRODUCTION
 const contactBtn = document.getElementById("intro-contacts-btn");
 const contactBlock = document.querySelector(".aboutus__contacts");
-contactBtn.addEventListener("click", () => {
-  contactBlock.scrollIntoView({ behavior: "smooth", block: "start" });
+
+if (contactBtn && contactBlock) {
+  contactBtn.addEventListener("click", () => {
+    contactBlock.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+// FORM
+const form = document.querySelector(".contacts__form");
+const formConfirm = document.querySelector(".contacts__button");
+const phoneInput = document.getElementById("phone");
+
+form.addEventListener("submit", (e) => {
+  if (phoneInput.value.length < 8) {
+    e.preventDefault();
+    alert("Сheck the phone number please");
+    phoneInput.focus();
+    return;
+  }
+
+  alert("Successfully delivered!! Thank you.");
+});
+
+phoneInput.addEventListener("input", () => {
+  phoneInput.value = phoneInput.value.replace(/(?!^)\+|[^\d+]/g, "");
 });

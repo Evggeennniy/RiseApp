@@ -1,0 +1,66 @@
+<section class="contacts">
+  <div class="contacts__wrapper container">
+    <div class="contacts__form">
+      <h3 class="contacts__title">Втілимо ваш сервіс в реальність</h3>
+      <h3 class="contacts__title contacts__title--highlight">
+        зв'яжіться з нами!
+      </h3>
+      <p class="contacts__subtitle">Нехай ваша бізнес-ідея стане реальністю!</p>
+      <form
+        action="{{ url_for('send_message') }}"
+        method="POST"
+        class="contacts__form"
+      >
+        <div class="contacts__input-wrapper">
+          <div class="contacts__icon">
+            <img
+              src="{{ url_for('static', filename='img/form-profile.svg') }}"
+              alt="contacts-icon"
+              class="contacts__icon-content"
+            />
+          </div>
+          <input
+            type="text"
+            class="contacts__input"
+            placeholder="Ім’я"
+            name="person_name"
+            required
+          />
+        </div>
+        <div class="contacts__input-wrapper">
+          <div class="contacts__icon">
+            <img
+              src="{{ url_for('static', filename='img/form-phone.svg') }}"
+              alt="contacts-icon"
+              class="contacts__icon-content"
+            />
+          </div>
+          <input
+            type="tel"
+            class="contacts__input"
+            placeholder="Номер телефону"
+            name="person_phone"
+            id="phone"
+            required
+          />
+        </div>
+        <div class="contacts__input-wrapper">
+          <textarea
+            type="text"
+            class="contacts__textarea"
+            placeholder="Про проект"
+            name="person_note"
+          ></textarea>
+        </div>
+        <button class="contacts__button">Надіслати</button>
+      </form>
+    </div>
+    <div class="contacts__img">
+      <img
+        src="{{ url_for('static', filename='img/form-img.png') }}"
+        alt="form-img"
+        class="form__img"
+      />
+    </div>
+  </div>
+</section>

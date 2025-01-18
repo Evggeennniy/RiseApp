@@ -602,6 +602,11 @@ a {
     align-items: center;
     gap: 10px;
     background-color: rgba(103, 98, 224, 1);
+    transition: scale 200ms ease-in-out;
+
+    &:hover {
+      scale: 0.95;
+    }
   }
 
   .project-item__header {
@@ -950,6 +955,13 @@ a {
     border-radius: 15px;
     border: 3px solid #162340;
     flex: 1;
+
+    &:hover {
+      border: 3px solid #5450e7;
+      scale: 1.04;
+      box-shadow: 0px 0px 22px 3px $theme-second-border-color;
+      transition: scale 200ms ease-in-out, border 200ms ease-in-out;
+    }
   }
 
   .advantages__title {
@@ -959,6 +971,11 @@ a {
 
   @media (max-width: 575px) {
     margin-bottom: 120px;
+
+    .advantages__list {
+      flex-direction: column;
+      gap: 20px;
+    }
 
     .advantages__item {
       padding: 20px;
@@ -1123,6 +1140,12 @@ a {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0px 0px 22px 3px $theme-second-border-color;
+    }
   }
 
   @media (max-width: 575px) {
@@ -1253,6 +1276,10 @@ a {
     height: 1px;
     background-color: #fff;
     margin: 20px 0;
+  }
+
+  .footer__subtitle {
+    color: gray;
   }
 
   @media (max-width: 575px) {
