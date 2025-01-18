@@ -1258,6 +1258,52 @@ a {
   overflow: hidden;
 }
 
+#form-finder {
+  display: block;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  background-color: #1c87c9;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px;
+  animation: glowing 1.5s infinite;
+
+  svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+    display: block;
+  }
+
+  @media (max-width: 575px) {
+    bottom: 5px;
+    right: 5px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #1c87c9;
+    scale: 1;
+  }
+  50% {
+    box-shadow: 0 0 10px #49e819;
+    scale: 0.98;
+  }
+  100% {
+    box-shadow: 0 0 5px #1c87c9;
+    scale: 1.02;
+  }
+}
+
 .footer {
   background-color: #090945;
   padding: 65px 0 80px;
