@@ -34,6 +34,9 @@ def send_message():
 💬 {request.form.get('person_note', 'Без заметки')}
 ———————————
 RiseApp Team 👨🏻‍💻
+Сведения об отправителе:
+IP: {request.remote_addr}
+User-Agent: {request.__dict__['headers'].get('User-Agent')}
 """
 
     send_telegram_message(message)
