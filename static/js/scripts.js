@@ -29,17 +29,17 @@ langButton.addEventListener("click", () => {
 const contactBtn = document.getElementById("intro-contacts-btn");
 const contactBlock = document.querySelector(".aboutus__contacts");
 
-if (contactBtn && contactBlock) {
-  contactBtn.addEventListener("click", () => {
-    contactBlock.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-}
-
 // FORM
 const formTrigger = document.getElementById("form-finder");
 const form = document.querySelector(".contacts__form");
 const formConfirm = document.querySelector(".contacts__button");
 const phoneInput = document.getElementById("phone");
+
+if (contactBtn) {
+  contactBtn.addEventListener("click", () => {
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
 
 form.addEventListener("submit", (e) => {
   if (phoneInput.value.length < 8) {
