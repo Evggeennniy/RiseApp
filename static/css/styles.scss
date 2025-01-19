@@ -465,9 +465,10 @@ a {
     }
 
     .services__item {
-      min-width: 80px;
+      min-width: 110px;
       padding: 10px;
       text-align: center;
+      border: 3px solid $theme-border-color;
     }
 
     .services__img {
@@ -586,7 +587,7 @@ a {
 .portfolio {
   background-color: black;
   overflow: hidden;
-  padding: 75px 0 170px 0;
+  padding: 75px 0;
 
   .portfolio__intro {
     text-align: center;
@@ -700,7 +701,7 @@ a {
 }
 
 .aboutus {
-  padding: 150px 0;
+  padding: 0;
 
   .aboutus__title {
     font-weight: 700;

@@ -399,9 +399,10 @@ a {
     gap: 10px;
   }
   .services .services__item {
-    min-width: 80px;
+    min-width: 110px;
     padding: 10px;
     text-align: center;
+    border: 3px solid #1c1a42;
   }
   .services .services__img {
     margin-bottom: 5px;
@@ -495,7 +496,7 @@ a {
 .portfolio {
   background-color: black;
   overflow: hidden;
-  padding: 75px 0 170px 0;
+  padding: 75px 0;
 }
 .portfolio .portfolio__intro {
   text-align: center;
@@ -588,7 +589,7 @@ a {
 }
 
 .aboutus {
-  padding: 150px 0;
+  padding: 0;
 }
 .aboutus .aboutus__title {
   font-weight: 700;
