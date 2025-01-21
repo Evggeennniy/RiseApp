@@ -45,10 +45,26 @@
           />
         </div>
         <div class="contacts__input-wrapper">
+          <div class="contacts__icon">
+            <img
+              src="{{ url_for('static', filename='img/form-phone.svg') }}"
+              alt="contacts-icon"
+              class="contacts__icon-content"
+            />
+          </div>
+          <input
+            type="text"
+            class="contacts__input"
+            placeholder="Telegram / WhatApp"
+            name="contact-teg"
+            id="contact-teg"
+          />
+        </div>
+        <div class="contacts__input-wrapper">
           <textarea
             type="text"
             class="contacts__textarea"
-            placeholder="Про проект"
+            placeholder="Cообщение"
             name="person_note"
           ></textarea>
         </div>
