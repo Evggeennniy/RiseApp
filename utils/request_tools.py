@@ -29,7 +29,7 @@ def __get_information(request):
     user_agent = request.headers.get('User-Agent', 'Неизвестно 🤷‍♂️')
 
     message = f"""
-📊 Сведения об отправителе:
+📊 Сведения об запросе:
 🌍 IP: {ip_address}
 📌 Местоположение: {location}
 🖥️ Устройство: {user_agent}

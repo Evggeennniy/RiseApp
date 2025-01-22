@@ -2,24 +2,15 @@ import os
 from dotenv import load_dotenv
 import requests
 from flask import Flask, request, render_template, url_for, send_from_directory, redirect
-from utils.request_tools import __get_client_ip, __get_ip_info, __get_information
-from utils.telegram_tools import __send_telegram_message
+from utils.request_tools import __get_information
+from utils.telegram_tools import send_telegram_message
 
 load_dotenv()
 
 app = Flask(__name__)
 bot_token = os.getenv("TG_BOT_TOKEN")
-
-admins_ids = [
-    os.getenv("TEAMLEAD_ID"),
-    os.getenv("ADMIN_ID")
-]
-
-
-def notify(message):
-    for admin_id in admins_ids:
-        __send_telegram_message(admin_id, message, bot_token)
-    return True
+move_group_id = os.getenv("TG_MOVE_GROUP_ID")
+notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
 
 
 @app.route('/send-message', methods=['POST'])
@@ -40,9 +31,7 @@ def send_message():
 👨🏻‍💻 RiseApp Team
 """
 
-    notify(message)
-    print(message)
-
+    send_telegram_message(notify_group_id, message, bot_token)
     return redirect(url_for('index'))
 
 
@@ -56,8 +45,8 @@ def index():
 ———————————
 👨🏻‍💻 RiseApp Team
 """
-    notify(message)
 
+    send_telegram_message(move_group_id, message, bot_token)
     return render_template('index.html')
 
 
@@ -71,8 +60,7 @@ def project_1():
 ———————————
 👨🏻‍💻 RiseApp Team
 """
-    notify(message)
-
+    send_telegram_message(move_group_id, message, bot_token)
     return render_template('trendcity.html')
 
 
@@ -86,8 +74,7 @@ def project_2():
 ———————————
 👨🏻‍💻 RiseApp Team
 """
-    notify(message)
-
+    send_telegram_message(move_group_id, message, bot_token)
     return render_template('prolearn.html')
 
 
@@ -101,8 +88,7 @@ def project_3():
 ———————————
 👨🏻‍💻 RiseApp Team
 """
-    notify(message)
-
+    send_telegram_message(move_group_id, message, bot_token)
     return render_template('skillpoint.html')
 
 
