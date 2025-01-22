@@ -691,17 +691,13 @@ a {
     padding: 80px 0;
 
     .facts__img-pc {
-      display: none;
-    }
-
-    .facts__img-mob {
-      display: inline;
+      content: url("/static/img/facts-mob.png");
     }
   }
 }
 
 .aboutus {
-  padding: 0;
+  padding: 0 0 100px;
 
   .aboutus__title {
     font-weight: 700;
