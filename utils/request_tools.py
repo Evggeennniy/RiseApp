@@ -8,13 +8,12 @@ def __get_ip_info(ip):
         if data["status"] == "success":
             return f"{data['country']} 🇦🇷, {data['regionName']} 📍, {data['city']} 🌆"
         else:
-            return "Не удалось определить местоположение 🌍"
+            return "Error in determining the location 🌍"
     except Exception:
-        return "Ошибка при определении местоположения 🚨"
+        return "Error in determining the location 🚨"
 
 
 def __get_client_ip(request):
-    """Функция для получения IP-адреса клиента, даже если он за прокси"""
     ip = request.headers.get('X-Forwarded-For', request.headers.get('X-Real-IP', request.remote_addr))
 
     if ip and "," in ip:
@@ -26,13 +25,13 @@ def __get_client_ip(request):
 def __get_information(request):
     ip_address = __get_client_ip(request)
     location = __get_ip_info(ip_address)
-    user_agent = request.headers.get('User-Agent', 'Неизвестно 🤷‍♂️')
+    user_agent = request.headers.get('User-Agent', 'Anonimous 🤷‍♂️')
 
     message = f"""
-📊 Сведения об запросе:
+📊 Information about the request:
 🌍 IP: {ip_address}
-📌 Местоположение: {location}
-🖥️ Устройство: {user_agent}
+📌 Location: {location}
+🖥️ Device: {user_agent}
     """
 
     return message

@@ -19,12 +19,12 @@ def send_message():
         return
 
     message = f"""
-🚀 Получена новая заявка!
+🚀 We've got a request!
 ———————————
-👤 Имя: {request.form.get('person_name', 'Не указано')}
-📱 Телефон: {request.form.get('person_phone', 'Не указано')}
-📱 Соц. сеть: {request.form.get('contact-teg', 'Не указано')}
-💬 Сообщение: {request.form.get('person_note', 'Не указано')}
+👤 Name: {request.form.get('person_name', 'Undefined')}
+📱 Phone: {request.form.get('person_phone', 'Undefined')}
+📱 Social Media teg: {request.form.get('contact-teg', 'Undefined')}
+💬 Message: {request.form.get('person_note', 'Undefined')}
 ———————————
 {__get_information(request)}
 ———————————
@@ -39,7 +39,7 @@ def send_message():
 def index():
 
     message = f"""
-Движение на Главной странице.
+📈 We've detected a visitor! The main page.
 ———————————
 {__get_information(request)}
 ———————————
@@ -54,7 +54,7 @@ def index():
 def project_1():
 
     message = f"""
-Движение на странице TrendCity.
+📈 We've detected a visitor! The TrendCity page.
 ———————————
 {__get_information(request)}
 ———————————
@@ -68,7 +68,7 @@ def project_1():
 def project_2():
 
     message = f"""
-Движение на странице Prolearn.
+📈 We've detected a visitor! The Prolearn page. 
 ———————————
 {__get_information(request)}
 ———————————
@@ -82,7 +82,7 @@ def project_2():
 def project_3():
 
     message = f"""
-Движение на странице SkillPoint.
+📈 We've detected a visitor! The SkillPoint page. 
 ———————————
 {__get_information(request)}
 ———————————
