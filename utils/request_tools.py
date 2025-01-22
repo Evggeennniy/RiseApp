@@ -3,7 +3,7 @@ import requests
 
 def __get_ip_info(ip):
     try:
-        response = requests.get(f"http://ip-api.com/json/{ip}?lang=ru")
+        response = requests.get(f"http://ip-api.com/json/{ip}?lang=en")
         data = response.json()
         if data["status"] == "success":
             return f"{data['country']} 🇦🇷, {data['regionName']} 📍, {data['city']} 🌆"
