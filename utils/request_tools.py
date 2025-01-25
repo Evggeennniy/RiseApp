@@ -22,18 +22,21 @@ def __get_client_ip(request):
     return ip
 
 
-def __get_information(request):
-    ip_address = __get_client_ip(request)
-    location = __get_ip_info(ip_address)
-    user_agent = request.headers.get('User-Agent', 'Anonimous 🤷‍♂️')
-    identity = request.cookies.get('id')
+def __get_user_agent(headers):
+    return headers.get('User-Agent', 'Anonimous 🤷‍♂️')
 
-    message = f"""
-📊 Information about the request:
-🆔 ID: {identity}
-🌍 IP: {ip_address}
-📌 Location: {location}
-🖥️ Device: {user_agent}
+
+def get_request_info(request) -> dict:
+    """
+    Returns a dict with data about the request
     """
 
-    return message
+    user_ip = __get_client_ip(request)
+    user_location = __get_ip_info(user_ip)
+    user_agent = __get_user_agent(request.headers)
+
+    return {
+        'user_ip': user_ip,
+        'user_location': user_location,
+        'user_agent': user_agent
+    }

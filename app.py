@@ -1,8 +1,9 @@
 import os
-from dotenv import load_dotenv
+import uuid
 import requests
-from flask import Flask, request, render_template, url_for, send_from_directory, redirect
-from utils.request_tools import __get_information
+from dotenv import load_dotenv
+from flask import Flask, request, render_template, url_for, send_from_directory, redirect, make_response
+from utils.request_tools import get_request_info
 from utils.telegram_tools import send_telegram_message
 
 load_dotenv()
@@ -13,82 +14,82 @@ move_group_id = os.getenv("TG_MOVE_GROUP_ID")
 notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
 
 
+@app.after_request
+def after_request_handler(response):
+    if request.path.startswith('/static') \
+            or request.path.startswith('/favicon.ico') \
+            or request.path.startswith('/send-message'):
+        return response
+
+    request_uuid = request.cookies.get('uuid')
+    if not request_uuid:
+        request_uuid = uuid.uuid4()
+        response.set_cookie('uuid', str(request_uuid))
+
+    request_info = get_request_info(request)
+
+    log = f"""
+📊 Cought a move by:
+-------------------------------
+🔗 Link: {request.url}
+🆔 ID: {request_uuid}
+🌍 IP: {request_info.get('user_ip')}
+📌 Location: {request_info.get('user_location')}
+🖥️ Device: {request_info.get('user_agent')}
+-------------------------------
+"""
+
+    send_telegram_message(move_group_id, log, bot_token)
+
+    return response
+
+
 @app.route('/send-message', methods=['POST'])
 def send_message():
     if request.method != 'POST':
         return
 
-    message = f"""
-🚀 We've got a request!
-———————————
+    request_info = get_request_info(request)
+
+    log = f"""
+🚀 Got a request by:
+-------------------------------
 👤 Name: {request.form.get('person_name', 'Undefined')}
 📱 Phone: {request.form.get('person_phone', 'Undefined')}
-📱 Social Media teg: {request.form.get('contact-teg', 'Undefined')}
+📱 Email: {request.form.get('person_email', 'Undefined')}
 💬 Message: {request.form.get('person_note', 'Undefined')}
-———————————
-{__get_information(request)}
-———————————
+-------------------------------
+📊 About the request:
+-------------------------------
+🔗 Link: {request.url}
+🆔 ID: {request.cookies.get('uuid')}
+🌍 IP: {request_info.get('user_ip')}
+📌 Location: {request_info.get('user_location')}
+🖥️ Device: {request_info.get('user_agent')}
+-------------------------------
 👨🏻‍💻 RiseApp Team
 """
-
     send_telegram_message(notify_group_id, message, bot_token)
     return redirect(url_for('index'))
 
 
 @app.route('/')
 def index():
-
-    message = f"""
-📈 We've detected a visitor! The main page.
-———————————
-{__get_information(request)}
-———————————
-👨🏻‍💻 RiseApp Team
-"""
-
-    send_telegram_message(move_group_id, message, bot_token)
     return render_template('index.html')
 
 
 @app.route('/trendcity')
 def project_1():
-
-    message = f"""
-📈 We've detected a visitor! The TrendCity page.
-———————————
-{__get_information(request)}
-———————————
-👨🏻‍💻 RiseApp Team
-"""
-    send_telegram_message(move_group_id, message, bot_token)
     return render_template('trendcity.html')
 
 
 @app.route('/prolearn')
 def project_2():
-
-    message = f"""
-📈 We've detected a visitor! The Prolearn page. 
-———————————
-{__get_information(request)}
-———————————
-👨🏻‍💻 RiseApp Team
-"""
-    send_telegram_message(move_group_id, message, bot_token)
     return render_template('prolearn.html')
 
 
 @app.route('/skillpoint')
 def project_3():
-
-    message = f"""
-📈 We've detected a visitor! The SkillPoint page. 
-———————————
-{__get_information(request)}
-———————————
-👨🏻‍💻 RiseApp Team
-"""
-    send_telegram_message(move_group_id, message, bot_token)
     return render_template('skillpoint.html')
 
 
