@@ -55,9 +55,10 @@
           <input
             type="text"
             class="contacts__input"
-            placeholder="Telegram / WhatApp"
+            placeholder="@ Telegram / WhatApp / Facebook"
             name="contact-teg"
             id="contact-teg"
+            required
           />
         </div>
         <div class="contacts__input-wrapper">
@@ -68,6 +69,7 @@
             name="person_note"
           ></textarea>
         </div>
+        <input type="text" style="display: none" id="uuid-field" value="" />
         <button class="contacts__button">Надіслати</button>
       </form>
     </div>

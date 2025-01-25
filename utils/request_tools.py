@@ -6,7 +6,7 @@ def __get_ip_info(ip):
         response = requests.get(f"http://ip-api.com/json/{ip}?lang=en")
         data = response.json()
         if data["status"] == "success":
-            return f"{data['country']} 🇦🇷, {data['regionName']} 📍, {data['city']} 🌆"
+            return f"{data['country']} 🏁, region {data['regionName']} 📍, city {data['city']} 🌆"
         else:
             return "Error in determining the location 🌍"
     except Exception:
@@ -26,9 +26,11 @@ def __get_information(request):
     ip_address = __get_client_ip(request)
     location = __get_ip_info(ip_address)
     user_agent = request.headers.get('User-Agent', 'Anonimous 🤷‍♂️')
+    identity = request.cookies.get('id')
 
     message = f"""
 📊 Information about the request:
+🆔 ID: {identity}
 🌍 IP: {ip_address}
 📌 Location: {location}
 🖥️ Device: {user_agent}

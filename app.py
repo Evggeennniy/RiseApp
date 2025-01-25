@@ -32,6 +32,7 @@ def send_message():
 """
 
     send_telegram_message(notify_group_id, message, bot_token)
+
     return redirect(url_for('index'))
 
 
@@ -47,6 +48,7 @@ def index():
 """
 
     send_telegram_message(move_group_id, message, bot_token)
+
     return render_template('index.html')
 
 
@@ -61,6 +63,7 @@ def project_1():
 👨🏻‍💻 RiseApp Team
 """
     send_telegram_message(move_group_id, message, bot_token)
+
     return render_template('trendcity.html')
 
 
@@ -75,6 +78,7 @@ def project_2():
 👨🏻‍💻 RiseApp Team
 """
     send_telegram_message(move_group_id, message, bot_token)
+
     return render_template('prolearn.html')
 
 
@@ -89,6 +93,7 @@ def project_3():
 👨🏻‍💻 RiseApp Team
 """
     send_telegram_message(move_group_id, message, bot_token)
+
     return render_template('skillpoint.html')
 
 

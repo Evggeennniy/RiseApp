@@ -1,3 +1,45 @@
+function getCookie(name) {
+  let cookies = document.cookie.split("; ");
+  for (let cookie of cookies) {
+    let [cookieName, cookieValue] = cookie.split("=");
+    if (cookieName === name) {
+      return cookieValue;
+    }
+  }
+  return null;
+}
+
+function setCookie(name, value, days = 365, path = "/") {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // переводим дни в миллисекунды
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = `${name}=${value}${expires}; path=${path}`;
+
+  return value;
+}
+
+function generateUUID() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = (Math.random() * 16) | 0,
+      v = c === "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+const uuidField = document.getElementById("uuid-field");
+function identifier() {
+  let id = getCookie("id");
+
+  if (!id) id = setCookie("id", generateUUID());
+
+  uuidField.value = id;
+}
+
+identifier();
+
 // ANIMANIONS
 const animatedSlideItem = document.querySelectorAll(".animated-slide");
 function checkFade() {
