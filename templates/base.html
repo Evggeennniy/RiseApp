@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiseApp Сompany</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}?v=2.0"
+    />
+    <script
+      src="{{ url_for('static', filename='js/scripts.min.js') }}?v=2.0"
+      defer
+    ></script>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+</html>

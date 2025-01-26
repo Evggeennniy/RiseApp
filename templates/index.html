@@ -1,582 +1,539 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RiseApp Сompany</title>
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename='img/favicon.ico') }}"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/reset.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}?v=2.0"
-    />
-    <script
-      src="{{ url_for('static', filename='js/scripts.min.js') }}?v=2.0"
-      defer
-    ></script>
-  </head>
-  <body>
-    <img
-      src="{{ url_for('static', filename='img/ellipse-top.png') }}"
-      class="bg-ellipse-top"
-    />
-    <div class="page">
-      <header class="header">
-        <div class="header__wrapper container">
-          <div class="header__company">
-            <img
-              src="{{ url_for('static', filename='img/logotype.png') }}"
-              alt="logotype"
-              class="header__logo"
-            />
-            <h2 class="header__company-name">
-              <span class="company-name font--bold">Rise</span
-              ><span class="company-name">App</span>
-            </h2>
+{% extends "base.html" %} {% block content %}
+<img
+  src="{{ url_for('static', filename='img/ellipse-top.png') }}"
+  class="bg-ellipse-top"
+/>
+<div class="page">
+  <header class="header">
+    <div class="header__wrapper container">
+      <div class="header__company">
+        <img
+          src="{{ url_for('static', filename='img/logotype.png') }}"
+          alt="logotype"
+          class="header__logo"
+        />
+        <h2 class="header__company-name">
+          <span class="company-name font--bold">Rise</span
+          ><span class="company-name">App</span>
+        </h2>
+      </div>
+      <div class="header__mobnav-button">
+        <div class="header__mobnav-stick"></div>
+        <div class="header__mobnav-stick"></div>
+      </div>
+      <nav class="header__nav">
+        <a class="nav__link nav__link-portfolio nav__link--white">Портфоліо</a>
+        <div class="nav__lang">
+          <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
+          <div class="nav__lang-menu-wrapper">
+            <ul class="nav__lang-menu">
+              <li class="nav__lang-item">
+                <a class="nav__lang-link">UA</a>
+              </li>
+            </ul>
           </div>
-          <div class="header__mobnav-button">
-            <div class="header__mobnav-stick"></div>
-            <div class="header__mobnav-stick"></div>
-          </div>
-          <nav class="header__nav">
-            <a class="nav__link nav__link-portfolio nav__link--white"
-              >Портфоліо</a
-            >
-            <div class="nav__lang">
-              <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
-              <div class="nav__lang-menu-wrapper">
-                <ul class="nav__lang-menu">
-                  <li class="nav__lang-item">
-                    <a class="nav__lang-link">UA</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
         </div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="intro__wrapper container">
-            <img
-              src="{{ url_for('static', filename='img/intro_img-invisible.png') }}"
-              alt="image"
-              class="intro__img"
-            />
-            <div class="intro__info">
-              <h1 class="intro__title">Розробимо сервіс який:</h1>
-              <h1 class="intro__title font--highlight">Економить ваш час</h1>
-              <h4 class="intro__subtitle">
-                Rise.app надає послуги з 2022 року
-              </h4>
-              <button class="intro__button" id="intro-contacts-btn">
-                Консультація
-              </button>
-            </div>
-          </div>
-        </section>
-        <section class="services">
-          <div class="services__wrapper animated-slide container">
-            <div class="services__content">
-              <ul class="services__list">
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-planning.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">План</h3>
-                    <p class="services__desc">
-                      Розробимо докладний план виходячи з ваших потреб
-                    </p>
-                  </div>
-                </li>
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-design.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">Дизайн</h3>
-                    <p class="services__desc">
-                      Наші дизайнери вміють підібрати та розробити дизайн під
-                      клієнта
-                    </p>
-                  </div>
-                </li>
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-front-end.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">Фронт-Енд</h3>
-                    <p class="services__desc">
-                      Створення адаптивного інтерфейсу для будь-яких пристроїв
-                    </p>
-                  </div>
-                </li>
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-backend.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">Бeк-Енд</h3>
-                    <p class="services__desc">
-                      Ми розробимо серверні рішення будь-якої складності
-                    </p>
-                  </div>
-                </li>
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-devops.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">Девопс</h3>
-                    <p class="services__desc">
-                      Налаштовуємо серверну безпеку та їх зв'язок між собою
-                    </p>
-                  </div>
-                </li>
-                <li class="services__item">
-                  <div class="services__info">
-                    <img
-                      src="{{ url_for('static', filename='img/services-hosting.png') }}"
-                      alt="services-icon"
-                      class="services__img"
-                    />
-                    <h3 class="services__title font--bold">Хостинг</h3>
-                    <p class="services__desc">
-                      Якісний хостинг та ексклюзивні домени для вашого проекту
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="dev-steps">
-          <div
-            class="dev-steps__wrapper animated-slide slide-top-bottom container"
-          >
-            <div class="dev-steps__content">
-              <div class="dev-steps__actions">
-                <h4 class="dev-steps__subtitle font--bold">eтапи створення</h4>
-                <h2 class="dev-steps__title font--bold">
-                  <span class="font--highlight">Створення</span> вашого сайту
-                  від концепції до запуску
-                </h2>
-                <ul class="dev-steps__list">
-                  <li class="dev-steps__item animated-slide slide-left-right">
-                    <div class="dev-steps__item-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/dev-steps-design.png') }}"
-                        alt="item_img"
-                        class="dev-steps__item-img"
-                      />
-                    </div>
-                    <div class="dev-steps__item-text">
-                      <h3 class="dev-steps__item-title">
-                        Проектування та розробка інтерфейсу
-                      </h3>
-                      <p class="dev-steps__item-desc">
-                        Створення та затвердження прототипу дизайну. Адаптивна
-                        верстка під різні пристрої.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="dev-steps__item animated-slide slide-left-right">
-                    <div class="dev-steps__item-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/dev-steps-programming.png') }}"
-                        alt="item_img"
-                        class="dev-steps__item-img"
-                      />
-                    </div>
-                    <div class="dev-steps__item-text">
-                      <h3 class="dev-steps__item-title">
-                        Програмування та інтеграція
-                      </h3>
-                      <p class="dev-steps__item-desc">
-                        Розробка функціоналу та інтеграція сервісів.
-                        Налаштування API для повноцінної роботи програми.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="dev-steps__item animated-slide slide-left-right">
-                    <div class="dev-steps__item-img-wrapper">
-                      <img
-                        src="{{ url_for('static', filename='img/dev-steps-hosting.png') }}"
-                        alt="item_img"
-                        class="dev-steps__item-img"
-                      />
-                    </div>
-                    <div class="dev-steps__item-text">
-                      <h3 class="dev-steps__item-title">
-                        Тестування, хостинг та запуск
-                      </h3>
-                      <p class="dev-steps__item-desc">
-                        Тестування виявлення помилок. Розміщення, налаштування
-                        та контроль стабільності програми на хостингу.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="dev-steps__img-wrapper">
-                <img
-                  src="{{ url_for('static', filename='img/devsteps-img.png') }}"
-                  alt="devsteps-img"
-                  class="dev-steps__img"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="portfolio">
-          <div
-            class="portfolio__wrapper animated-slide slide-top-bottom container"
-          >
-            <div class="portfolio__content">
-              <div class="portfolio__intro">
-                <h2 class="portfolio__title font--highlight">RISE APP</h2>
-                <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
-              </div>
-              <div class="portfolio__projects">
-                <a
-                  href="{{ url_for('project_1') }}"
-                  class="portfolio__project-item"
-                >
-                  <h4 class="project-item__header">ТрендСіті</h4>
-                  <p class="project-item__desc">
-                    Новий український маркетплейс
-                  </p>
-                  <img
-                    src="{{ url_for('static', filename='img/trendcity.png') }}"
-                    alt="project-img"
-                    class="project-item__img"
-                  />
-                </a>
-                <a
-                  href="{{ url_for('project_2') }}"
-                  class="portfolio__project-item"
-                >
-                  <h4 class="project-item__header">ProLearn</h4>
-                  <p class="project-item__desc">Українська онлайн школа</p>
-                  <img
-                    src="{{ url_for('static', filename='img/prolearn.png') }}"
-                    alt="project-img"
-                    class="project-item__img"
-                  />
-                </a>
-                <a
-                  href="{{ url_for('project_3') }}"
-                  class="portfolio__project-item"
-                >
-                  <h4 class="project-item__header">SkillPoint</h4>
-                  <p class="project-item__desc">Онлайн найм репетиторів</p>
-                  <img
-                    src="{{ url_for('static', filename='img/skillpoint.png') }}"
-                    alt="project-img"
-                    class="project-item__img"
-                  />
-                </a>
-              </div>
-              <img
-                src="{{ url_for('static', filename='img/portfolio-pc.png') }}"
-                class="portfolio__img portfolio__img-pc"
-              />
-              <img
-                src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
-                class="portfolio__img portfolio__img-mob"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section class="aboutus">
-          <div class="aboutus__wrapper container">
-            <h2 class="aboutus__title">
-              Про <span class="font--highlight">RiseApp</span>
-            </h2>
-            <div class="aboutus__info">
-              <div class="aboutus__item">
-                <div class="aboutus__item__img-wrap">
-                  <img
-                    src="{{ url_for('static', filename='img/aboutus-1.png') }}"
-                    alt="icon"
-                    class="aboutus__item-icon"
-                  />
-                </div>
-                <h4 class="aboutus__item-title font--highlight">
-                  Досвід та надійність
-                </h4>
-                <p class="aboutus__item-subtitle">
-                  Працюємо на ринку веб-розробки понад два роки, знаходячи
-                  найкращі рішення для будь-яких завдань.
-                </p>
-              </div>
-              <div class="aboutus__item">
-                <div class="aboutus__item__img-wrap">
-                  <img
-                    src="{{ url_for('static', filename='img/aboutus-2.png') }}"
-                    alt="icon"
-                    class="aboutus__item-icon"
-                  />
-                </div>
-                <h4 class="aboutus__item-title font--highlight">
-                  Індивідуальний підхід
-                </h4>
-                <p class="aboutus__item-subtitle">
-                  Кожному проекту ми підходимо з увагою до деталей та враховуємо
-                  всі потреби клієнта.
-                </p>
-              </div>
-              <div class="aboutus__item">
-                <div class="aboutus__item__img-wrap">
-                  <img
-                    src="{{ url_for('static', filename='img/aboutus-3.png') }}"
-                    alt="icon"
-                    class="aboutus__item-icon"
-                  />
-                </div>
-                <h4 class="aboutus__item-title font--highlight">
-                  Сучасні технології
-                </h4>
-                <p class="aboutus__item-subtitle">
-                  Ми використовуємо найсучасніші технології для створення
-                  актуальних сайтів.
-                </p>
-              </div>
-            </div>
-            <h2 class="aboutus__title">
-              Відгуки <span class="font--highlight">клієнтів</span>
-            </h2>
-            <div class="aboutus__reviews">
-              <div class="aboutus__reviews-item">
-                <div class="aboutus__reviews-message">
-                  <img
-                    src="{{ url_for('static', filename='img/logotype.png') }}"
-                    alt="icon"
-                    class="aboutus__reviews-icon"
-                  />
-                  <p class="aboutus__reviews-text">
-                    Працювати з цією командою було легко та приємно. Вони дійсно
-                    розуміються на тому, що роблять. Мій сайт тепер виглядає
-                    стильно та функціонує на відмінно.
-                  </p>
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="24"
-                  viewBox="0 0 30 24"
-                  class="aboutus__reviews-triangle"
-                  fill="none"
-                >
-                  <path
-                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                    fill="url(#paint0_linear_3297_169)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_3297_169"
-                      x1="30"
-                      y1="0"
-                      x2="0"
-                      y2="0"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#504BC9" />
-                      <stop offset="1" stop-color="#4E49C7" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div class="aboutus__reviews-user">
-                  <img
-                    src="{{ url_for('static', filename='img/client-img-1.png') }}"
-                    alt="user-img"
-                    class="aboutus__reviews-userimg"
-                  />
-                  <div class="aboutus__reviews-userinfo">
-                    <h4 class="aboutus__reviews-username">Анастасія Карпова</h4>
-                    <p class="aboutus__reviews-userorder">
-                      Замовлення укр. маркетплейс
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="aboutus__reviews-item">
-                <div class="aboutus__reviews-message">
-                  <img
-                    src="{{ url_for('static', filename='img/logotype.png') }}"
-                    alt="icon"
-                    class="aboutus__reviews-icon"
-                  />
-                  <p class="aboutus__reviews-text">
-                    Отличный сервис и великолепное отношение к клиентам! Все
-                    было сделано вовремя) Если вам нужен качественный сайт, не
-                    раздумывайте — заказывайте здесь!
-                  </p>
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="24"
-                  viewBox="0 0 30 24"
-                  class="aboutus__reviews-triangle"
-                  fill="none"
-                >
-                  <path
-                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                    fill="url(#paint0_linear_3297_169)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_3297_169"
-                      x1="30"
-                      y1="0"
-                      x2="0"
-                      y2="0"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#504BC9" />
-                      <stop offset="1" stop-color="#4E49C7" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div class="aboutus__reviews-user">
-                  <img
-                    src="{{ url_for('static', filename='img/client-img-2.png') }}"
-                    alt="user-img"
-                    class="aboutus__reviews-userimg"
-                  />
-                  <div class="aboutus__reviews-userinfo">
-                    <h4 class="aboutus__reviews-username">Василь Корелин</h4>
-                    <p class="aboutus__reviews-userorder">
-                      Фото галерея міста Суми
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="aboutus__reviews-item">
-                <div class="aboutus__reviews-message">
-                  <img
-                    src="{{ url_for('static', filename='img/logotype.png') }}"
-                    alt="icon"
-                    class="aboutus__reviews-icon"
-                  />
-                  <p class="aboutus__reviews-text">
-                    Завдяки Rise клієнти легко знаходять товари та оформляють
-                    замовлення. Врахували всі побажання, завжди були на зв’язку
-                    і швидко вносили правки. Рекомендуемо.
-                  </p>
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="24"
-                  viewBox="0 0 30 24"
-                  class="aboutus__reviews-triangle"
-                  fill="none"
-                >
-                  <path
-                    d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                    fill="url(#paint0_linear_3297_169)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_3297_169"
-                      x1="30"
-                      y1="0"
-                      x2="0"
-                      y2="0"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#504BC9" />
-                      <stop offset="1" stop-color="#4E49C7" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div class="aboutus__reviews-user">
-                  <img
-                    src="{{ url_for('static', filename='img/client-img-3.png') }}"
-                    alt="user-img"
-                    class="aboutus__reviews-userimg"
-                  />
-                  <div class="aboutus__reviews-userinfo">
-                    <h4 class="aboutus__reviews-username">
-                      Компанія VerginCity
-                    </h4>
-                    <p class="aboutus__reviews-userorder">
-                      Сайт мережі буд. магазинів
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="facts">
-          <div class="facts__wrapper container">
-            <img
-              src="{{ url_for('static', filename='img/facts-pc.png') }}"
-              alt="img"
-              class="facts__img-pc facts__img"
-            />
-            <img
-              src="{{ url_for('static', filename='img/facts-mob.png') }}"
-              alt="img"
-              class="facts__img-mob facts__img"
-            />
-          </div>
-        </section>
-        <section class="aboutus">
-          <h4 class="aboutus__subtitle">контакти</h4>
-          <h2 class="aboutus__title">
-            Для <span class="font--highlight">безкоштовної</span> консультації
-          </h2>
-          <p class="aboutus__subtitle">
-            зв'яжіться з нами будь-яким зручним для вас методом
-          </p>
-          <div class="aboutus__contacts">
-            <a
-              href="https://www.instagram.com/rise.app.software?igsh=MWdjbHExc2dvZzhueQ=="
-              target="_blank"
-              class="aboutus__contact-link"
-              >Instagram</a
-            >
-            <a
-              href="https://t.me/riseapp_support"
-              target="_blank"
-              class="aboutus__contact-link"
-              >Telegram</a
-            >
-          </div>
-        </section>
-        {% include 'form.html' %} {% include 'form-finder.html' %}
-      </main>
-      <footer class="footer">
-        <div class="footer__wrapper">
-          <h2 class="footer__title font--highlight">RISE APP</h2>
-          <div class="footer__line"></div>
-          <p class="footer__subtitle">The company was founded in 2022.</p>
-        </div>
-      </footer>
+      </nav>
     </div>
-  </body>
-</html>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="intro__wrapper container">
+        <img
+          src="{{ url_for('static', filename='img/intro_img-invisible.png') }}"
+          alt="image"
+          class="intro__img"
+        />
+        <div class="intro__info">
+          <h1 class="intro__title">Розробимо сервіс який:</h1>
+          <h1 class="intro__title font--highlight">Економить ваш час</h1>
+          <h4 class="intro__subtitle">Rise.app надає послуги з 2022 року</h4>
+          <button class="intro__button" id="intro-contacts-btn">
+            Консультація
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services__wrapper animated-slide container">
+        <div class="services__content">
+          <ul class="services__list">
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-planning.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">План</h3>
+                <p class="services__desc">
+                  Розробимо докладний план виходячи з ваших потреб
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-design.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">Дизайн</h3>
+                <p class="services__desc">
+                  Наші дизайнери вміють підібрати та розробити дизайн під
+                  клієнта
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-front-end.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">Фронт-Енд</h3>
+                <p class="services__desc">
+                  Створення адаптивного інтерфейсу для будь-яких пристроїв
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-backend.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">Бeк-Енд</h3>
+                <p class="services__desc">
+                  Ми розробимо серверні рішення будь-якої складності
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-devops.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">Девопс</h3>
+                <p class="services__desc">
+                  Налаштовуємо серверну безпеку та їх зв'язок між собою
+                </p>
+              </div>
+            </li>
+            <li class="services__item">
+              <div class="services__info">
+                <img
+                  src="{{ url_for('static', filename='img/services-hosting.png') }}"
+                  alt="services-icon"
+                  class="services__img"
+                />
+                <h3 class="services__title font--bold">Хостинг</h3>
+                <p class="services__desc">
+                  Якісний хостинг та ексклюзивні домени для вашого проекту
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="dev-steps">
+      <div class="dev-steps__wrapper animated-slide slide-top-bottom container">
+        <div class="dev-steps__content">
+          <div class="dev-steps__actions">
+            <h4 class="dev-steps__subtitle font--bold">eтапи створення</h4>
+            <h2 class="dev-steps__title font--bold">
+              <span class="font--highlight">Створення</span> вашого сайту від
+              концепції до запуску
+            </h2>
+            <ul class="dev-steps__list">
+              <li class="dev-steps__item animated-slide slide-left-right">
+                <div class="dev-steps__item-img-wrapper">
+                  <img
+                    src="{{ url_for('static', filename='img/dev-steps-design.png') }}"
+                    alt="item_img"
+                    class="dev-steps__item-img"
+                  />
+                </div>
+                <div class="dev-steps__item-text">
+                  <h3 class="dev-steps__item-title">
+                    Проектування та розробка інтерфейсу
+                  </h3>
+                  <p class="dev-steps__item-desc">
+                    Створення та затвердження прототипу дизайну. Адаптивна
+                    верстка під різні пристрої.
+                  </p>
+                </div>
+              </li>
+              <li class="dev-steps__item animated-slide slide-left-right">
+                <div class="dev-steps__item-img-wrapper">
+                  <img
+                    src="{{ url_for('static', filename='img/dev-steps-programming.png') }}"
+                    alt="item_img"
+                    class="dev-steps__item-img"
+                  />
+                </div>
+                <div class="dev-steps__item-text">
+                  <h3 class="dev-steps__item-title">
+                    Програмування та інтеграція
+                  </h3>
+                  <p class="dev-steps__item-desc">
+                    Розробка функціоналу та інтеграція сервісів. Налаштування
+                    API для повноцінної роботи програми.
+                  </p>
+                </div>
+              </li>
+              <li class="dev-steps__item animated-slide slide-left-right">
+                <div class="dev-steps__item-img-wrapper">
+                  <img
+                    src="{{ url_for('static', filename='img/dev-steps-hosting.png') }}"
+                    alt="item_img"
+                    class="dev-steps__item-img"
+                  />
+                </div>
+                <div class="dev-steps__item-text">
+                  <h3 class="dev-steps__item-title">
+                    Тестування, хостинг та запуск
+                  </h3>
+                  <p class="dev-steps__item-desc">
+                    Тестування виявлення помилок. Розміщення, налаштування та
+                    контроль стабільності програми на хостингу.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dev-steps__img-wrapper">
+            <img
+              src="{{ url_for('static', filename='img/devsteps-img.png') }}"
+              alt="devsteps-img"
+              class="dev-steps__img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="portfolio__wrapper animated-slide slide-top-bottom container">
+        <div class="portfolio__content">
+          <div class="portfolio__intro">
+            <h2 class="portfolio__title font--highlight">RISE APP</h2>
+            <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
+          </div>
+          <div class="portfolio__projects">
+            <a
+              href="{{ url_for('project_1') }}"
+              class="portfolio__project-item"
+            >
+              <h4 class="project-item__header">ТрендСіті</h4>
+              <p class="project-item__desc">Новий український маркетплейс</p>
+              <img
+                src="{{ url_for('static', filename='img/trendcity.png') }}"
+                alt="project-img"
+                class="project-item__img"
+              />
+            </a>
+            <a
+              href="{{ url_for('project_2') }}"
+              class="portfolio__project-item"
+            >
+              <h4 class="project-item__header">ProLearn</h4>
+              <p class="project-item__desc">Українська онлайн школа</p>
+              <img
+                src="{{ url_for('static', filename='img/prolearn.png') }}"
+                alt="project-img"
+                class="project-item__img"
+              />
+            </a>
+            <a
+              href="{{ url_for('project_3') }}"
+              class="portfolio__project-item"
+            >
+              <h4 class="project-item__header">SkillPoint</h4>
+              <p class="project-item__desc">Онлайн найм репетиторів</p>
+              <img
+                src="{{ url_for('static', filename='img/skillpoint.png') }}"
+                alt="project-img"
+                class="project-item__img"
+              />
+            </a>
+          </div>
+          <img
+            src="{{ url_for('static', filename='img/portfolio-pc.png') }}"
+            class="portfolio__img portfolio__img-pc"
+          />
+          <img
+            src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
+            class="portfolio__img portfolio__img-mob"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="aboutus">
+      <div class="aboutus__wrapper container">
+        <h2 class="aboutus__title">
+          Про <span class="font--highlight">RiseApp</span>
+        </h2>
+        <div class="aboutus__info">
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img
+                src="{{ url_for('static', filename='img/aboutus-1.png') }}"
+                alt="icon"
+                class="aboutus__item-icon"
+              />
+            </div>
+            <h4 class="aboutus__item-title font--highlight">
+              Досвід та надійність
+            </h4>
+            <p class="aboutus__item-subtitle">
+              Працюємо на ринку веб-розробки понад два роки, знаходячи найкращі
+              рішення для будь-яких завдань.
+            </p>
+          </div>
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img
+                src="{{ url_for('static', filename='img/aboutus-2.png') }}"
+                alt="icon"
+                class="aboutus__item-icon"
+              />
+            </div>
+            <h4 class="aboutus__item-title font--highlight">
+              Індивідуальний підхід
+            </h4>
+            <p class="aboutus__item-subtitle">
+              Кожному проекту ми підходимо з увагою до деталей та враховуємо всі
+              потреби клієнта.
+            </p>
+          </div>
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img
+                src="{{ url_for('static', filename='img/aboutus-3.png') }}"
+                alt="icon"
+                class="aboutus__item-icon"
+              />
+            </div>
+            <h4 class="aboutus__item-title font--highlight">
+              Сучасні технології
+            </h4>
+            <p class="aboutus__item-subtitle">
+              Ми використовуємо найсучасніші технології для створення актуальних
+              сайтів.
+            </p>
+          </div>
+        </div>
+        <h2 class="aboutus__title">
+          Відгуки <span class="font--highlight">клієнтів</span>
+        </h2>
+        <div class="aboutus__reviews">
+          <div class="aboutus__reviews-item">
+            <div class="aboutus__reviews-message">
+              <img
+                src="{{ url_for('static', filename='img/logotype.png') }}"
+                alt="icon"
+                class="aboutus__reviews-icon"
+              />
+              <p class="aboutus__reviews-text">
+                Працювати з цією командою було легко та приємно. Вони дійсно
+                розуміються на тому, що роблять. Мій сайт тепер виглядає стильно
+                та функціонує на відмінно.
+              </p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="24"
+              viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle"
+              fill="none"
+            >
+              <path
+                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3297_169"
+                  x1="30"
+                  y1="0"
+                  x2="0"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#504BC9" />
+                  <stop offset="1" stop-color="#4E49C7" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="aboutus__reviews-user">
+              <img
+                src="{{ url_for('static', filename='img/client-img-1.png') }}"
+                alt="user-img"
+                class="aboutus__reviews-userimg"
+              />
+              <div class="aboutus__reviews-userinfo">
+                <h4 class="aboutus__reviews-username">Анастасія Карпова</h4>
+                <p class="aboutus__reviews-userorder">
+                  Замовлення укр. маркетплейс
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus__reviews-item">
+            <div class="aboutus__reviews-message">
+              <img
+                src="{{ url_for('static', filename='img/logotype.png') }}"
+                alt="icon"
+                class="aboutus__reviews-icon"
+              />
+              <p class="aboutus__reviews-text">
+                Отличный сервис и великолепное отношение к клиентам! Все было
+                сделано вовремя) Если вам нужен качественный сайт, не
+                раздумывайте — заказывайте здесь!
+              </p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="24"
+              viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle"
+              fill="none"
+            >
+              <path
+                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3297_169"
+                  x1="30"
+                  y1="0"
+                  x2="0"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#504BC9" />
+                  <stop offset="1" stop-color="#4E49C7" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="aboutus__reviews-user">
+              <img
+                src="{{ url_for('static', filename='img/client-img-2.png') }}"
+                alt="user-img"
+                class="aboutus__reviews-userimg"
+              />
+              <div class="aboutus__reviews-userinfo">
+                <h4 class="aboutus__reviews-username">Василь Корелин</h4>
+                <p class="aboutus__reviews-userorder">
+                  Фото галерея міста Суми
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus__reviews-item">
+            <div class="aboutus__reviews-message">
+              <img
+                src="{{ url_for('static', filename='img/logotype.png') }}"
+                alt="icon"
+                class="aboutus__reviews-icon"
+              />
+              <p class="aboutus__reviews-text">
+                Завдяки Rise клієнти легко знаходять товари та оформляють
+                замовлення. Врахували всі побажання, завжди були на зв’язку і
+                швидко вносили правки. Рекомендуемо.
+              </p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="24"
+              viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle"
+              fill="none"
+            >
+              <path
+                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3297_169"
+                  x1="30"
+                  y1="0"
+                  x2="0"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#504BC9" />
+                  <stop offset="1" stop-color="#4E49C7" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="aboutus__reviews-user">
+              <img
+                src="{{ url_for('static', filename='img/client-img-3.png') }}"
+                alt="user-img"
+                class="aboutus__reviews-userimg"
+              />
+              <div class="aboutus__reviews-userinfo">
+                <h4 class="aboutus__reviews-username">Компанія VerginCity</h4>
+                <p class="aboutus__reviews-userorder">
+                  Сайт мережі буд. магазинів
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="facts">
+      <div class="facts__wrapper container">
+        <img
+          src="{{ url_for('static', filename='img/facts-pc.png') }}"
+          alt="img"
+          class="facts__img-pc facts__img"
+        />
+        <img
+          src="{{ url_for('static', filename='img/facts-mob.png') }}"
+          alt="img"
+          class="facts__img-mob facts__img"
+        />
+      </div>
+    </section>
+    <section class="aboutus">
+      <h4 class="aboutus__subtitle">контакти</h4>
+      <h2 class="aboutus__title">
+        Для <span class="font--highlight">безкоштовної</span> консультації
+      </h2>
+      <p class="aboutus__subtitle">
+        зв'яжіться з нами будь-яким зручним для вас методом
+      </p>
+      <div class="aboutus__contacts">
+        <a
+          href="https://www.instagram.com/rise.app.software?igsh=MWdjbHExc2dvZzhueQ=="
+          target="_blank"
+          class="aboutus__contact-link"
+          >Instagram</a
+        >
+        <a
+          href="https://t.me/riseapp_support"
+          target="_blank"
+          class="aboutus__contact-link"
+          >Telegram</a
+        >
+      </div>
+    </section>
+    {% include 'form.html' %} {% include 'form-finder.html' %}
+  </main>
+  {% include 'footer.html' %}
+</div>
+{% endblock %}

@@ -1,277 +1,246 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RiseApp Сompany</title>
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename='img/favicon.ico') }}"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/reset.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}?v=2.0"
-    />
-    <script
-      src="{{ url_for('static', filename='js/scripts.min.js') }}?v=2.0"
-      defer
-    ></script>
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <div class="header__wrapper container">
-          <div class="header__company">
-            <img
-              src="{{ url_for('static', filename='img/logotype.png') }}"
-              alt="logotype"
-              class="header__logo"
-            />
-            <h2 class="header__company-name">
-              <span class="company-name font--bold">Rise</span
-              ><span class="company-name">App</span>
-            </h2>
+{% extends "base.html" %} {% block content %}
+<div class="page">
+  <header class="header">
+    <div class="header__wrapper container">
+      <div class="header__company">
+        <img
+          src="{{ url_for('static', filename='img/logotype.png') }}"
+          alt="logotype"
+          class="header__logo"
+        />
+        <h2 class="header__company-name">
+          <span class="company-name font--bold">Rise</span
+          ><span class="company-name">App</span>
+        </h2>
+      </div>
+      <div class="header__mobnav-button">
+        <div class="header__mobnav-stick"></div>
+        <div class="header__mobnav-stick"></div>
+      </div>
+      <nav class="header__nav">
+        <a class="nav__link nav__link-portfolio nav__link--white">Портфоліо</a>
+        <div class="nav__lang">
+          <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
+          <div class="nav__lang-menu-wrapper">
+            <ul class="nav__lang-menu">
+              <li class="nav__lang-item">
+                <a class="nav__lang-link">UA</a>
+              </li>
+            </ul>
           </div>
-          <div class="header__mobnav-button">
-            <div class="header__mobnav-stick"></div>
-            <div class="header__mobnav-stick"></div>
-          </div>
-          <nav class="header__nav">
-            <a class="nav__link nav__link-portfolio nav__link--white"
-              >Портфоліо</a
-            >
-            <div class="nav__lang">
-              <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
-              <div class="nav__lang-menu-wrapper">
-                <ul class="nav__lang-menu">
-                  <li class="nav__lang-item">
-                    <a class="nav__lang-link">UA</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
         </div>
-      </header>
-      <main>
-        <section class="details__intro animated-slide slide-bottom-top">
-          <div class="intro-wrapper container">
-            <div class="intro-textpart">
-              <h4 class="intro-header">Проект 24-го року</h4>
-              <h2 class="intro-title">ProLearn</h2>
-              <h2 class="intro-name">Українська онлайн школа</h2>
-              <h4 class="intro-description">
-                Сучасний український сайт онлайн-курсів для швидкого освоєння
-                нових професій. Платформа пропонує понад 200 курсів у сферах
-                програмування, дизайну, маркетингу та інших напрямків
-              </h4>
-            </div>
-            <div class="intro-imgpart">
-              <img
-                src="{{ url_for('static', filename='img/prolearn-detailts.png') }}"
-                alt="details-img"
-                class="intro-img"
-              />
-            </div>
-          </div>
-        </section>
-        <section class="advantages">
-          <div class="advantages__wrapper container">
-            <div class="advantages__list">
-              <div class="advantages__item">
-                <h4 class="advantages__title">Доступність і зрозумілість</h4>
-                <p class="advantages__description">
-                  Створення інтуїтивно зрозумілий інтерфейс, щоб користувачі
-                  легко знаходили потрібні курси.
-                </p>
-              </div>
-              <div class="advantages__item">
-                <h4 class="advantages__title">Мотивація до навчання</h4>
-                <p class="advantages__description">
-                  Заохочуючий дизайн, демонстрація переваги курсів через
-                  візуальну презентацію та чіткі блоки інформ.
-                </p>
-              </div>
-              <div class="advantages__item">
-                <h4 class="advantages__title">Довіра до платформи</h4>
-                <p class="advantages__description">
-                  Підкреслення професіоналізму викладачів і надійність
-                  сертифікатів додаючи відгуки та статистику.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__wrapper container">
-            <img
-              src="{{ url_for('static', filename='img/prolearn-pc.png') }}"
-              alt="project-img"
-              class="project__img prolearn-pc"
-            />
-          </div>
-        </section>
-        <section class="properties">
-          <div class="properties__wrapper container">
-            <div class="properties__list">
-              <div class="properties__item">
-                <div class="properties__item-wrap">
-                  <p class="properties__item-title">
-                    <span class="properties__name">Вартість розробки:</span>
-                    <span class="properties__value">1740 $</span>
-                  </p>
-                </div>
-              </div>
-              <div class="properties__item">
-                <div
-                  class="properties__item-wrap properties__item-wrap--filled"
-                >
-                  <p class="properties__item-title">
-                    <span class="properties__name">Час розробки:</span>
-                    <span class="properties__value">27 днів</span>
-                  </p>
-                </div>
-              </div>
-              <div class="properties__item">
-                <div class="properties__item-wrap">
-                  <p class="properties__item-title">
-                    <span class="properties__name">SEO-оптимізація:</span>
-                    <span class="properties__value">Включена</span>
-                  </p>
-                </div>
-              </div>
-              <div class="properties__item">
-                <div class="properties__item-wrap">
-                  <p class="properties__item-title">
-                    <span class="properties__name">Технічна підтримка:</span>
-                    <span class="properties__value">12 месяцев</span>
-                  </p>
-                </div>
-              </div>
-              <div class="properties__item">
-                <div class="properties__item-wrap">
-                  <p class="properties__item-title">
-                    <span class="properties__name"
-                      >Адміністративна панель:</span
-                    >
-                    <span class="properties__value">Так</span>
-                  </p>
-                </div>
-              </div>
-              <div class="properties__item">
-                <div class="properties__item-wrap">
-                  <p class="properties__item-title">
-                    <span class="properties__name">Кількість сторінок:</span>
-                    <span class="properties__value">8</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__wrapper container">
-            <img
-              src="{{ url_for('static', filename='img/prolearn-mobile.png') }}"
-              alt="project-img"
-              class="project__img prolearn-mobile"
-            />
-          </div>
-        </section>
-
-        <section class="results">
-          <div class="results__wrapper container">
-            <div class="results__list">
-              <div class="results__item">
-                <h3 class="results__title">
-                  Головні <span class="gray-text">показники</span> пректу
-                </h3>
-                <h4 class="results__subtitle">
-                  Rise app збільшує показники продажів проектів
-                </h4>
-              </div>
-
-              <div class="results__item results__item--highlight">
-                <div class="results__header">
-                  <img
-                    src="{{ url_for('static', filename='img/3.svg') }}"
-                    alt="header-icon"
-                    class="results__header-icon"
-                  />
-
-                  <h4 class="results__header-text">UX/UI дизайн</h4>
-                </div>
-                <p class="results__desc">
-                  Інтерфейс дозволяє легко знаходити курси та орієнтуватися.
-                </p>
-              </div>
-              <div class="results__item">
-                <div class="results__header">
-                  <img
-                    src="{{ url_for('static', filename='img/3.svg') }}"
-                    alt="header-icon"
-                    class="results__header-icon"
-                  />
-
-                  <h4 class="results__header-text">Адаптивність</h4>
-                </div>
-                <p class="results__desc">
-                  Сайт адаптивно працює що збільшую мобільний трафік.
-                </p>
-              </div>
-              <div class="results__item">
-                <div class="results__header">
-                  <img
-                    src="{{ url_for('static', filename='img/8.svg') }}"
-                    alt="header-icon"
-                    class="results__header-icon"
-                  />
-
-                  <h4 class="results__header-text">Оптимізація швидкості</h4>
-                </div>
-                <p class="results__desc">
-                  Відгук у частку секунди завдяки сучасним технологіям
-                </p>
-              </div>
-              <div class="results__item">
-                <div class="results__header">
-                  <img
-                    src="{{ url_for('static', filename='img/6.svg') }}"
-                    alt="header-icon"
-                    class="results__header-icon"
-                  />
-
-                  <h4 class="results__header-text">Зручність функцій</h4>
-                </div>
-                <p class="results__desc">
-                  Додано особистий кабінет, блок з відгуками та систему
-                  сертифікації.
-                </p>
-              </div>
-              <div class="results__item">
-                <div class="results__header">
-                  <img
-                    src="{{ url_for('static', filename='img/7.svg') }}"
-                    alt="header-icon"
-                    class="results__header-icon"
-                  />
-                  <h4 class="results__header-text">Збільшення конверсій</h4>
-                </div>
-                <p class="results__desc">
-                  Спрощена навігація збільшує кількість реєстрацій та покупок.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        {% include 'form.html' %} {% include 'form-finder.html' %}
-      </main>
-      {% include 'footer.html' %}
+      </nav>
     </div>
-  </body>
-</html>
+  </header>
+  <main>
+    <section class="details__intro animated-slide slide-bottom-top">
+      <div class="intro-wrapper container">
+        <div class="intro-textpart">
+          <h4 class="intro-header">Проект 24-го року</h4>
+          <h2 class="intro-title">ProLearn</h2>
+          <h2 class="intro-name">Українська онлайн школа</h2>
+          <h4 class="intro-description">
+            Сучасний український сайт онлайн-курсів для швидкого освоєння нових
+            професій. Платформа пропонує понад 200 курсів у сферах
+            програмування, дизайну, маркетингу та інших напрямків
+          </h4>
+        </div>
+        <div class="intro-imgpart">
+          <img
+            src="{{ url_for('static', filename='img/prolearn-detailts.png') }}"
+            alt="details-img"
+            class="intro-img"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper container">
+        <div class="advantages__list">
+          <div class="advantages__item">
+            <h4 class="advantages__title">Доступність і зрозумілість</h4>
+            <p class="advantages__description">
+              Створення інтуїтивно зрозумілий інтерфейс, щоб користувачі легко
+              знаходили потрібні курси.
+            </p>
+          </div>
+          <div class="advantages__item">
+            <h4 class="advantages__title">Мотивація до навчання</h4>
+            <p class="advantages__description">
+              Заохочуючий дизайн, демонстрація переваги курсів через візуальну
+              презентацію та чіткі блоки інформ.
+            </p>
+          </div>
+          <div class="advantages__item">
+            <h4 class="advantages__title">Довіра до платформи</h4>
+            <p class="advantages__description">
+              Підкреслення професіоналізму викладачів і надійність сертифікатів
+              додаючи відгуки та статистику.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="project">
+      <div class="project__wrapper container">
+        <img
+          src="{{ url_for('static', filename='img/prolearn-pc.png') }}"
+          alt="project-img"
+          class="project__img prolearn-pc"
+        />
+      </div>
+    </section>
+    <section class="properties">
+      <div class="properties__wrapper container">
+        <div class="properties__list">
+          <div class="properties__item">
+            <div class="properties__item-wrap">
+              <p class="properties__item-title">
+                <span class="properties__name">Вартість розробки:</span>
+                <span class="properties__value">1740 $</span>
+              </p>
+            </div>
+          </div>
+          <div class="properties__item">
+            <div class="properties__item-wrap properties__item-wrap--filled">
+              <p class="properties__item-title">
+                <span class="properties__name">Час розробки:</span>
+                <span class="properties__value">27 днів</span>
+              </p>
+            </div>
+          </div>
+          <div class="properties__item">
+            <div class="properties__item-wrap">
+              <p class="properties__item-title">
+                <span class="properties__name">SEO-оптимізація:</span>
+                <span class="properties__value">Включена</span>
+              </p>
+            </div>
+          </div>
+          <div class="properties__item">
+            <div class="properties__item-wrap">
+              <p class="properties__item-title">
+                <span class="properties__name">Технічна підтримка:</span>
+                <span class="properties__value">12 месяцев</span>
+              </p>
+            </div>
+          </div>
+          <div class="properties__item">
+            <div class="properties__item-wrap">
+              <p class="properties__item-title">
+                <span class="properties__name">Адміністративна панель:</span>
+                <span class="properties__value">Так</span>
+              </p>
+            </div>
+          </div>
+          <div class="properties__item">
+            <div class="properties__item-wrap">
+              <p class="properties__item-title">
+                <span class="properties__name">Кількість сторінок:</span>
+                <span class="properties__value">8</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="project">
+      <div class="project__wrapper container">
+        <img
+          src="{{ url_for('static', filename='img/prolearn-mobile.png') }}"
+          alt="project-img"
+          class="project__img prolearn-mobile"
+        />
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="results__wrapper container">
+        <div class="results__list">
+          <div class="results__item">
+            <h3 class="results__title">
+              Головні <span class="gray-text">показники</span> пректу
+            </h3>
+            <h4 class="results__subtitle">
+              Rise app збільшує показники продажів проектів
+            </h4>
+          </div>
+
+          <div class="results__item results__item--highlight">
+            <div class="results__header">
+              <img
+                src="{{ url_for('static', filename='img/3.svg') }}"
+                alt="header-icon"
+                class="results__header-icon"
+              />
+
+              <h4 class="results__header-text">UX/UI дизайн</h4>
+            </div>
+            <p class="results__desc">
+              Інтерфейс дозволяє легко знаходити курси та орієнтуватися.
+            </p>
+          </div>
+          <div class="results__item">
+            <div class="results__header">
+              <img
+                src="{{ url_for('static', filename='img/3.svg') }}"
+                alt="header-icon"
+                class="results__header-icon"
+              />
+
+              <h4 class="results__header-text">Адаптивність</h4>
+            </div>
+            <p class="results__desc">
+              Сайт адаптивно працює що збільшую мобільний трафік.
+            </p>
+          </div>
+          <div class="results__item">
+            <div class="results__header">
+              <img
+                src="{{ url_for('static', filename='img/8.svg') }}"
+                alt="header-icon"
+                class="results__header-icon"
+              />
+
+              <h4 class="results__header-text">Оптимізація швидкості</h4>
+            </div>
+            <p class="results__desc">
+              Відгук у частку секунди завдяки сучасним технологіям
+            </p>
+          </div>
+          <div class="results__item">
+            <div class="results__header">
+              <img
+                src="{{ url_for('static', filename='img/6.svg') }}"
+                alt="header-icon"
+                class="results__header-icon"
+              />
+
+              <h4 class="results__header-text">Зручність функцій</h4>
+            </div>
+            <p class="results__desc">
+              Додано особистий кабінет, блок з відгуками та систему
+              сертифікації.
+            </p>
+          </div>
+          <div class="results__item">
+            <div class="results__header">
+              <img
+                src="{{ url_for('static', filename='img/7.svg') }}"
+                alt="header-icon"
+                class="results__header-icon"
+              />
+              <h4 class="results__header-text">Збільшення конверсій</h4>
+            </div>
+            <p class="results__desc">
+              Спрощена навігація збільшує кількість реєстрацій та покупок.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include 'form.html' %} {% include 'form-finder.html' %}
+  </main>
+  {% include 'footer.html' %}
+</div>
+{% endblock %}
