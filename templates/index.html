@@ -4,38 +4,7 @@
   class="bg-ellipse-top"
 />
 <div class="page">
-  <header class="header">
-    <div class="header__wrapper container">
-      <div class="header__company">
-        <img
-          src="{{ url_for('static', filename='img/logotype.png') }}"
-          alt="logotype"
-          class="header__logo"
-        />
-        <h2 class="header__company-name">
-          <span class="company-name font--bold">Rise</span
-          ><span class="company-name">App</span>
-        </h2>
-      </div>
-      <div class="header__mobnav-button">
-        <div class="header__mobnav-stick"></div>
-        <div class="header__mobnav-stick"></div>
-      </div>
-      <nav class="header__nav">
-        <a class="nav__link nav__link-portfolio nav__link--white">Портфоліо</a>
-        <div class="nav__lang">
-          <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
-          <div class="nav__lang-menu-wrapper">
-            <ul class="nav__lang-menu">
-              <li class="nav__lang-item">
-                <a class="nav__lang-link">UA</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  {% include 'header.html' %}
   <main>
     <section class="intro">
       <div class="intro__wrapper container">
@@ -45,11 +14,13 @@
           class="intro__img"
         />
         <div class="intro__info">
-          <h1 class="intro__title">Розробимо сервіс який:</h1>
-          <h1 class="intro__title font--highlight">Економить ваш час</h1>
-          <h4 class="intro__subtitle">Rise.app надає послуги з 2022 року</h4>
+          <h1 class="intro__title">{{ _('Web Solutions') }}</h1>
+          <h2 class="intro__title font--highlight">
+            {{ _('That Will Increase Your Income') }}
+          </h2>
+          <h4 class="intro__subtitle">{{ _('Established since 2022') }}</h4>
           <button class="intro__button" id="intro-contacts-btn">
-            Консультація
+            {{ _('Inquiry') }}
           </button>
         </div>
       </div>
@@ -65,9 +36,9 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">План</h3>
+                <h3 class="services__title font--bold">{{ _('Plan') }}</h3>
                 <p class="services__desc">
-                  Розробимо докладний план виходячи з ваших потреб
+                  {{ _('We will develop a holistic client-centered plan') }}
                 </p>
               </div>
             </li>
@@ -78,10 +49,10 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">Дизайн</h3>
+                <h3 class="services__title font--bold">{{ _('Design') }}</h3>
                 <p class="services__desc">
-                  Наші дизайнери вміють підібрати та розробити дизайн під
-                  клієнта
+                  {{ _('Our talented designers provides creative, interactive &
+                  interesting designs') }}
                 </p>
               </div>
             </li>
@@ -92,9 +63,10 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">Фронт-Енд</h3>
+                <h3 class="services__title font--bold">{{ _('Front-End') }}</h3>
                 <p class="services__desc">
-                  Створення адаптивного інтерфейсу для будь-яких пристроїв
+                  {{ _('Creating an adaptive interface and accessible for any
+                  device') }}
                 </p>
               </div>
             </li>
@@ -105,9 +77,10 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">Бeк-Енд</h3>
+                <h3 class="services__title font--bold">{{ _('Back End') }}</h3>
                 <p class="services__desc">
-                  Ми розробимо серверні рішення будь-якої складності
+                  {{ _('Continuous refinement of server and troubleshoot on any
+                  complexity') }}
                 </p>
               </div>
             </li>
@@ -118,9 +91,12 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">Девопс</h3>
+                <h3 class="services__title font--bold">
+                  {{ _('Devops Method') }}
+                </h3>
                 <p class="services__desc">
-                  Налаштовуємо серверну безпеку та їх зв'язок між собою
+                  {{_('Effective system of server security, IT operations and
+                  software development') }}
                 </p>
               </div>
             </li>
@@ -131,9 +107,10 @@
                   alt="services-icon"
                   class="services__img"
                 />
-                <h3 class="services__title font--bold">Хостинг</h3>
+                <h3 class="services__title font--bold">{{ _('Hosting') }}</h3>
                 <p class="services__desc">
-                  Якісний хостинг та ексклюзивні домени для вашого проекту
+                  {{ _("We offer various types of hosting and exclusive domains
+                  based on client's needs") }}
                 </p>
               </div>
             </li>
@@ -145,10 +122,11 @@
       <div class="dev-steps__wrapper animated-slide slide-top-bottom container">
         <div class="dev-steps__content">
           <div class="dev-steps__actions">
-            <h4 class="dev-steps__subtitle font--bold">eтапи створення</h4>
+            <h4 class="dev-steps__subtitle font--bold">
+              {{ _('stages of development') }}
+            </h4>
             <h2 class="dev-steps__title font--bold">
-              <span class="font--highlight">Створення</span> вашого сайту від
-              концепції до запуску
+              {{ _('From Concept to Launch: Your Website, Perfected') }}
             </h2>
             <ul class="dev-steps__list">
               <li class="dev-steps__item animated-slide slide-left-right">
@@ -161,11 +139,11 @@
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
-                    Проектування та розробка інтерфейсу
+                    {{ _('UI/UX Design & Development') }}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    Створення та затвердження прототипу дизайну. Адаптивна
-                    верстка під різні пристрої.
+                    {{ _('Crafting a seamless and visually stunning interface.
+                    Adaptive layout for all devices.') }}
                   </p>
                 </div>
               </li>
@@ -179,11 +157,12 @@
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
-                    Програмування та інтеграція
+                    {{ _('Programming & Integration') }}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    Розробка функціоналу та інтеграція сервісів. Налаштування
-                    API для повноцінної роботи програми.
+                    {{ _('Bringing your website to life with powerful
+                    functionality, seamless service integration and API
+                    setup')}}
                   </p>
                 </div>
               </li>
@@ -197,11 +176,11 @@
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
-                    Тестування, хостинг та запуск
+                    {{ _('Testing, Hosting & Deployment') }}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    Тестування виявлення помилок. Розміщення, налаштування та
-                    контроль стабільності програми на хостингу.
+                    {{ _('Ensuring stability, security, and a flawless launch.
+                    Bug fixes & Hosting setup & performance monitoring') }}
                   </p>
                 </div>
               </li>
@@ -226,11 +205,13 @@
           </div>
           <div class="portfolio__projects">
             <a
-              href="{{ url_for('project_1') }}"
+              href="{{ url_for('project_1', lang=request.args.get('lang', 'en')) }}"
               class="portfolio__project-item"
             >
-              <h4 class="project-item__header">ТрендСіті</h4>
-              <p class="project-item__desc">Новий український маркетплейс</p>
+              <h4 class="project-item__header">TrendCity</h4>
+              <p class="project-item__desc">
+                {{ _('New Ukrainian marketplace') }}
+              </p>
               <img
                 src="{{ url_for('static', filename='img/trendcity.png') }}"
                 alt="project-img"
@@ -238,11 +219,13 @@
               />
             </a>
             <a
-              href="{{ url_for('project_2') }}"
+              href="{{ url_for('project_2', lang=request.args.get('lang', 'en')) }}"
               class="portfolio__project-item"
             >
               <h4 class="project-item__header">ProLearn</h4>
-              <p class="project-item__desc">Українська онлайн школа</p>
+              <p class="project-item__desc">
+                {{ _('Ukrainian online school') }}
+              </p>
               <img
                 src="{{ url_for('static', filename='img/prolearn.png') }}"
                 alt="project-img"
@@ -250,11 +233,13 @@
               />
             </a>
             <a
-              href="{{ url_for('project_3') }}"
+              href="{{ url_for('project_3', lang=request.args.get('lang', 'en')) }}"
               class="portfolio__project-item"
             >
               <h4 class="project-item__header">SkillPoint</h4>
-              <p class="project-item__desc">Онлайн найм репетиторів</p>
+              <p class="project-item__desc">
+                {{ _('Online hiring of tutors') }}
+              </p>
               <img
                 src="{{ url_for('static', filename='img/skillpoint.png') }}"
                 alt="project-img"
@@ -273,12 +258,9 @@
         </div>
       </div>
     </section>
-
     <section class="aboutus">
       <div class="aboutus__wrapper container">
-        <h2 class="aboutus__title">
-          Про <span class="font--highlight">RiseApp</span>
-        </h2>
+        <h2 class="aboutus__title">{{ _('About RiseApp') }}</h2>
         <div class="aboutus__info">
           <div class="aboutus__item">
             <div class="aboutus__item__img-wrap">
@@ -289,11 +271,11 @@
               />
             </div>
             <h4 class="aboutus__item-title font--highlight">
-              Досвід та надійність
+              {{ _('Evidence and reliability') }}
             </h4>
             <p class="aboutus__item-subtitle">
-              Працюємо на ринку веб-розробки понад два роки, знаходячи найкращі
-              рішення для будь-яких завдань.
+              {{ _('We are working on the web development market for two reasons
+              that are the best solution for any task.') }}
             </p>
           </div>
           <div class="aboutus__item">
@@ -305,11 +287,11 @@
               />
             </div>
             <h4 class="aboutus__item-title font--highlight">
-              Індивідуальний підхід
+              {{ _('Individual approach') }}
             </h4>
             <p class="aboutus__item-subtitle">
-              Кожному проекту ми підходимо з увагою до деталей та враховуємо всі
-              потреби клієнта.
+              {{ _("We approach each project with attention to detail and take
+              into account all of the client's needs.") }}
             </p>
           </div>
           <div class="aboutus__item">
@@ -321,17 +303,15 @@
               />
             </div>
             <h4 class="aboutus__item-title font--highlight">
-              Сучасні технології
+              {{ _('Modern technologies') }}
             </h4>
             <p class="aboutus__item-subtitle">
-              Ми використовуємо найсучасніші технології для створення актуальних
-              сайтів.
+              {{ _('We use the latest technologies to create relevant
+              websites.') }}
             </p>
           </div>
         </div>
-        <h2 class="aboutus__title">
-          Відгуки <span class="font--highlight">клієнтів</span>
-        </h2>
+        <h2 class="aboutus__title">{{ _('Customer reviews') }}</h2>
         <div class="aboutus__reviews">
           <div class="aboutus__reviews-item">
             <div class="aboutus__reviews-message">
@@ -341,9 +321,9 @@
                 class="aboutus__reviews-icon"
               />
               <p class="aboutus__reviews-text">
-                Працювати з цією командою було легко та приємно. Вони дійсно
-                розуміються на тому, що роблять. Мій сайт тепер виглядає стильно
-                та функціонує на відмінно.
+                {{ _('This team was easy and pleasant to work with. They really
+                know what they are doing. My website now looks stylish and
+                functions perfectly.') }}
               </p>
             </div>
             <svg
@@ -379,9 +359,11 @@
                 class="aboutus__reviews-userimg"
               />
               <div class="aboutus__reviews-userinfo">
-                <h4 class="aboutus__reviews-username">Анастасія Карпова</h4>
+                <h4 class="aboutus__reviews-username">
+                  {{ _('Anastasia Karpova') }}
+                </h4>
                 <p class="aboutus__reviews-userorder">
-                  Замовлення укр. маркетплейс
+                  {{ _('Order Ukrainian marketplace') }}
                 </p>
               </div>
             </div>
@@ -394,9 +376,9 @@
                 class="aboutus__reviews-icon"
               />
               <p class="aboutus__reviews-text">
-                Отличный сервис и великолепное отношение к клиентам! Все было
-                сделано вовремя) Если вам нужен качественный сайт, не
-                раздумывайте — заказывайте здесь!
+                {{ _('Excellent service and great attitude towards customers!
+                Everything was done on time If you need a quality website, do
+                not hesitate - order here!') }}
               </p>
             </div>
             <svg
@@ -432,9 +414,11 @@
                 class="aboutus__reviews-userimg"
               />
               <div class="aboutus__reviews-userinfo">
-                <h4 class="aboutus__reviews-username">Василь Корелин</h4>
+                <h4 class="aboutus__reviews-username">
+                  {{ _('Vasyl Korelin') }}
+                </h4>
                 <p class="aboutus__reviews-userorder">
-                  Фото галерея міста Суми
+                  {{ _('Photo gallery of the city of Sumy') }}
                 </p>
               </div>
             </div>
@@ -447,9 +431,9 @@
                 class="aboutus__reviews-icon"
               />
               <p class="aboutus__reviews-text">
-                Завдяки Rise клієнти легко знаходять товари та оформляють
-                замовлення. Врахували всі побажання, завжди були на зв’язку і
-                швидко вносили правки. Рекомендуемо.
+                {{ _('Thanks to Rise, customers can easily find products and
+                place orders. They took into account all their wishes, were
+                always in touch, and made quick changes. We recommend it.') }}
               </p>
             </div>
             <svg
@@ -485,9 +469,11 @@
                 class="aboutus__reviews-userimg"
               />
               <div class="aboutus__reviews-userinfo">
-                <h4 class="aboutus__reviews-username">Компанія VerginCity</h4>
+                <h4 class="aboutus__reviews-username">
+                  {{ _('VirginCity Company') }}
+                </h4>
                 <p class="aboutus__reviews-userorder">
-                  Сайт мережі буд. магазинів
+                  {{ _('Website of a chain of hardware stores') }}
                 </p>
               </div>
             </div>
@@ -495,7 +481,7 @@
         </div>
       </div>
     </section>
-    <section class="facts">
+    <!-- <section class="facts">
       <div class="facts__wrapper container">
         <img
           src="{{ url_for('static', filename='img/facts-pc.png') }}"
@@ -508,14 +494,12 @@
           class="facts__img-mob facts__img"
         />
       </div>
-    </section>
+    </section> -->
     <section class="aboutus">
-      <h4 class="aboutus__subtitle">контакти</h4>
-      <h2 class="aboutus__title">
-        Для <span class="font--highlight">безкоштовної</span> консультації
-      </h2>
+      <h4 class="aboutus__subtitle">{{ _('Contacts') }}</h4>
+      <h2 class="aboutus__title">{{ _('For a free consultation') }}</h2>
       <p class="aboutus__subtitle">
-        зв'яжіться з нами будь-яким зручним для вас методом
+        {{ _('contact us by any method convenient for you') }}
       </p>
       <div class="aboutus__contacts">
         <a

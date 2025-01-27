@@ -1,48 +1,17 @@
 {% extends "base.html" %} {% block content %}
 <div class="page">
-  <header class="header">
-    <div class="header__wrapper container">
-      <div class="header__company">
-        <img
-          src="{{ url_for('static', filename='img/logotype.png') }}"
-          alt="logotype"
-          class="header__logo"
-        />
-        <h2 class="header__company-name">
-          <span class="company-name font--bold">Rise</span
-          ><span class="company-name">App</span>
-        </h2>
-      </div>
-      <div class="header__mobnav-button">
-        <div class="header__mobnav-stick"></div>
-        <div class="header__mobnav-stick"></div>
-      </div>
-      <nav class="header__nav">
-        <a class="nav__link nav__link-portfolio nav__link--white">Портфоліо</a>
-        <div class="nav__lang">
-          <a class="nav__lang-switcher lang-toggle" ontouchstart="">UA</a>
-          <div class="nav__lang-menu-wrapper">
-            <ul class="nav__lang-menu">
-              <li class="nav__lang-item">
-                <a class="nav__lang-link">UA</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  {% include 'header.html' %}
   <main>
     <section class="details__intro animated-slide slide-bottom-top">
       <div class="intro-wrapper container">
         <div class="intro-textpart">
-          <h4 class="intro-header">Проект 24-го року</h4>
-          <h2 class="intro-title">ProLearn</h2>
-          <h2 class="intro-name">Українська онлайн школа</h2>
+          <h4 class="intro-header">{{ _('Project of the 24th year') }}</h4>
+          <h2 class="intro-title">{{ _('ProLearn') }}</h2>
+          <h2 class="intro-name">{{ _('Ukrainian Online School') }}</h2>
           <h4 class="intro-description">
-            Сучасний український сайт онлайн-курсів для швидкого освоєння нових
-            професій. Платформа пропонує понад 200 курсів у сферах
-            програмування, дизайну, маркетингу та інших напрямків
+            {{ _('A modern Ukrainian online course platform for quickly
+            mastering new professions. The platform offers over 200 courses in
+            programming, design, marketing, and other fields.') }}
           </h4>
         </div>
         <div class="intro-imgpart">
@@ -58,24 +27,26 @@
       <div class="advantages__wrapper container">
         <div class="advantages__list">
           <div class="advantages__item">
-            <h4 class="advantages__title">Доступність і зрозумілість</h4>
+            <h4 class="advantages__title">
+              {{ _('Accessibility and Clarity') }}
+            </h4>
             <p class="advantages__description">
-              Створення інтуїтивно зрозумілий інтерфейс, щоб користувачі легко
-              знаходили потрібні курси.
+              {{ _('Creating an intuitive interface so users can easily find the
+              right courses.') }}
             </p>
           </div>
           <div class="advantages__item">
-            <h4 class="advantages__title">Мотивація до навчання</h4>
+            <h4 class="advantages__title">{{ _('Motivation to Learn') }}</h4>
             <p class="advantages__description">
-              Заохочуючий дизайн, демонстрація переваги курсів через візуальну
-              презентацію та чіткі блоки інформ.
+              {{ _('An engaging design that highlights course advantages through
+              visual presentation and clear information blocks.') }}
             </p>
           </div>
           <div class="advantages__item">
-            <h4 class="advantages__title">Довіра до платформи</h4>
+            <h4 class="advantages__title">{{ _('Trust in the Platform') }}</h4>
             <p class="advantages__description">
-              Підкреслення професіоналізму викладачів і надійність сертифікатів
-              додаючи відгуки та статистику.
+              {{ _('Emphasizing the professionalism of instructors and the
+              reliability of certificates by adding reviews and statistics.') }}
             </p>
           </div>
         </div>
@@ -96,7 +67,9 @@
           <div class="properties__item">
             <div class="properties__item-wrap">
               <p class="properties__item-title">
-                <span class="properties__name">Вартість розробки:</span>
+                <span class="properties__name">
+                  {{ _('Development Cost:') }}</span
+                >
                 <span class="properties__value">1740 $</span>
               </p>
             </div>
@@ -104,39 +77,47 @@
           <div class="properties__item">
             <div class="properties__item-wrap properties__item-wrap--filled">
               <p class="properties__item-title">
-                <span class="properties__name">Час розробки:</span>
-                <span class="properties__value">27 днів</span>
+                <span class="properties__name">
+                  {{ _('Development Time:') }}</span
+                >
+                <span class="properties__value">27 {{ _('days') }}</span>
               </p>
             </div>
           </div>
           <div class="properties__item">
             <div class="properties__item-wrap">
               <p class="properties__item-title">
-                <span class="properties__name">SEO-оптимізація:</span>
-                <span class="properties__value">Включена</span>
+                <span class="properties__name">
+                  {{ _('SEO Optimization:') }}</span
+                >
+                <span class="properties__value"> {{ _('Included') }}</span>
               </p>
             </div>
           </div>
           <div class="properties__item">
             <div class="properties__item-wrap">
               <p class="properties__item-title">
-                <span class="properties__name">Технічна підтримка:</span>
-                <span class="properties__value">12 месяцев</span>
+                <span class="properties__name">
+                  {{ _('Technical Support:') }}</span
+                >
+                <span class="properties__value">12 {{ _('months') }}</span>
               </p>
             </div>
           </div>
           <div class="properties__item">
             <div class="properties__item-wrap">
               <p class="properties__item-title">
-                <span class="properties__name">Адміністративна панель:</span>
-                <span class="properties__value">Так</span>
+                <span class="properties__name"> {{ _('Admin Panel:') }}</span>
+                <span class="properties__value"> {{ _('Yes') }}</span>
               </p>
             </div>
           </div>
           <div class="properties__item">
             <div class="properties__item-wrap">
               <p class="properties__item-title">
-                <span class="properties__name">Кількість сторінок:</span>
+                <span class="properties__name">
+                  {{ _('Number of Pages:') }}</span
+                >
                 <span class="properties__value">8</span>
               </p>
             </div>
@@ -159,10 +140,10 @@
         <div class="results__list">
           <div class="results__item">
             <h3 class="results__title">
-              Головні <span class="gray-text">показники</span> пректу
+              <span class="gray-text">{{ _('Project Indicators') }}</span>
             </h3>
             <h4 class="results__subtitle">
-              Rise app збільшує показники продажів проектів
+              {{ _('Rise App boosts project sales') }}
             </h4>
           </div>
 
@@ -173,11 +154,10 @@
                 alt="header-icon"
                 class="results__header-icon"
               />
-
-              <h4 class="results__header-text">UX/UI дизайн</h4>
+              <h4 class="results__header-text">{{ _('UX/UI Design') }}</h4>
             </div>
             <p class="results__desc">
-              Інтерфейс дозволяє легко знаходити курси та орієнтуватися.
+              {{ _('The interface allows easy course search and navigation.') }}
             </p>
           </div>
           <div class="results__item">
@@ -187,11 +167,10 @@
                 alt="header-icon"
                 class="results__header-icon"
               />
-
-              <h4 class="results__header-text">Адаптивність</h4>
+              <h4 class="results__header-text">{{ _('Adaptability') }}</h4>
             </div>
             <p class="results__desc">
-              Сайт адаптивно працює що збільшую мобільний трафік.
+              {{ _('The site adapts seamlessly, increasing mobile traffic.') }}
             </p>
           </div>
           <div class="results__item">
@@ -201,11 +180,13 @@
                 alt="header-icon"
                 class="results__header-icon"
               />
-
-              <h4 class="results__header-text">Оптимізація швидкості</h4>
+              <h4 class="results__header-text">
+                {{ _('Speed Optimization') }}
+              </h4>
             </div>
             <p class="results__desc">
-              Відгук у частку секунди завдяки сучасним технологіям
+              {{ _('Page response in a fraction of a second thanks to modern
+              technologies.') }}
             </p>
           </div>
           <div class="results__item">
@@ -215,12 +196,13 @@
                 alt="header-icon"
                 class="results__header-icon"
               />
-
-              <h4 class="results__header-text">Зручність функцій</h4>
+              <h4 class="results__header-text">
+                {{ _('Feature Convenience') }}
+              </h4>
             </div>
             <p class="results__desc">
-              Додано особистий кабінет, блок з відгуками та систему
-              сертифікації.
+              {{ _('Includes a personal account, a review section, and a
+              certification system.') }}
             </p>
           </div>
           <div class="results__item">
@@ -230,10 +212,11 @@
                 alt="header-icon"
                 class="results__header-icon"
               />
-              <h4 class="results__header-text">Збільшення конверсій</h4>
+              <h4 class="results__header-text">{{ _('Conversion Growth') }}</h4>
             </div>
             <p class="results__desc">
-              Спрощена навігація збільшує кількість реєстрацій та покупок.
+              {{ _('Simplified navigation increases registrations and
+              purchases.') }}
             </p>
           </div>
         </div>

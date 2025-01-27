@@ -178,7 +178,7 @@ a {
 
   * {
     position: relative;
-    z-index: 3;
+    z-index: 4;
   }
 
   .header__wrapper {
@@ -275,7 +275,7 @@ a {
   .nav__lang-menu {
     display: flex;
     position: relative;
-    left: -6px;
+    left: 4px;
     top: 9px;
     gap: 4px;
     flex-direction: column;
@@ -290,6 +290,7 @@ a {
     width: 50px;
     background-color: #413680;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .nav__lang-menu-wrapper.visible {
@@ -453,6 +454,10 @@ a {
     margin-bottom: 23px;
     width: 70px;
     height: 70px;
+  }
+
+  .services__desc {
+    line-height: 20px;
   }
 
   .services__title {
@@ -985,6 +990,10 @@ a {
   .advantages__title {
     margin-bottom: 15px;
     font-weight: 700;
+  }
+
+  .advantages__description {
+    line-height: 20px;
   }
 
   @media (max-width: 575px) {

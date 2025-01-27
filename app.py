@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from flask import Flask, request, render_template, url_for, send_from_directory, redirect, make_response
 from utils.request_tools import get_request_info
 from utils.telegram_tools import send_telegram_message
+from flask_babel import Babel, _
 
 load_dotenv()
 
@@ -12,6 +13,21 @@ app = Flask(__name__)
 bot_token = os.getenv("TG_BOT_TOKEN")
 move_group_id = os.getenv("TG_MOVE_GROUP_ID")
 notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
+
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+
+
+def get_locale():
+    lang = request.args.get('lang')
+    if not lang:
+        lang = request.accept_languages.best_match(['ru', 'uk', 'en'])
+
+    return lang
+
+
+babel = Babel()
+babel.init_app(app, locale_selector=get_locale)
 
 
 @app.after_request
@@ -39,7 +55,7 @@ def after_request_handler(response):
 -------------------------------
 """
 
-    send_telegram_message(move_group_id, log, bot_token)
+    # send_telegram_message(move_group_id, log, bot_token)
 
     return response
 
@@ -69,7 +85,7 @@ def send_message():
 -------------------------------
 👨🏻‍💻 RiseApp Team
 """
-    send_telegram_message(notify_group_id, message, bot_token)
+    # send_telegram_message(notify_group_id, message, bot_token)
     return redirect(url_for('index'))
 
 
@@ -94,4 +110,4 @@ def project_3():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)

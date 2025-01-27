@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="header__wrapper container">
+    <div class="header__company">
+      <img
+        src="{{ url_for('static', filename='img/logotype.png') }}"
+        alt="logotype"
+        class="header__logo"
+      />
+      <h2 class="header__company-name">
+        <span class="company-name font--bold">Rise</span
+        ><span class="company-name">App</span>
+      </h2>
+    </div>
+    <div class="header__mobnav-button">
+      <div class="header__mobnav-stick"></div>
+      <div class="header__mobnav-stick"></div>
+    </div>
+    <nav class="header__nav">
+      <a class="nav__link nav__link-portfolio nav__link--white"
+        >{{ _('Poftfolio') }}</a
+      >
+      <div class="nav__lang">
+        <a class="nav__lang-switcher lang-toggle" ontouchstart="">LANG</a>
+        <div class="nav__lang-menu-wrapper">
+          <ul class="nav__lang-menu">
+            <li class="nav__lang-item">
+              <a href="?lang=uk" class="nav__lang-link">UA</a>
+            </li>
+            <li class="nav__lang-item">
+              <a href="?lang=ru" class="nav__lang-link">RU</a>
+            </li>
+            <li class="nav__lang-item">
+              <a href="?lang=en" class="nav__lang-link">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

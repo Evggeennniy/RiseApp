@@ -1,11 +1,18 @@
 <section class="contacts">
   <div class="contacts__wrapper container">
     <div class="contacts__form">
-      <h3 class="contacts__title">Втілимо ваш сервіс в реальність</h3>
-      <h3 class="contacts__title contacts__title--highlight">
-        зв'яжіться з нами!
+      <h3 class="contacts__title">
+        <!-- prettier-ignore -->
+        {{ _("Let's make your service a reality") }}
       </h3>
-      <p class="contacts__subtitle">Нехай ваша бізнес-ідея стане реальністю!</p>
+      <h3 class="contacts__title contacts__title--highlight">
+        <!-- prettier-ignore -->
+        {{ _('contact us!') }}
+      </h3>
+      <p class="contacts__subtitle">
+        <!-- prettier-ignore -->
+        {{ _('Let your business idea become a reality!') }}
+      </p>
       <form
         action="{{ url_for('send_message') }}"
         method="POST"
@@ -50,7 +57,7 @@
           <input
             type="text"
             class="contacts__input"
-            placeholder="Ім’я"
+            placeholder="{{ _('Name') }}"
             name="person_name"
             required
           />
@@ -87,7 +94,7 @@
           <input
             type="tel"
             class="contacts__input"
-            placeholder="Номер телефону"
+            placeholder="{{ _('Phone number') }}"
             name="person_phone"
             id="phone"
             required
@@ -146,7 +153,7 @@
           <input
             type="email"
             class="contacts__input"
-            placeholder="Эл. Пошта"
+            placeholder="{{ _('Email') }}"
             name="person_email"
             id="email"
             required
@@ -156,11 +163,14 @@
           <textarea
             type="text"
             class="contacts__textarea"
-            placeholder="Cообщение"
+            placeholder="{{ _('Message') }}"
             name="person_note"
           ></textarea>
         </div>
-        <button class="contacts__button">Надіслати</button>
+        <button class="contacts__button">
+          <!-- prettier-ignore -->
+          {{ _('Send') }}
+        </button>
       </form>
     </div>
     <div class="contacts__img">
