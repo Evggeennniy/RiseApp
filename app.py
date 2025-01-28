@@ -22,7 +22,6 @@ def get_locale():
     lang = request.args.get('lang')
     if not lang:
         lang = request.accept_languages.best_match(['ru', 'uk', 'en'])
-        # breakpoint()
 
     return lang
 
@@ -92,23 +91,23 @@ def send_message():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', lang=get_locale())
 
 
 @app.route('/trendcity')
 def project_1():
-    return render_template('trendcity.html')
+    return render_template('trendcity.html', lang=get_locale())
 
 
 @app.route('/prolearn')
 def project_2():
-    return render_template('prolearn.html')
+    return render_template('prolearn.html', lang=get_locale())
 
 
 @app.route('/skillpoint')
 def project_3():
-    return render_template('skillpoint.html')
+    return render_template('skillpoint.html', lang=get_locale())
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)

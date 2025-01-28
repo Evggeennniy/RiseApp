@@ -205,7 +205,7 @@
           </div>
           <div class="portfolio__projects">
             <a
-              href="{{ url_for('project_1', lang=request.args.get('lang', 'en')) }}"
+              href="{{ url_for('project_1', lang=lang) }}"
               class="portfolio__project-item"
             >
               <h4 class="project-item__header">TrendCity</h4>
@@ -219,7 +219,7 @@
               />
             </a>
             <a
-              href="{{ url_for('project_2', lang=request.args.get('lang', 'en')) }}"
+              href="{{ url_for('project_2', lang=lang) }}"
               class="portfolio__project-item"
             >
               <h4 class="project-item__header">ProLearn</h4>
@@ -233,7 +233,7 @@
               />
             </a>
             <a
-              href="{{ url_for('project_3', lang=request.args.get('lang', 'en')) }}"
+              href="{{ url_for('project_3', lang=lang) }}"
               class="portfolio__project-item"
             >
               <h4 class="project-item__header">SkillPoint</h4>
@@ -485,12 +485,12 @@
     <section class="facts">
       <div class="facts__wrapper container">
         <img
-          src="{{ url_for('static', filename='img/facts-pc-' + request.accept_languages.1.0 + '.png') }}"
+          src="{{ url_for('static', filename='img/facts-pc-' + lang + '.png') }}"
           alt="img"
           class="facts__img-pc facts__img"
         />
         <img
-          src="{{ url_for('static', filename='img/facts-mob-' + request.accept_languages.1.0 + '.png') }}"
+          src="{{ url_for('static', filename='img/facts-mob-' + lang + '.png') }}"
           alt="img"
           class="facts__img-mob facts__img"
         />
