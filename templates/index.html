@@ -485,12 +485,12 @@
     <section class="facts">
       <div class="facts__wrapper container">
         <img
-          src="{{ url_for('static', filename='img/facts-pc-' + request.args.get('lang', 'en') + '.png') }}"
+          src="{{ url_for('static', filename='img/facts-pc-' + request.accept_languages.1.0 + '.png') }}"
           alt="img"
           class="facts__img-pc facts__img"
         />
         <img
-          src="{{ url_for('static', filename='img/facts-mob-' + request.args.get('lang', 'en') + '.png') }}"
+          src="{{ url_for('static', filename='img/facts-mob-' + request.accept_languages.1.0 + '.png') }}"
           alt="img"
           class="facts__img-mob facts__img"
         />

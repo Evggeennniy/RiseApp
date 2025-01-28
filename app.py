@@ -22,6 +22,7 @@ def get_locale():
     lang = request.args.get('lang')
     if not lang:
         lang = request.accept_languages.best_match(['ru', 'uk', 'en'])
+        # breakpoint()
 
     return lang
 
@@ -110,4 +111,4 @@ def project_3():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
