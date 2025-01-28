@@ -481,20 +481,21 @@
         </div>
       </div>
     </section>
-    <!-- <section class="facts">
+    <!-- TODO: THIS SHIT MUST'VE BEEN REMOVED  -->
+    <section class="facts">
       <div class="facts__wrapper container">
         <img
-          src="{{ url_for('static', filename='img/facts-pc.png') }}"
+          src="{{ url_for('static', filename='img/facts-pc-' + request.args.get('lang', 'en') + '.png') }}"
           alt="img"
           class="facts__img-pc facts__img"
         />
         <img
-          src="{{ url_for('static', filename='img/facts-mob.png') }}"
+          src="{{ url_for('static', filename='img/facts-mob-' + request.args.get('lang', 'en') + '.png') }}"
           alt="img"
           class="facts__img-mob facts__img"
         />
       </div>
-    </section> -->
+    </section>
     <section class="aboutus">
       <h4 class="aboutus__subtitle">{{ _('Contacts') }}</h4>
       <h2 class="aboutus__title">{{ _('For a free consultation') }}</h2>

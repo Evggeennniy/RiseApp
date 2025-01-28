@@ -20,7 +20,9 @@
         >{{ _('Poftfolio') }}</a
       >
       <div class="nav__lang">
-        <a class="nav__lang-switcher lang-toggle" ontouchstart="">LANG</a>
+        <a class="nav__lang-switcher lang-toggle" ontouchstart=""
+          >{{ request.args.get('lang', 'en') | upper }}</a
+        >
         <div class="nav__lang-menu-wrapper">
           <ul class="nav__lang-menu">
             <li class="nav__lang-item">

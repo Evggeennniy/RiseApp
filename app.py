@@ -55,7 +55,7 @@ def after_request_handler(response):
 -------------------------------
 """
 
-    # send_telegram_message(move_group_id, log, bot_token)
+    send_telegram_message(move_group_id, log, bot_token)
 
     return response
 
@@ -85,7 +85,7 @@ def send_message():
 -------------------------------
 👨🏻‍💻 RiseApp Team
 """
-    # send_telegram_message(notify_group_id, message, bot_token)
+    send_telegram_message(notify_group_id, message, bot_token)
     return redirect(url_for('index'))
 
 
@@ -110,4 +110,4 @@ def project_3():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)

@@ -275,7 +275,7 @@ a {
   .nav__lang-menu {
     display: flex;
     position: relative;
-    left: 4px;
+    left: -5px;
     top: 9px;
     gap: 4px;
     flex-direction: column;
@@ -481,6 +481,10 @@ a {
       width: 33px;
       height: 33px;
     }
+
+    .services__desc {
+      line-height: 12px;
+    }
   }
 }
 
@@ -497,6 +501,7 @@ a {
 
   .dev-steps__subtitle {
     margin-bottom: 5px;
+    color: #6b87e6;
   }
 
   .dev-steps__title {
@@ -696,7 +701,16 @@ a {
     padding: 80px 0;
 
     .facts__img-pc {
-      content: url("/static/img/facts-mob.png");
+      display: none;
+    }
+
+    .facts__wrapper {
+      text-align: center;
+    }
+
+    .facts__img-mob {
+      display: inline;
+      width: 80%;
     }
   }
 }
@@ -708,6 +722,7 @@ a {
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
+    color: #6b87e6;
   }
 
   .aboutus__title:nth-child(4) {
@@ -846,6 +861,7 @@ a {
     .aboutus__reviews {
       justify-content: unset;
       overflow-x: scroll;
+      line-height: 16px;
     }
 
     .aboutus__reviews-message {
@@ -863,6 +879,10 @@ a {
 
     .aboutus__reviews-userorder {
       font-size: 14px;
+    }
+
+    .aboutus__contacts {
+      margin-bottom: 50px;
     }
   }
 }
@@ -1098,10 +1118,7 @@ a {
     margin-bottom: 10px;
 
     &--highlight {
-      background: linear-gradient(90deg, #5450e7 0.02%, #999 38.33%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #6b87e6;
     }
   }
 
