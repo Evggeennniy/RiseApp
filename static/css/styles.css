@@ -403,8 +403,8 @@ a {
     gap: 10px;
   }
   .services .services__item {
-    min-width: 110px;
-    padding: 10px;
+    min-width: 200px;
+    padding: 10px 30px;
     text-align: center;
     border: 3px solid #1c1a42;
   }
@@ -817,6 +817,9 @@ a {
   .project .skillpoint-pc {
     content: url("/static/img/skillpoint-pc2.png");
   }
+  .project .skillpoint-mobile {
+    content: url("/static/img/skillpoint-mobile2.png");
+  }
 }
 
 .advantages {
@@ -1087,7 +1090,7 @@ a {
   right: 100px;
   background-color: #1c87c9;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
   cursor: pointer;
   padding: 10px;
   animation: glowing 1.5s infinite;
@@ -1117,11 +1120,11 @@ a {
   }
   50% {
     box-shadow: 0 0 10px #49e819;
-    scale: 0.98;
+    scale: 0.9;
   }
   100% {
     box-shadow: 0 0 5px #1c87c9;
-    scale: 1.02;
+    scale: 1;
   }
 }
 .footer {

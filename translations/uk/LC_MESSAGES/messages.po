@@ -488,9 +488,9 @@ msgstr "Зростання продажів"
 #: templates/skillpoint.html:158 templates/trendcity.html:163
 #, python-format
 msgid ""
-"Increases sales by 30%% thanks to an intuitive and\n"
-"              user-friendly interface tailored to customer needs."
-msgstr "Збільшує продажі на 30% завдяки інтуїтивно зрозумілому та зручному інтерфейсу, адаптованому до потреб клієнтів."
+"Increases sales thanks to an intuitive and user-friendly\n"
+"              interface tailored to customer needs."
+msgstr "Збільшує продажі завдяки інтуїтивно зрозумілому та зручному інтерфейсу, адаптованому до потреб клієнтів."
 
 #: templates/skillpoint.html:170 templates/trendcity.html:175
 msgid "UI Design"
@@ -508,10 +508,8 @@ msgstr "Адаптивний дизайн"
 
 #: templates/skillpoint.html:188 templates/trendcity.html:193
 #, python-format
-msgid ""
-"Increased mobile traffic by 50%% thanks to a responsive\n"
-"              design."
-msgstr "Збільшив мобільний трафік на 50% завдяки адаптивному дизайну."
+msgid "Increased mobile traffic thanks to a responsive design."
+msgstr "Збільшив мобільний трафік завдяки адаптивному дизайну."
 
 #: templates/skillpoint.html:201 templates/trendcity.html:206
 msgid "Conversion Rate Improvement"

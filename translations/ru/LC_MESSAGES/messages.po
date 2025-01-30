@@ -127,7 +127,7 @@ msgstr "Хостинг"
 msgid ""
 "We offer various types of hosting and exclusive domains\n"
 "                  based on client's needs"
-msgstr "Мы предлагаем различные виды хостинга и эксклюзивные домены в зависимости от потребностей клиента"
+msgstr "Различные виды хостинга и эксклюзивные домены в зависимости от потребностей клиента"
 
 #: templates/index.html:126
 msgid "stages of development"
@@ -192,7 +192,7 @@ msgstr "Доказательства и надёжность"
 msgid ""
 "We are working on the web development market for two reasons\n"
 "              that are the best solution for any task."
-msgstr "Мы работаем на рынке веб-разработки по двум причинам, которые являются лучшим решением для любых задач."
+msgstr "Rise app на рынке веб-разработки предоставляет лучшие решения для любых задач."
 
 #: templates/index.html:290
 msgid "Individual approach"
@@ -488,9 +488,9 @@ msgstr "Рост продаж"
 #: templates/skillpoint.html:158 templates/trendcity.html:163
 #, python-format
 msgid ""
-"Increases sales by 30%% thanks to an intuitive and\n"
-"              user-friendly interface tailored to customer needs."
-msgstr "Увеличивает продажи на 30% благодаря интуитивно понятному и удобному интерфейсу, ориентированному на потребности клиентов."
+"Increases sales thanks to an intuitive and user-friendly\n"
+"              interface tailored to customer needs."
+msgstr "Увеличивает продажи благодаря интуитивно понятному и удобному интерфейсу, ориентированному на потребности клиентов."
 
 #: templates/skillpoint.html:170 templates/trendcity.html:175
 msgid "UI Design"
@@ -508,10 +508,8 @@ msgstr "Адаптивный дизайн"
 
 #: templates/skillpoint.html:188 templates/trendcity.html:193
 #, python-format
-msgid ""
-"Increased mobile traffic by 50%% thanks to a responsive\n"
-"              design."
-msgstr "Увеличил мобильный трафик на 50% благодаря адаптивному дизайну."
+msgid "Increased mobile traffic thanks to a responsive design."
+msgstr "Увеличил мобильный трафик благодаря адаптивному дизайну."
 
 #: templates/skillpoint.html:201 templates/trendcity.html:206
 msgid "Conversion Rate Improvement"
