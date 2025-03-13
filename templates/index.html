@@ -1,41 +1,89 @@
 {% extends "base.html" %} {% block content %}
-<img
-  src="{{ url_for('static', filename='img/ellipse-top.png') }}"
-  class="bg-ellipse-top"
-/>
+<img src="{{ url_for('static', filename='img/ellipse-top.png') }}" class="bg-ellipse-top" />
 <div class="page">
   {% include 'header.html' %}
   <main>
     <section class="intro">
       <div class="intro__wrapper container">
-        <img
-          src="{{ url_for('static', filename='img/intro_img-invisible.png') }}"
-          alt="image"
-          class="intro__img"
-        />
+        <img src="{{ url_for('static', filename='img/intro__img.png') }}" alt="image" class="intro__img" />
         <div class="intro__info">
-          <h1 class="intro__title">{{ _('Web Solutions') }}</h1>
-          <h2 class="intro__title font--highlight">
-            {{ _('That Will Increase Your Income') }}
-          </h2>
-          <h4 class="intro__subtitle">{{ _('Established since 2022') }}</h4>
-          <button class="intro__button" id="intro-contacts-btn">
-            {{ _('Inquiry') }}
-          </button>
+          <div class="intro__info_top">
+            <p class="intro__desc">
+              {{ _('RISE APP PROVIDES SERVICES SINCE 2022') }}
+            </p>
+            <div class="intro_info_top_titles">
+              <h1 class="intro__title">
+                {{ _('We will develop a service that') }}
+              </h1>
+              <h2 class="intro__title intro__title_highlight">
+                {{ _('Saves your time') }}
+              </h2>
+            </div>
+          </div>
+          <div class="intro__inquiry_container">
+            <button class="intro__button" id="intro-contacts-btn">
+              {{ _('Inquiry') }}
+            </button>
+            <div class="intro__inquiry_clients">
+              <h4 class="intro__inquiry_clients_amnt">450 +</h4>
+              <p class="intro__inquiry_clients_desc">
+                {{ _('Satisfied customers')}}
+              </p>
+            </div>
+          </div>
+          <div class="intro__info_bottom">
+            <img src="{{ url_for('static', filename='img/riseapp_circle_logo_img.png') }}" alt="" class="" />
+            <p class="intro__info_bottom_desc">
+              {{ _('99,9%% of customers are satisfied with our service, because your trust and impeccable reputation are our top priority!') }}
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="portfolio">
+      <div class="portfolio__wrapper animated-slide slide-top-bottom container">
+        <div class="portfolio__content">
+          <!-- <div class="portfolio__intro">
+            <h2 class="portfolio__title font--highlight">RISE APP</h2>
+            <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
+          </div> -->
+          <div class="portfolio__projects">
+            <a href="{{ url_for('project_1', lang=lang) }}" class="portfolio__project-item">
+              <h4 class="project-item__header">TrendCity</h4>
+              <p class="project-item__desc">
+                {{ _('New Ukrainian marketplace') }}
+              </p>
+              <img src="{{ url_for('static', filename='img/trendcity.png') }}" alt="project-img"
+                class="project-item__img" />
+            </a>
+            <a href="{{ url_for('project_2', lang=lang) }}" class="portfolio__project-item">
+              <h4 class="project-item__header">ProLearn</h4>
+              <p class="project-item__desc">
+                {{ _('Ease of learning thanks to UX UI')}}
+              </p>
+              <img src="{{ url_for('static', filename='img/prolearn.png') }}" alt="project-img"
+                class="project-item__img" />
+            </a>
+            <a href="{{ url_for('project_3', lang=lang) }}" class="portfolio__project-item">
+              <h4 class="project-item__header">SkillPoint</h4>
+              <p class="project-item__desc">
+                {{ _('Ease of learning thanks to UX UI')}}
+              </p>
+              <img src="{{ url_for('static', filename='img/skillpoint.png') }}" alt="project-img"
+                class="project-item__img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="services">
       <div class="services__wrapper animated-slide container">
         <div class="services__content">
           <ul class="services__list">
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-planning.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-planning.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">{{ _('Plan') }}</h3>
                 <p class="services__desc">
                   {{ _('We will develop a holistic client-centered plan') }}
@@ -44,11 +92,8 @@
             </li>
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-design.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-design.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">{{ _('Design') }}</h3>
                 <p class="services__desc">
                   {{ _('Our talented designers provides creative, interactive &
@@ -58,11 +103,8 @@
             </li>
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-front-end.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-front-end.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">{{ _('Front-End') }}</h3>
                 <p class="services__desc">
                   {{ _('Creating an adaptive interface and accessible for any
@@ -72,11 +114,8 @@
             </li>
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-backend.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-backend.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">{{ _('Back End') }}</h3>
                 <p class="services__desc">
                   {{ _('Continuous refinement of server and troubleshoot on any
@@ -86,11 +125,8 @@
             </li>
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-devops.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-devops.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">
                   {{ _('Devops Method') }}
                 </h3>
@@ -102,11 +138,8 @@
             </li>
             <li class="services__item">
               <div class="services__info">
-                <img
-                  src="{{ url_for('static', filename='img/services-hosting.png') }}"
-                  alt="services-icon"
-                  class="services__img"
-                />
+                <img src="{{ url_for('static', filename='img/services-hosting.png') }}" alt="services-icon"
+                  class="services__img" />
                 <h3 class="services__title font--bold">{{ _('Hosting') }}</h3>
                 <p class="services__desc">
                   {{ _("We offer various types of hosting and exclusive domains
@@ -117,247 +150,109 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="dev-steps">
       <div class="dev-steps__wrapper animated-slide slide-top-bottom container">
         <div class="dev-steps__content">
           <div class="dev-steps__actions">
             <h4 class="dev-steps__subtitle font--bold">
-              {{ _('stages of development') }}
+              {{ _('stages of creation')}}
             </h4>
             <h2 class="dev-steps__title font--bold">
-              {{ _('From Concept to Launch: Your Website, Perfected') }}
+             <span>
+              {{ _('Creation')}}
+            </span> 
+            {{ _('of your website from concept to launch')}}
             </h2>
             <ul class="dev-steps__list">
               <li class="dev-steps__item animated-slide slide-left-right">
                 <div class="dev-steps__item-img-wrapper">
-                  <img
-                    src="{{ url_for('static', filename='img/dev-steps-design.png') }}"
-                    alt="item_img"
-                    class="dev-steps__item-img"
-                  />
+                  <img src="{{ url_for('static', filename='img/dev-steps-design.png') }}" alt="item_img"
+                    class="dev-steps__item-img" />
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
-                    {{ _('UI/UX Design & Development') }}
+                    {{ _('Interface design and development')}}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    {{ _('Crafting a seamless and visually stunning interface.
-                    Adaptive layout for all devices.') }}
+                    {{ _('Creation and approval of a design prototype.')}} <span>
+                      {{ _('Adaptive layout for different devices.')}}
+                    </span> 
                   </p>
                 </div>
               </li>
               <li class="dev-steps__item animated-slide slide-left-right">
                 <div class="dev-steps__item-img-wrapper">
-                  <img
-                    src="{{ url_for('static', filename='img/dev-steps-programming.png') }}"
-                    alt="item_img"
-                    class="dev-steps__item-img"
-                  />
+                  <img src="{{ url_for('static', filename='img/dev-steps-programming.png') }}" alt="item_img"
+                    class="dev-steps__item-img" />
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
                     {{ _('Programming & Integration') }}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    {{ _('Bringing your website to life with powerful
-                    functionality, seamless service integration and API
-                    setup')}}
+                    {{ _('Functional development and service integration.')}}<span>
+                      {{ _('API settings for full application operation.')}}
+                    </span>
                   </p>
                 </div>
               </li>
               <li class="dev-steps__item animated-slide slide-left-right">
                 <div class="dev-steps__item-img-wrapper">
-                  <img
-                    src="{{ url_for('static', filename='img/dev-steps-hosting.png') }}"
-                    alt="item_img"
-                    class="dev-steps__item-img"
-                  />
+                  <img src="{{ url_for('static', filename='img/dev-steps-hosting.png') }}" alt="item_img"
+                    class="dev-steps__item-img" />
                 </div>
                 <div class="dev-steps__item-text">
                   <h3 class="dev-steps__item-title">
-                    {{ _('Testing, Hosting & Deployment') }}
+                    {{ _('Testing, hosting and launch')}}
                   </h3>
                   <p class="dev-steps__item-desc">
-                    {{ _('Ensuring stability, security, and a flawless launch.
-                    Bug fixes & Hosting setup & performance monitoring') }}
+                    {{ _('Testing for error detection. Hosting, configuring, and monitoring the stability of the application on the hosting.')}}
                   </p>
                 </div>
               </li>
             </ul>
           </div>
           <div class="dev-steps__img-wrapper">
-            <img
-              src="{{ url_for('static', filename='img/devsteps-img.png') }}"
-              alt="devsteps-img"
-              class="dev-steps__img"
-            />
+            <img src="{{ url_for('static', filename='img/devsteps-img.png') }}" alt="devsteps-img"
+              class="dev-steps__img" />
           </div>
         </div>
       </div>
     </section>
-    <section class="portfolio">
-      <div class="portfolio__wrapper animated-slide slide-top-bottom container">
-        <div class="portfolio__content">
-          <div class="portfolio__intro">
-            <h2 class="portfolio__title font--highlight">RISE APP</h2>
-            <h3 class="portfolio__subtitle">FULL-STACK & UX UI DESIGN</h3>
-          </div>
-          <div class="portfolio__projects">
-            <a
-              href="{{ url_for('project_1', lang=lang) }}"
-              class="portfolio__project-item"
-            >
-              <h4 class="project-item__header">TrendCity</h4>
-              <p class="project-item__desc">
-                {{ _('New Ukrainian marketplace') }}
-              </p>
-              <img
-                src="{{ url_for('static', filename='img/trendcity.png') }}"
-                alt="project-img"
-                class="project-item__img"
-              />
-            </a>
-            <a
-              href="{{ url_for('project_2', lang=lang) }}"
-              class="portfolio__project-item"
-            >
-              <h4 class="project-item__header">ProLearn</h4>
-              <p class="project-item__desc">
-                {{ _('Ukrainian online school') }}
-              </p>
-              <img
-                src="{{ url_for('static', filename='img/prolearn.png') }}"
-                alt="project-img"
-                class="project-item__img"
-              />
-            </a>
-            <a
-              href="{{ url_for('project_3', lang=lang) }}"
-              class="portfolio__project-item"
-            >
-              <h4 class="project-item__header">SkillPoint</h4>
-              <p class="project-item__desc">
-                {{ _('Online hiring of tutors') }}
-              </p>
-              <img
-                src="{{ url_for('static', filename='img/skillpoint.png') }}"
-                alt="project-img"
-                class="project-item__img"
-              />
-            </a>
-          </div>
-          <img
-            src="{{ url_for('static', filename='img/portfolio-pc.png') }}"
-            class="portfolio__img portfolio__img-pc"
-          />
-          <img
-            src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
-            class="portfolio__img portfolio__img-mob"
-          />
-        </div>
-      </div>
-    </section>
+    <!-- TODO: THIS SHIT MUST'VE BEEN REMOVED  -->
     <section class="aboutus">
       <div class="aboutus__wrapper container">
-        <h2 class="aboutus__title">{{ _('About RiseApp') }}</h2>
-        <div class="aboutus__info">
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img
-                src="{{ url_for('static', filename='img/aboutus-1.png') }}"
-                alt="icon"
-                class="aboutus__item-icon"
-              />
-            </div>
-            <h4 class="aboutus__item-title font--highlight">
-              {{ _('Evidence and reliability') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _('We are working on the web development market for two reasons
-              that are the best solution for any task.') }}
-            </p>
-          </div>
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img
-                src="{{ url_for('static', filename='img/aboutus-2.png') }}"
-                alt="icon"
-                class="aboutus__item-icon"
-              />
-            </div>
-            <h4 class="aboutus__item-title font--highlight">
-              {{ _('Individual approach') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _("We approach each project with attention to detail and take
-              into account all of the client's needs.") }}
-            </p>
-          </div>
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img
-                src="{{ url_for('static', filename='img/aboutus-3.png') }}"
-                alt="icon"
-                class="aboutus__item-icon"
-              />
-            </div>
-            <h4 class="aboutus__item-title font--highlight">
-              {{ _('Modern technologies') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _('We use the latest technologies to create relevant
-              websites.') }}
-            </p>
-          </div>
-        </div>
-        <h2 class="aboutus__title">{{ _('Customer reviews') }}</h2>
+        <h2 class="aboutus__title">
+          {{ _('Customer')}} 
+          <span>
+            {{ _('reviews')}}
+          </span></h2>
         <div class="aboutus__reviews">
           <div class="aboutus__reviews-item">
             <div class="aboutus__reviews-message">
-              <img
-                src="{{ url_for('static', filename='img/logotype.png') }}"
-                alt="icon"
-                class="aboutus__reviews-icon"
-              />
+              <img src="{{ url_for('static', filename='img/logotype.png') }}" alt="icon"
+                class="aboutus__reviews-icon" />
               <p class="aboutus__reviews-text">
                 {{ _('This team was easy and pleasant to work with. They really
                 know what they are doing. My website now looks stylish and
                 functions perfectly.') }}
               </p>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="24"
-              viewBox="0 0 30 24"
-              class="aboutus__reviews-triangle"
-              fill="none"
-            >
-              <path
-                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                fill="url(#paint0_linear_3297_169)"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle" fill="none">
+              <path d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)" />
               <defs>
-                <linearGradient
-                  id="paint0_linear_3297_169"
-                  x1="30"
-                  y1="0"
-                  x2="0"
-                  y2="0"
-                  gradientUnits="userSpaceOnUse"
-                >
+                <linearGradient id="paint0_linear_3297_169" x1="30" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#504BC9" />
                   <stop offset="1" stop-color="#4E49C7" />
                 </linearGradient>
               </defs>
             </svg>
             <div class="aboutus__reviews-user">
-              <img
-                src="{{ url_for('static', filename='img/client-img-1.png') }}"
-                alt="user-img"
-                class="aboutus__reviews-userimg"
-              />
+              <img src="{{ url_for('static', filename='img/client-img-1.png') }}" alt="user-img"
+                class="aboutus__reviews-userimg" />
               <div class="aboutus__reviews-userinfo">
                 <h4 class="aboutus__reviews-username">
                   {{ _('Anastasia Karpova') }}
@@ -370,49 +265,28 @@
           </div>
           <div class="aboutus__reviews-item">
             <div class="aboutus__reviews-message">
-              <img
-                src="{{ url_for('static', filename='img/logotype.png') }}"
-                alt="icon"
-                class="aboutus__reviews-icon"
-              />
+              <img src="{{ url_for('static', filename='img/logotype.png') }}" alt="icon"
+                class="aboutus__reviews-icon" />
               <p class="aboutus__reviews-text">
                 {{ _('Excellent service and great attitude towards customers!
                 Everything was done on time If you need a quality website, do
                 not hesitate - order here!') }}
               </p>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="24"
-              viewBox="0 0 30 24"
-              class="aboutus__reviews-triangle"
-              fill="none"
-            >
-              <path
-                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                fill="url(#paint0_linear_3297_169)"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle" fill="none">
+              <path d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)" />
               <defs>
-                <linearGradient
-                  id="paint0_linear_3297_169"
-                  x1="30"
-                  y1="0"
-                  x2="0"
-                  y2="0"
-                  gradientUnits="userSpaceOnUse"
-                >
+                <linearGradient id="paint0_linear_3297_169" x1="30" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#504BC9" />
                   <stop offset="1" stop-color="#4E49C7" />
                 </linearGradient>
               </defs>
             </svg>
             <div class="aboutus__reviews-user">
-              <img
-                src="{{ url_for('static', filename='img/client-img-2.png') }}"
-                alt="user-img"
-                class="aboutus__reviews-userimg"
-              />
+              <img src="{{ url_for('static', filename='img/client-img-2.png') }}" alt="user-img"
+                class="aboutus__reviews-userimg" />
               <div class="aboutus__reviews-userinfo">
                 <h4 class="aboutus__reviews-username">
                   {{ _('Vasyl Korelin') }}
@@ -425,49 +299,28 @@
           </div>
           <div class="aboutus__reviews-item">
             <div class="aboutus__reviews-message">
-              <img
-                src="{{ url_for('static', filename='img/logotype.png') }}"
-                alt="icon"
-                class="aboutus__reviews-icon"
-              />
+              <img src="{{ url_for('static', filename='img/logotype.png') }}" alt="icon"
+                class="aboutus__reviews-icon" />
               <p class="aboutus__reviews-text">
                 {{ _('Thanks to Rise, customers can easily find products and
                 place orders. They took into account all their wishes, were
                 always in touch, and made quick changes. We recommend it.') }}
               </p>
             </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="24"
-              viewBox="0 0 30 24"
-              class="aboutus__reviews-triangle"
-              fill="none"
-            >
-              <path
-                d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
-                fill="url(#paint0_linear_3297_169)"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 30 24"
+              class="aboutus__reviews-triangle" fill="none">
+              <path d="M0 0H30L3.30986 23.1315C2.01472 24.2539 0 23.3339 0 21.6201V0Z"
+                fill="url(#paint0_linear_3297_169)" />
               <defs>
-                <linearGradient
-                  id="paint0_linear_3297_169"
-                  x1="30"
-                  y1="0"
-                  x2="0"
-                  y2="0"
-                  gradientUnits="userSpaceOnUse"
-                >
+                <linearGradient id="paint0_linear_3297_169" x1="30" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#504BC9" />
                   <stop offset="1" stop-color="#4E49C7" />
                 </linearGradient>
               </defs>
             </svg>
             <div class="aboutus__reviews-user">
-              <img
-                src="{{ url_for('static', filename='img/client-img-3.png') }}"
-                alt="user-img"
-                class="aboutus__reviews-userimg"
-              />
+              <img src="{{ url_for('static', filename='img/client-img-3.png') }}" alt="user-img"
+                class="aboutus__reviews-userimg" />
               <div class="aboutus__reviews-userinfo">
                 <h4 class="aboutus__reviews-username">
                   {{ _('VirginCity Company') }}
@@ -479,21 +332,65 @@
             </div>
           </div>
         </div>
+        <img src="{{ url_for('static', filename='img/portfolio-pc.png') }}" class="portfolio__img portfolio__img-pc" />
+        <img src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
+          class="portfolio__img portfolio__img-mob" />
+        <h2 class="aboutus__title">
+          {{ _('About')}} 
+          <span>
+            RiseApp
+          </span></h2>
+        <div class="aboutus__info">
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img src="{{ url_for('static', filename='img/aboutus-1.png') }}" alt="icon" class="aboutus__item-icon" />
+            </div>
+            <h4 class="aboutus__item-title">
+              {{ _('Evidence and reliability') }}
+            </h4>
+            <p class="aboutus__item-subtitle">
+              {{ _('We are working on the web development market for two reasons
+              that are the best solution for any task.') }}
+            </p>
+          </div>
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img src="{{ url_for('static', filename='img/aboutus-2.png') }}" alt="icon" class="aboutus__item-icon" />
+            </div>
+            <h4 class="aboutus__item-title">
+              {{ _('Individual approach') }}
+            </h4>
+            <p class="aboutus__item-subtitle">
+              {{ _("We approach each project with attention to detail and take
+              into account all of the client's needs.") }}
+            </p>
+          </div>
+          <div class="aboutus__item">
+            <div class="aboutus__item__img-wrap">
+              <img src="{{ url_for('static', filename='img/aboutus-3.png') }}" alt="icon" class="aboutus__item-icon" />
+            </div>
+            <h4 class="aboutus__item-title">
+              {{ _('Modern technologies') }}
+            </h4>
+            <p class="aboutus__item-subtitle">
+              {{ _('We use the latest technologies to create relevant
+              websites.') }}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- TODO: THIS SHIT MUST'VE BEEN REMOVED  -->
     <section class="facts">
       <div class="facts__wrapper container">
-        <img
-          src="{{ url_for('static', filename='img/facts-pc-' + lang + '.png') }}"
-          alt="img"
-          class="facts__img-pc facts__img"
-        />
-        <img
-          src="{{ url_for('static', filename='img/facts-mob-' + lang + '.png') }}"
-          alt="img"
-          class="facts__img-mob facts__img"
-        />
+        <h2 class="facts__title">
+          {{ _('Our')}} 
+          <span>
+            {{ _('advantages')}}
+          </span></h2>
+        <img src="{{ url_for('static', filename='img/facts-pc-' + lang + '.png') }}" alt="img"
+          class="facts__img-pc facts__img" />
+        <img src="{{ url_for('static', filename='img/facts-mob-' + lang + '.png') }}" alt="img"
+          class="facts__img-mob facts__img" />
       </div>
     </section>
     <!-- !!! TODO: DECIDE ABOUT THE BLOCK  -->

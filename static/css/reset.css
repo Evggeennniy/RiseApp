@@ -105,6 +105,10 @@ nav,
 section {
   display: block;
 }
+img,
+svg {
+  user-select: none;
+}
 body {
   line-height: 1;
 }

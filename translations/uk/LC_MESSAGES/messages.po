@@ -20,12 +20,12 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 
 #: templates/form.html:6
-msgid "Let's make your service a reality"
-msgstr "Давайте зробимо ваш сервіс реальністю"
+msgid "We will make your service a reality"
+msgstr "Втілимо ваш сервіс в реальність"
 
 #: templates/form.html:10
 msgid "contact us!"
-msgstr "Зв'яжіться з нами!"
+msgstr "зв'яжіться з нами!"
 
 #: templates/form.html:14
 msgid "Let your business idea become a reality!"
@@ -55,134 +55,89 @@ msgstr "Відправити"
 msgid "Poftfolio"
 msgstr "Портфоліо"
 
+#: templates/index.html:13
+msgid "RISE APP PROVIDES SERVICES SINCE 2022"
+msgstr "RISE APP НАДАЄ ПОСЛУГИ З 2022 РОКУ"
+
+#: templates/index.html:14
+msgid "We will develop a service that"
+msgstr "Розробимо сервіс який"
+
 #: templates/index.html:17
-msgid "Web Solutions"
-msgstr "Веб-рішення"
-
-#: templates/index.html:19
-msgid "That Will Increase Your Income"
-msgstr "Що Збільшуть Ваш Дохід"
-
-#: templates/index.html:21
-msgid "Established since 2022"
-msgstr "Засновано у 2022 році"
+msgid "Saves your time"
+msgstr "Економить ваш час"
 
 #: templates/index.html:23
 msgid "Inquiry"
 msgstr "Консультація"
 
-#: templates/index.html:39
-msgid "Plan"
-msgstr "План"
+#: templates/index.html:30
+msgid "Satisfied customers"
+msgstr "Задоволених клієнтів"
 
-#: templates/index.html:41
-msgid "We will develop a holistic client-centered plan"
-msgstr "Ми розробимо комплексний план, орієнтований на клієнта"
+#: templates/index.html:37
+msgid "99,9%% of customers are satisfied with our service, because your trust and impeccable reputation are our top priority!"
+msgstr "99,9%% клієнтів задоволені нашим сервісом, адже ваша довіра та бездоганна репутація наш головний пріоритет!"
 
-#: templates/index.html:52
-msgid "Design"
-msgstr "Дизайн"
+#: templates/index.html:62
+msgid "Ease of learning thanks to UX UI"
+msgstr "Легкість навчання завдяки UX UI"
 
-#: templates/index.html:54
-msgid ""
-"Our talented designers provides creative, interactive &\n"
-"                  interesting designs"
-msgstr "Наші талановиті дизайнери створюють креативні, інтерактивні та цікаві дизайни"
-
-#: templates/index.html:66
-msgid "Front-End"
-msgstr "Фронтенд"
-
-#: templates/index.html:68
-msgid ""
-"Creating an adaptive interface and accessible for any\n"
-"                  device"
-msgstr "Створення адаптивного інтерфейсу, доступного для будь-якого пристрою"
-
-#: templates/index.html:80
-msgid "Back End"
-msgstr "Бекенд"
-
-#: templates/index.html:82
-msgid ""
-"Continuous refinement of server and troubleshoot on any\n"
-"                  complexity"
-msgstr "Постійне вдосконалення сервера та усунення проблем будь-якої складності"
-
-#: templates/index.html:95
-msgid "Devops Method"
-msgstr "Метод DevOps"
-
-#: templates/index.html:98
-msgid ""
-"Effective system of server security, IT operations and\n"
-"                  software development"
-msgstr "Ефективна система безпеки серверів, ІТ-операцій та розробки програмного забезпечення"
-
-#: templates/index.html:110
-msgid "Hosting"
-msgstr "Хостинг"
-
-#: templates/index.html:112
-msgid ""
-"We offer various types of hosting and exclusive domains\n"
-"                  based on client's needs"
-msgstr "Ми пропонуємо різні види хостингу та ексклюзивні домени в залежності від потреб клієнта"
-
-#: templates/index.html:126
-msgid "stages of development"
-msgstr "Етапи розробки"
-
-#: templates/index.html:129
-msgid "From Concept to Launch: Your Website, Perfected"
-msgstr "Від концепції до запуску: ваш сайт, вдосконалений"
-
-#: templates/index.html:142
-msgid "UI/UX Design & Development"
-msgstr "Дизайн та розробка UI/UX"
-
-#: templates/index.html:145
-msgid ""
-"Crafting a seamless and visually stunning interface.\n"
-"                    Adaptive layout for all devices."
-msgstr "Створення безшовного та візуально вражаючого інтерфейсу. Адаптивне розташування для всіх пристроїв."
-
-#: templates/index.html:160
-msgid "Programming & Integration"
-msgstr "Програмування та інтеграція"
+#: templates/index.html:159
+msgid "stages of creation"
+msgstr "етапи створення"
 
 #: templates/index.html:163
-msgid ""
-"Bringing your website to life with powerful\n"
-"                    functionality, seamless service integration and API\n"
-"                    setup"
-msgstr "Втілюємо ваш сайт в життя з потужним функціоналом, безшовною інтеграцією сервісів та налаштуванням API"
+msgid "Creation"
+msgstr "Створення"
+
+#: templates/index.html:165
+msgid "of your website from concept to launch"
+msgstr "вашого сайту від концепції до запуску"
+
+#: templates/index.html:175
+msgid "Interface design and development"
+msgstr "Проектування та розробка інтерфейсу"
+
+#: templates/index.html:178
+msgid "Creation and approval of a design prototype."
+msgstr "Створення та затвердження прототипу дизайну."
+
+#: templates/index.html:179
+msgid "Adaptive layout for different devices."
+msgstr "Адаптивна верстка під різні пристрої."
 
 #: templates/index.html:179
 msgid "Testing, Hosting & Deployment"
 msgstr "Тестування, хостинг та деплоймент"
 
-#: templates/index.html:182
-msgid ""
-"Ensuring stability, security, and a flawless launch.\n"
-"                    Bug fixes & Hosting setup & performance monitoring"
-msgstr "Забезпечення стабільності, безпеки та бездоганного запуску. Виправлення помилок, налаштування хостингу та моніторинг продуктивності"
+#: templates/index.html:194
+msgid "Functional development and service integration."
+msgstr "Розробка функціоналу та інтеграція сервісів."
+
+#: templates/index.html:195
+msgid "API settings for full application operation."
+msgstr "Налаштування API для повноцінної роботи програми."
+
+#: templates/index.html:207
+msgid "Testing, hosting and launch"
+msgstr "Тестування, хостинг та запуск"
+
+#: templates/index.html:210
+msgid "Testing for error detection. Hosting, configuring, and monitoring the stability of the application on the hosting."
+msgstr "Тестування виявлення помилок. Розміщення, налаштування та контроль стабільності програми на хостингу."
 
 #: templates/index.html:213
 msgid "New Ukrainian marketplace"
 msgstr "Новий український маркетплейс"
 
 #: templates/index.html:227
-msgid "Ukrainian online school"
-msgstr "Українська онлайн школа"
+msgid "Customer"
+msgstr "Відгуки"
 
-#: templates/index.html:241
-msgid "Online hiring of tutors"
-msgstr "Онлайн найм репетиторів"
-
-#: templates/index.html:263
-msgid "About RiseApp"
-msgstr "Про RiseApp"
+#: templates/index.html:228
+msgid "reviews"
+msgstr "клієнтів"
 
 #: templates/index.html:274
 msgid "Evidence and reliability"
@@ -192,7 +147,7 @@ msgstr "Докази та надійність"
 msgid ""
 "We are working on the web development market for two reasons\n"
 "              that are the best solution for any task."
-msgstr "Ми працюємо на ринку веб-розробки з двох причин, що є найкращим рішенням для будь-яких завдань."
+msgstr "Працюємо на ринку веб-розробки понад два роки, знаходячи найкращі рішення для будь-яких завдань."
 
 #: templates/index.html:290
 msgid "Individual approach"
@@ -212,7 +167,7 @@ msgstr "Сучасні технології"
 msgid ""
 "We use the latest technologies to create relevant\n"
 "              websites."
-msgstr "Ми використовуємо новітні технології для створення актуальних вебсайтів."
+msgstr "Ми використовуємо найсучасніші технології для створення актуальних сайтів."
 
 #: templates/index.html:314
 msgid "Customer reviews"
@@ -225,6 +180,10 @@ msgid ""
 "and\n"
 "                functions perfectly."
 msgstr "Ця команда була легкою та приємною у роботі. Вони справді знають, що роблять. Мій сайт тепер виглядає стильно і функціонує ідеально."
+
+#: templates/index.html:339
+msgid "About"
+msgstr "Про"
 
 #: templates/index.html:363
 msgid "Anastasia Karpova"
@@ -241,6 +200,14 @@ msgid ""
 "website, do\n"
 "                not hesitate - order here!"
 msgstr "Чудовий сервіс і відмінне ставлення до клієнтів! Все було зроблено вчасно. Якщо вам потрібен якісний сайт, не сумнівайтеся — замовляйте тут!"
+
+#: templates/index.html:386
+msgid "Our"
+msgstr "Наші"
+
+#: templates/index.html:388
+msgid "advantages"
+msgstr "переваги"
 
 #: templates/index.html:418
 msgid "Vasyl Korelin"

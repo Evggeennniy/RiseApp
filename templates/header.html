@@ -21,15 +21,17 @@
       >
       <div class="nav__lang">
         <a class="nav__lang-switcher lang-toggle" ontouchstart=""
-          >{{ lang | upper }}</a
-        >
+          >
+          {{ lang | upper }}
+          <img 
+          src="{{ url_for('static', filename='img/arrow_down_icon.svg') }}" 
+          alt="123"
+          />
+        </a>
         <div class="nav__lang-menu-wrapper">
           <ul class="nav__lang-menu">
             <li class="nav__lang-item">
               <a href="?lang=uk" class="nav__lang-link">UA</a>
-            </li>
-            <li class="nav__lang-item">
-              <a href="?lang=ru" class="nav__lang-link">RU</a>
             </li>
             <li class="nav__lang-item">
               <a href="?lang=en" class="nav__lang-link">EN</a>
