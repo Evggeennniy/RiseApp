@@ -83,6 +83,46 @@ msgstr "99,9%% клієнтів задоволені нашим сервісом
 msgid "Ease of learning thanks to UX UI"
 msgstr "Легкість навчання завдяки UX UI"
 
+#: templates/index.html:83
+msgid "Comprehensive IT solutions"
+msgstr "Комплексні ІТ-рішення"
+
+#: templates/index.html:85
+msgid "for your business"
+msgstr "для вашого бізнесу"
+
+#: templates/index.html:87
+msgid "We combine design, development, and infrastructure to create efficient, secure, and scalable digital products."
+msgstr "Ми об'єднуємо дизайн, розробку та інфраструктуру, щоб створити ефективні, безпечні та масштабовані цифрові продукти."
+
+#: templates/index.html:89
+msgid "Telegram"
+msgstr "Телеграм"
+
+#: templates/index.html:100
+msgid "UX/UI and Front-End"
+msgstr "UX/UI та Фронт-Енд"
+
+#: templates/index.html:103
+msgid "We develop adaptive design and interface for any device, taking into account user needs."
+msgstr "Розробляємо адаптивний дизайн та інтерфейс для будь-яких пристроїв, що враховує потреби користувачів."
+
+#: templates/index.html:115
+msgid "Back-End and Devops"
+msgstr "Бек-Енд та Девопс"
+
+#: templates/index.html:118
+msgid "We create server solutions of any complexity, ensuring their security and stable operation."
+msgstr "Створюємо серверні рішення будь-якої складності забезпечуючи їхню безпеку та стабільну роботу."
+
+#: templates/index.html:130
+msgid "Planning and Hosting"
+msgstr "Планування та Хостинг"
+
+#: templates/index.html:133
+msgid "We offer reliable hosting with exclusive domains. This makes the presentation more concise."
+msgstr "Пропонуємо надійний хостинг з ексклюзивними доменами. Це робить подачу більш лаконічною."
+
 #: templates/index.html:159
 msgid "stages of creation"
 msgstr "етапи створення"
@@ -174,12 +214,8 @@ msgid "Customer reviews"
 msgstr "Відгуки клієнтів"
 
 #: templates/index.html:324
-msgid ""
-"This team was easy and pleasant to work with. They really\n"
-"                know what they are doing. My website now looks stylish "
-"and\n"
-"                functions perfectly."
-msgstr "Ця команда була легкою та приємною у роботі. Вони справді знають, що роблять. Мій сайт тепер виглядає стильно і функціонує ідеально."
+msgid "This team was easy and pleasant to work with. They really know what they are doing. My website now looks stylish and functions perfectly."
+msgstr "Працювати з цією командою було легко та приємно. Вони дійсно розуміються на тому, що роблять. Мій сайт тепер виглядає стильно та функціонує на відмінно."
 
 #: templates/index.html:339
 msgid "About"
@@ -194,12 +230,8 @@ msgid "Order Ukrainian marketplace"
 msgstr "Замовити український маркетплейс"
 
 #: templates/index.html:379
-msgid ""
-"Excellent service and great attitude towards customers!\n"
-"                Everything was done on time If you need a quality "
-"website, do\n"
-"                not hesitate - order here!"
-msgstr "Чудовий сервіс і відмінне ставлення до клієнтів! Все було зроблено вчасно. Якщо вам потрібен якісний сайт, не сумнівайтеся — замовляйте тут!"
+msgid "Excellent service and great customer service! If you need a quality website, do not hesitate - order here!"
+msgstr "Відмінний сервіс і чудове ставлення до клієнтів! Якщо вам потрібен якісний сайт, не роздумуйте - замовляйте тут!"
 
 #: templates/index.html:386
 msgid "Our"
@@ -218,12 +250,8 @@ msgid "Photo gallery of the city of Sumy"
 msgstr "Фотогалерея міста Суми"
 
 #: templates/index.html:434
-msgid ""
-"Thanks to Rise, customers can easily find products and\n"
-"                place orders. They took into account all their wishes, "
-"were\n"
-"                always in touch, and made quick changes. We recommend it."
-msgstr "Завдяки Rise клієнти легко знаходять продукти і роблять замовлення. Врахували всі їхні побажання, завжди були на зв'язку і швидко вносили зміни. Рекомендуємо."
+msgid "Thanks to Rise, customers can easily find products and place orders. They took into account all their wishes, were always in touch, and quickly made changes."
+msgstr "Завдяки Rise клієнти легко знаходять товари та оформляють замовлення. Врахували всі побажання, завжди були на зв’язку і швидко вносили правки."
 
 #: templates/index.html:473
 msgid "VirginCity Company"

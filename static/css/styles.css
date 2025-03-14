@@ -163,6 +163,7 @@ a {
   align-items: center;
 }
 .header .header__company {
+  text-decoration: none;
   display: flex;
   gap: 13px;
 }
@@ -224,10 +225,11 @@ a {
   cursor: pointer;
   border-radius: 10px;
   color: white;
-  padding: 15px 25px;
+  font-size: 16px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: transform 100ms ease-in-out;
   box-shadow: none;
 }
@@ -254,11 +256,12 @@ a {
 }
 .header .nav__lang-link {
   display: block;
-  padding: 5px 10px;
-  border-bottom: 1px solid white;
-  border-radius: 10px;
-  background-color: #413680;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #534FE6;
   cursor: pointer;
+  font-size: 16px;
   text-decoration: none;
 }
 .header .nav__lang-menu-wrapper.visible {
@@ -306,7 +309,7 @@ a {
   }
 }
 .intro {
-  padding: 80px 0 50px 0;
+  padding: 75px 0;
   overflow: hidden;
 }
 .intro .intro__wrapper {
@@ -542,7 +545,7 @@ a {
 }
 
 .dev-steps {
-  padding: 75px 0 25px 0;
+  padding: 75px 0;
   background: linear-gradient(180deg, #000000 1.37%, #060629 50.48%, #000001 97.75%);
   overflow: hidden;
 }
@@ -705,7 +708,7 @@ a {
 }
 .portfolio__img {
   margin-top: 150px;
-  margin-bottom: 75px;
+  margin-bottom: 150px;
   width: 100%;
 }
 .portfolio__img-mob {
@@ -726,6 +729,133 @@ a {
   }
   .portfolio .portfolio__subtitle {
     margin-bottom: 20px;
+  }
+}
+
+.service__info {
+  padding: 75px 0;
+}
+
+.service__info_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.service__info_text,
+.service__info_main {
+  flex: 1;
+}
+
+.service__info_text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service__info_text_title {
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.service__info_text_title span {
+  background: linear-gradient(90deg, #5450E7, #3632C9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service__info_text_desc {
+  font-size: 20px;
+  color: #CCCCCC;
+}
+
+.service__info_text_btn {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #5450E7 0%, #0E0AA1 100%);
+  padding: 17px 30px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  width: fit-content;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.service__info_main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service__info_main_card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.service__info_main_card_img {
+  width: 100%;
+  height: 100%;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.service__info_main_card.highlighted {
+  background: linear-gradient(90deg, #5450E7 0%, #0E0AA1 100%);
+}
+
+.service__info_main_card_text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service__info_main_card_text_title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service__info_main_card_text_desc {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+
+  .service__info {
+    padding: 40px 0;
+  }
+
+  .service__info_wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service__info_text_title {
+    font-size: 6vw;
+  }
+
+  .service__info_text_desc {
+    font-size: 4vw;
+  }
+
+  .service__info_main_card_text_title {
+    font-size: 5vw;
+  }
+
+  .service__info_text_btn {
+    width: 100%;
   }
 }
 
@@ -778,8 +908,8 @@ a {
 .aboutus__title {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 75px;
+  margin-bottom: 30px;
+  margin-top: 10px;
   color: #fff;
 }
 
@@ -787,9 +917,6 @@ a {
   color: #534FE6;
 }
 
-.aboutus__title:nth-child(4) {
-  margin-bottom: 15px;
-}
 .aboutus__info {
   display: flex;
   gap: 45px;
@@ -839,16 +966,38 @@ a {
 }
 .aboutus__reviews-item {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex: 1;
 }
+
 .aboutus__reviews-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   border-radius: 15px;
   background: linear-gradient(270deg, #6762e0 0%, #4a45c3 100%);
-  padding: 15px 25px;
+  padding: 25px;
   width: 346px;
   flex: 3;
 }
+
+.quotes__container_left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.quotes__container_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.aboutus__reviews-text {
+  font-size: 18px;
+}
+
 .aboutus__reviews-icon {
   height: 20px;
   margin-bottom: 10px;
@@ -871,11 +1020,6 @@ a {
   margin-bottom: 7px;
 }
 @media (max-width: 575px) {
-
-  .aboutus__title {
-    margin-top: 40px;
-  }
-
   .aboutus {
     padding: 40px 0;
   }
@@ -908,7 +1052,7 @@ a {
   }
   .aboutus__reviews-message {
     width: 66vw;
-    padding: 15px 15px 30px;
+    padding: 15px 15px;
   }
   .aboutus__reviews-text {
     font-size: 15px;
@@ -1105,7 +1249,6 @@ a {
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  align-items: center;
 }
 .contacts .contacts__title {
   font-weight: 600;
@@ -1122,7 +1265,6 @@ a {
 }
 .contacts .contacts__input-wrapper {
   display: flex;
-  align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -1130,7 +1272,7 @@ a {
   font-size: 16px;
 }
 .contacts .contacts__icon {
-  padding: 14px;
+  padding: 10px;
   border-radius: 10px;
   border: 1px solid #fff;
 }
@@ -1141,12 +1283,17 @@ a {
 .contacts .contacts__input,
 .contacts .contacts__textarea {
   color: white;
-  padding: 20px;
+  padding: 13px 15px;
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid #fff;
   width: 100%;
 }
+
+.contacts__img {
+  transform: translateY(-20px);
+}
+
 .contacts .contacts__input::-moz-placeholder, .contacts .contacts__textarea::-moz-placeholder {
   color: white;
   font-weight: 300;
@@ -1157,10 +1304,11 @@ a {
   font-weight: 300;
 }
 .contacts .contacts__textarea {
-  height: 140px;
+  height: 109px;
+  padding: 15px;
 }
 .contacts .form__img {
-  width: 500px;
+  width: 550px;
 }
 .contacts .contacts__button {
   cursor: pointer;
@@ -1202,7 +1350,7 @@ a {
 
   .portfolio__img {
     margin-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 
   .contacts {
@@ -1280,8 +1428,8 @@ a {
 #form-finder {
   display: block;
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 50px;
+  right: 50px;
   background-color: #1c87c9;
   border: none;
   border-radius: 50px;

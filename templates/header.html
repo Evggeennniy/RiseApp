@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__wrapper container">
-    <div class="header__company">
+    <a class="header__company" href="{{ url_for('index', lang=lang) }}">
       <img
         src="{{ url_for('static', filename='img/logotype.png') }}"
         alt="logotype"
@@ -10,7 +10,7 @@
         <span class="company-name font--bold">Rise</span
         ><span class="company-name">App</span>
       </h2>
-    </div>
+    </a>
     <div class="header__mobnav-button">
       <div class="header__mobnav-stick"></div>
       <div class="header__mobnav-stick"></div>
