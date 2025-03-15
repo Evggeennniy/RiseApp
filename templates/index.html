@@ -13,7 +13,7 @@
             </p>
             <div class="intro_info_top_titles">
               <h1 class="intro__title">
-                {{ _('We will develop a service that') }}
+                {{ _("We'll develop a service that") }}
               </h1>
               <h2 class="intro__title intro__title_highlight">
                 {{ _('Saves your time') }}
@@ -22,7 +22,7 @@
           </div>
           <div class="intro__inquiry_container">
             <button class="intro__button" id="intro-contacts-btn">
-              {{ _('Inquiry') }}
+              {{ _('Advice') }}
             </button>
             <div class="intro__inquiry_clients">
               <h4 class="intro__inquiry_clients_amnt">450 +</h4>
@@ -68,7 +68,7 @@
       </div>
     </section>
     <section class="service__info">
-      <div class="service__info_wrapper container">
+      <div class="service__info_wrapper animated-slide slide-top-bottom container">
         <div class="service__info_text">
           <h1 class="service__info_text_title">
             {{ _('Comprehensive IT solutions')}}  
@@ -274,7 +274,7 @@
     </section>
     <!-- TODO: THIS SHIT MUST'VE BEEN REMOVED  -->
     <section class="aboutus">
-      <div class="aboutus__wrapper container">
+      <div class="aboutus__wrapper animated-slide slide-top-bottom container container">
         <div class="aboutus__reviews">
           <div class="aboutus__reviews-item">
             <div class="aboutus__reviews-message">
@@ -404,46 +404,48 @@
         <img src="{{ url_for('static', filename='img/portfolio-pc.png') }}" class="portfolio__img portfolio__img-pc" />
         <img src="{{ url_for('static', filename='img/portfolio-mob.png') }}"
           class="portfolio__img portfolio__img-mob" />
-        <h2 class="aboutus__title">
-          {{ _('About')}} 
-          <span>
-            RiseApp
-          </span></h2>
-        <div class="aboutus__info">
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img src="{{ url_for('static', filename='img/aboutus-1.png') }}" alt="icon" class="aboutus__item-icon" />
+        <div class="aboutus__info_container animated-slide slide-top-bottom">
+          <h2 class="aboutus__title">
+            {{ _('About')}} 
+            <span>
+              RiseApp
+            </span></h2>
+          <div class="aboutus__info">
+            <div class="aboutus__item">
+              <div class="aboutus__item__img-wrap">
+                <img src="{{ url_for('static', filename='img/aboutus-1.png') }}" alt="icon" class="aboutus__item-icon" />
+              </div>
+              <h4 class="aboutus__item-title">
+                {{ _('Experience and reliability') }}
+              </h4>
+              <p class="aboutus__item-subtitle">
+                {{ _('We have been working in the web development market for over two years, finding the best solutions for any task.') }}
+              </p>
             </div>
-            <h4 class="aboutus__item-title">
-              {{ _('Experience and reliability') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _('We have been working in the web development market for over two years, finding the best solutions for any task.') }}
-            </p>
-          </div>
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img src="{{ url_for('static', filename='img/aboutus-2.png') }}" alt="icon" class="aboutus__item-icon" />
+            <div class="aboutus__item">
+              <div class="aboutus__item__img-wrap">
+                <img src="{{ url_for('static', filename='img/aboutus-2.png') }}" alt="icon" class="aboutus__item-icon" />
+              </div>
+              <h4 class="aboutus__item-title">
+                {{ _('Individual approach') }}
+              </h4>
+              <p class="aboutus__item-subtitle">
+                {{ _("We approach each project with attention to detail and take
+                into account all of the client's needs.") }}
+              </p>
             </div>
-            <h4 class="aboutus__item-title">
-              {{ _('Individual approach') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _("We approach each project with attention to detail and take
-              into account all of the client's needs.") }}
-            </p>
-          </div>
-          <div class="aboutus__item">
-            <div class="aboutus__item__img-wrap">
-              <img src="{{ url_for('static', filename='img/aboutus-3.png') }}" alt="icon" class="aboutus__item-icon" />
+            <div class="aboutus__item">
+              <div class="aboutus__item__img-wrap">
+                <img src="{{ url_for('static', filename='img/aboutus-3.png') }}" alt="icon" class="aboutus__item-icon" />
+              </div>
+              <h4 class="aboutus__item-title">
+                {{ _('Modern technologies') }}
+              </h4>
+              <p class="aboutus__item-subtitle">
+                {{ _('We use the latest technologies to create relevant
+                websites.') }}
+              </p>
             </div>
-            <h4 class="aboutus__item-title">
-              {{ _('Modern technologies') }}
-            </h4>
-            <p class="aboutus__item-subtitle">
-              {{ _('We use the latest technologies to create relevant
-              websites.') }}
-            </p>
           </div>
         </div>
       </div>

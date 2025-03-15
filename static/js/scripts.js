@@ -30,7 +30,6 @@ const contactBtn = document.getElementById("intro-contacts-btn");
 const contactBlock = document.querySelector(".aboutus__contacts");
 
 // FORM
-const formTrigger = document.getElementById("form-finder");
 const form = document.querySelector(".contacts__form");
 const formConfirm = document.querySelector(".contacts__button");
 const phoneInput = document.getElementById("phone");
@@ -51,8 +50,4 @@ form.addEventListener("submit", (e) => {
 
 phoneInput.addEventListener("input", () => {
   phoneInput.value = phoneInput.value.replace(/(?!^)\+|[^\d+]/g, "");
-});
-
-formTrigger.addEventListener("click", () => {
-  form.scrollIntoView({ behavior: "smooth", block: "center" });
 });

@@ -60,7 +60,7 @@ msgid "RISE APP PROVIDES SERVICES SINCE 2022"
 msgstr "RISE APP НАДАЄ ПОСЛУГИ З 2022 РОКУ"
 
 #: templates/index.html:14
-msgid "We will develop a service that"
+msgid "We'll develop a service that"
 msgstr "Розробимо сервіс який"
 
 #: templates/index.html:17
@@ -68,7 +68,7 @@ msgid "Saves your time"
 msgstr "Економить ваш час"
 
 #: templates/index.html:23
-msgid "Inquiry"
+msgid "Advice"
 msgstr "Консультація"
 
 #: templates/index.html:30
