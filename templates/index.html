@@ -50,25 +50,16 @@
           <div class="portfolio__projects">
             <a href="{{ url_for('project_1', lang=lang) }}" class="portfolio__project-item">
               <h4 class="project-item__header">TrendCity</h4>
-              <p class="project-item__desc">
-                {{ _('New Ukrainian marketplace') }}
-              </p>
               <img src="{{ url_for('static', filename='img/trendcity.png') }}" alt="project-img"
                 class="project-item__img" />
             </a>
             <a href="{{ url_for('project_2', lang=lang) }}" class="portfolio__project-item">
               <h4 class="project-item__header">ProLearn</h4>
-              <p class="project-item__desc">
-                {{ _('Ease of learning thanks to UX UI')}}
-              </p>
               <img src="{{ url_for('static', filename='img/prolearn.png') }}" alt="project-img"
                 class="project-item__img" />
             </a>
             <a href="{{ url_for('project_3', lang=lang) }}" class="portfolio__project-item">
               <h4 class="project-item__header">SkillPoint</h4>
-              <p class="project-item__desc">
-                {{ _('Ease of learning thanks to UX UI')}}
-              </p>
               <img src="{{ url_for('static', filename='img/skillpoint.png') }}" alt="project-img"
                 class="project-item__img" />
             </a>
@@ -330,7 +321,7 @@
             </div>
           </div>
           <div class="aboutus__reviews-item">
-            <h2 class="aboutus__title">
+            <h2 class="aboutus__reviews_title">
               {{ _('Customer')}} 
               <span>
                 {{ _('reviews')}}
@@ -424,11 +415,10 @@
               <img src="{{ url_for('static', filename='img/aboutus-1.png') }}" alt="icon" class="aboutus__item-icon" />
             </div>
             <h4 class="aboutus__item-title">
-              {{ _('Evidence and reliability') }}
+              {{ _('Experience and reliability') }}
             </h4>
             <p class="aboutus__item-subtitle">
-              {{ _('We are working on the web development market for two reasons
-              that are the best solution for any task.') }}
+              {{ _('We have been working in the web development market for over two years, finding the best solutions for any task.') }}
             </p>
           </div>
           <div class="aboutus__item">

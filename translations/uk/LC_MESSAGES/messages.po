@@ -179,14 +179,16 @@ msgstr "Відгуки"
 msgid "reviews"
 msgstr "клієнтів"
 
+#: templates/index.html:252
+msgid "Programming & Integration"
+msgstr "Програмування та інтеграція"
+
 #: templates/index.html:274
-msgid "Evidence and reliability"
-msgstr "Докази та надійність"
+msgid "Experience and reliability"
+msgstr "Досвід та надійність"
 
 #: templates/index.html:277
-msgid ""
-"We are working on the web development market for two reasons\n"
-"              that are the best solution for any task."
+msgid "We have been working in the web development market for over two years, finding the best solutions for any task."
 msgstr "Працюємо на ринку веб-розробки понад два роки, знаходячи найкращі рішення для будь-яких завдань."
 
 #: templates/index.html:290
