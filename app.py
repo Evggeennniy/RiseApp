@@ -23,7 +23,7 @@ def get_locale():
     if not lang:
         lang = request.accept_languages.best_match(['uk', 'en'])
 
-    return lang
+    return lang or 'en'
 
 
 babel = Babel()
