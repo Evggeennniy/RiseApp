@@ -85,7 +85,7 @@ def send_message():
 -------------------------------
 👨🏻‍💻 RiseApp Team
 """
-    send_telegram_message(notify_group_id, message, bot_token)
+    send_telegram_message(notify_group_id, log, bot_token)
     return redirect(url_for('index'))
 
 
