@@ -24,7 +24,7 @@ app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 def get_locale():
     lang = request.args.get('lang')
     if not lang:
-        lang = request.accept_languages.best_match(['uk', 'en'])
+        lang = request.accept_languages.best_match(['uk', 'ru', 'en'])
 
     return lang or 'en'
 

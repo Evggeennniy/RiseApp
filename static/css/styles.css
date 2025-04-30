@@ -485,7 +485,7 @@ a {
 
 @media (max-width: 575px) {
   .intro {
-    padding: 90px 0 400px;
+    padding: 90px 0 200px;
   }
 
   .intro .intro__wrapper {
@@ -829,6 +829,7 @@ a {
 .service__info_text_desc {
   font-size: 20px;
   color: #cccccc;
+  line-height: 22px;
 }
 
 .service__info_text_btn {
@@ -916,6 +917,7 @@ a {
 
   .service__info_text_desc {
     font-size: 12px;
+    line-height: 18px;
   }
 
   .service__info_main_card_text {
@@ -928,6 +930,19 @@ a {
 
   .service__info_text_btn {
     width: 100%;
+    padding: 12px 25px;
+    margin-bottom: 20px;
+  }
+
+  .service__info__menu__item {
+    padding: 15px 10px;
+  }
+
+  .service__info_main_card_img {
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
   }
 }
 
@@ -1666,6 +1681,6 @@ a {
 @media (max-width: 575px) {
   .footer .footer__wrapper {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 }
