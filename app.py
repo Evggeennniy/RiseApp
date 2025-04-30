@@ -6,10 +6,13 @@ from flask import Flask, request, render_template, url_for, send_from_directory,
 from utils.request_tools import get_request_info
 from utils.telegram_tools import send_telegram_message
 from flask_babel import Babel, _
+from flask_wtf.csrf import CSRFProtect
 
 load_dotenv()
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY")
+csrf = CSRFProtect(app)
 bot_token = os.getenv("TG_BOT_TOKEN")
 move_group_id = os.getenv("TG_MOVE_GROUP_ID")
 notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")

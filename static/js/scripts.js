@@ -23,10 +23,11 @@ const langButton = document.querySelector(".lang-toggle");
 const langMenu = document.querySelector(".nav__lang-menu-wrapper");
 langButton.addEventListener("click", () => {
   langMenu.classList.toggle("visible");
+  langButton.classList.toggle("active");
 });
 
 // INTRODUCTION
-const contactBtn = document.getElementById("intro-contacts-btn");
+const contactBtns = document.querySelectorAll(".contacts-btn");
 const contactBlock = document.querySelector(".aboutus__contacts");
 
 // FORM
@@ -34,10 +35,12 @@ const form = document.querySelector(".contacts__form");
 const formConfirm = document.querySelector(".contacts__button");
 const phoneInput = document.getElementById("phone");
 
-if (contactBtn) {
-  contactBtn.addEventListener("click", () => {
-    form.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
+if (contactBtns) {
+  for (let btn of contactBtns) {
+    btn.addEventListener("click", () => {
+      form.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }
 }
 
 form.addEventListener("submit", (e) => {
@@ -51,3 +54,35 @@ form.addEventListener("submit", (e) => {
 phoneInput.addEventListener("input", () => {
   phoneInput.value = phoneInput.value.replace(/(?!^)\+|[^\d+]/g, "");
 });
+
+const serviceMenu = document.querySelector(".service__info-menu");
+const serviceBtns = document.querySelectorAll(".service__info__menu__item");
+const serviceContents = document.querySelectorAll(".service__info_main");
+if (serviceMenu) {
+  serviceMenu.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target.classList.contains("service__info__menu__item")) {
+      const targetContent = target.getAttribute("content");
+      for (let btn of serviceBtns) {
+        target === btn
+          ? btn.classList.add("active")
+          : btn.classList.remove("active");
+      }
+      for (let contentBlock of serviceContents) {
+        contentBlock.getAttribute("content") == targetContent
+          ? contentBlock.classList.add("active")
+          : contentBlock.classList.remove("active");
+      }
+    }
+  });
+}
+
+const getUpBtn = document.getElementById("get-up-btn");
+if (getUpBtn) {
+  getUpBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}

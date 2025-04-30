@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-27 20:24+0200\n"
+"POT-Creation-Date: 2025-04-29 11:12+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 
 #: templates/form.html:6
-msgid "Let's make your service a reality"
+msgid "We will make your service a reality"
 msgstr ""
 
 #: templates/form.html:10
@@ -29,251 +29,285 @@ msgstr ""
 msgid "Let your business idea become a reality!"
 msgstr ""
 
-#: templates/form.html:61
+#: templates/form.html:60
 msgid "Name"
 msgstr ""
 
-#: templates/form.html:99
+#: templates/form.html:97
 msgid "Phone number"
 msgstr ""
 
-#: templates/form.html:159
+#: templates/form.html:156
 msgid "Email"
 msgstr ""
 
-#: templates/form.html:170
+#: templates/form.html:166
 msgid "Message"
 msgstr ""
 
-#: templates/form.html:176
+#: templates/form.html:172
 msgid "Send"
 msgstr ""
 
-#: templates/header.html:20
+#: templates/header.html:39
 msgid "Poftfolio"
 msgstr ""
 
-#: templates/index.html:17
-msgid "Our software"
+#: templates/index.html:28
+msgid "RISE APP PROVIDES SERVICES SINCE 2022"
 msgstr ""
 
-#: templates/index.html:19
-msgid "Does the work for you"
+#: templates/index.html:32
+msgid "Payment only upon completed work"
 msgstr ""
 
-#: templates/index.html:21
-msgid "Established since 2022"
-msgstr ""
-
-#: templates/index.html:23
-msgid "Inquiry"
-msgstr ""
-
-#: templates/index.html:39
-msgid "Plan"
+#: templates/index.html:35
+msgid "no advance payments without guarantees"
 msgstr ""
 
 #: templates/index.html:41
-msgid "We will develop a holistic client-centered plan"
+msgid "Get in touch"
 msgstr ""
 
-#: templates/index.html:52
-msgid "Design"
+#: templates/index.html:56
+msgid "Zero Risks"
 msgstr ""
 
-#: templates/index.html:54
+#: templates/index.html:58
 msgid ""
-"Our talented designers provides creative, interactive &\n"
-"                  interesting designs"
-msgstr ""
-
-#: templates/index.html:66
-msgid "Front-End"
+"We receive payment only after you are fully satisfied with\n"
+"              the result."
 msgstr ""
 
 #: templates/index.html:68
+msgid "Everything You Need"
+msgstr ""
+
+#: templates/index.html:70
 msgid ""
-"Creating an adaptive interface and accessible for any\n"
-"                  device"
+"We plan, launch, and promote your product with minimal\n"
+"              investment."
 msgstr ""
 
 #: templates/index.html:80
-msgid "Back End"
+msgid "Quality Leader"
 msgstr ""
 
 #: templates/index.html:82
 msgid ""
-"Continuous refinement of server and troubleshoot on any\n"
-"                  complexity"
+"We use modern and flexible technologies to ensure full\n"
+"              control and top performance."
 msgstr ""
 
-#: templates/index.html:95
-msgid "Devops Method"
+#: templates/index.html:102
+msgid "Web Development"
 msgstr ""
 
-#: templates/index.html:98
-msgid ""
-"Effective system of server security, IT operations and\n"
-"                  software development"
+#: templates/index.html:105
+msgid "Business Services"
 msgstr ""
 
-#: templates/index.html:110
-msgid "Hosting"
+#: templates/index.html:108
+msgid "Marketing"
 msgstr ""
 
 #: templates/index.html:112
+msgid "IT solutions for your business"
+msgstr ""
+
+#: templates/index.html:113
+msgid "— our specialization."
+msgstr ""
+
+#: templates/index.html:116
 msgid ""
-"We offer various types of hosting and exclusive domains\n"
-"                  based on client's needs"
+"We provide key services for a safe, efficient, and\n"
+"            high-quality product launch that fits your budget and future\n"
+"            goals."
 msgstr ""
 
-#: templates/index.html:126
-msgid "stages of development"
+#: templates/index.html:121
+msgid "Get in Touch"
 msgstr ""
 
-#: templates/index.html:129
-msgid "From Concept to Launch: Your Website, Perfected"
+#: templates/index.html:133
+msgid "UX/UI Web Design"
 msgstr ""
 
-#: templates/index.html:142
-msgid "UI/UX Design & Development"
-msgstr ""
-
-#: templates/index.html:145
+#: templates/index.html:136
 msgid ""
-"Crafting a seamless and visually stunning interface.\n"
-"                    Adaptive layout for all devices."
+"We adapt your product for all necessary device types. Your\n"
+"                clients will always feel comfortable with you."
 msgstr ""
 
-#: templates/index.html:160
-msgid "Programming & Integration"
+#: templates/index.html:149
+msgid "Software Development"
 msgstr ""
 
-#: templates/index.html:163
+#: templates/index.html:152
 msgid ""
-"Bringing your website to life with powerful\n"
-"                    functionality, seamless service integration and API\n"
-"                    setup"
+"We develop flexible systems and architectures for maximum\n"
+"                speed and reliability."
 msgstr ""
 
-#: templates/index.html:179
-msgid "Testing, Hosting & Deployment"
+#: templates/index.html:165
+msgid "Hosting"
 msgstr ""
 
-#: templates/index.html:182
+#: templates/index.html:168
 msgid ""
-"Ensuring stability, security, and a flawless launch.\n"
-"                    Bug fixes & Hosting setup & performance monitoring"
+"We secure your hosting and build the best solutions for\n"
+"                various needs."
 msgstr ""
 
-#: templates/index.html:213
-msgid "New Ukrainian marketplace"
+#: templates/index.html:183
+msgid "Product Management"
 msgstr ""
 
-#: templates/index.html:227
-msgid "Ukrainian online school"
-msgstr ""
-
-#: templates/index.html:241
-msgid "Online hiring of tutors"
-msgstr ""
-
-#: templates/index.html:263
-msgid "About RiseApp"
-msgstr ""
-
-#: templates/index.html:274
-msgid "Evidence and reliability"
-msgstr ""
-
-#: templates/index.html:277
+#: templates/index.html:186
 msgid ""
-"We are working on the web development market for two reasons\n"
-"              that are the best solution for any task."
+"We build a clear product development strategy and manage\n"
+"                processes to achieve maximum results."
 msgstr ""
 
-#: templates/index.html:290
-msgid "Individual approach"
+#: templates/index.html:199
+msgid "Planning, USP/MVP"
 msgstr ""
 
-#: templates/index.html:293
+#: templates/index.html:202
 msgid ""
-"We approach each project with attention to detail and take\n"
-"              into account all of the client's needs."
+"We create a unique value proposition and develop a minimum\n"
+"                viable product for a fast market launch. "
 msgstr ""
 
-#: templates/index.html:306
-msgid "Modern technologies"
+#: templates/index.html:215
+msgid "Hypothesis Testing"
 msgstr ""
 
-#: templates/index.html:309
+#: templates/index.html:218
 msgid ""
-"We use the latest technologies to create relevant\n"
-"              websites."
+"We validate your ideas through rapid experiments to reduce\n"
+"                risks and find the best solutions. "
 msgstr ""
 
-#: templates/index.html:314
-msgid "Customer reviews"
+#: templates/index.html:233
+msgid "Marketing Strategy"
 msgstr ""
 
-#: templates/index.html:324
+#: templates/index.html:236
 msgid ""
-"This team was easy and pleasant to work with. They really\n"
-"                know what they are doing. My website now looks stylish "
-"and\n"
-"                functions perfectly."
+"We develop comprehensive promotion strategies to attract\n"
+"                your target audience."
 msgstr ""
 
-#: templates/index.html:363
-msgid "Anastasia Karpova"
+#: templates/index.html:249
+msgid "Advertising and Promotion"
 msgstr ""
 
-#: templates/index.html:366
-msgid "Order Ukrainian marketplace"
+#: templates/index.html:252
+msgid ""
+"We set up effective advertising campaigns and help scale\n"
+"                your business through multiple channels. "
+msgstr ""
+
+#: templates/index.html:265
+msgid "Content Marketing"
+msgstr ""
+
+#: templates/index.html:268
+msgid ""
+"We create high-quality content to attract, engage, and\n"
+"                convert your audience into loyal customers. "
+msgstr ""
+
+#: templates/index.html:333
+msgid ""
+"I had a great experience — the team planned everything\n"
+"              carefully and adapted to the situation. I'm very satisfied "
+"with\n"
+"              the result."
 msgstr ""
 
 #: templates/index.html:379
-msgid ""
-"Excellent service and great attitude towards customers!\n"
-"                Everything was done on time If you need a quality "
-"website, do\n"
-"                not hesitate - order here!"
+msgid "Anastasia Karpova"
 msgstr ""
 
-#: templates/index.html:418
+#: templates/index.html:382
+msgid "Ukrainian marketplace"
+msgstr ""
+
+#: templates/index.html:389
+msgid "Customer"
+msgstr ""
+
+#: templates/index.html:390
+msgid "reviews"
+msgstr ""
+
+#: templates/index.html:394
+msgid ""
+"This isn’t my first time using their service — the best\n"
+"              price-to-quality ratio. Great team!"
+msgstr ""
+
+#: templates/index.html:432
 msgid "Vasyl Korelin"
 msgstr ""
 
-#: templates/index.html:421
-msgid "Photo gallery of the city of Sumy"
-msgstr ""
-
 #: templates/index.html:434
-msgid ""
-"Thanks to Rise, customers can easily find products and\n"
-"                place orders. They took into account all their wishes, "
-"were\n"
-"                always in touch, and made quick changes. We recommend it."
+msgid "Photo gallery"
 msgstr ""
 
-#: templates/index.html:473
+#: templates/index.html:448
+msgid ""
+"We started working together in 2023. They know how to plan\n"
+"              projects effectively within budget. Continuing our "
+"cooperation!"
+msgstr ""
+
+#: templates/index.html:494
 msgid "VirginCity Company"
 msgstr ""
 
-#: templates/index.html:476
-msgid "Website of a chain of hardware stores"
+#: templates/index.html:497
+msgid "Construction retail website"
 msgstr ""
 
-#: templates/index.html:499
-msgid "Contacts"
+#: templates/index.html:509
+msgid "Our Philosophy"
 msgstr ""
 
-#: templates/index.html:500
-msgid "For a free consultation"
+#: templates/index.html:516
+msgid "Technology is Accessibility"
 msgstr ""
 
-#: templates/index.html:502
-msgid "contact us by any method convenient for you"
+#: templates/index.html:519
+msgid ""
+"We do what we love, and we believe that everyone has\n"
+"                    the right to dream and bring their ideas to life. "
+msgstr ""
+
+#: templates/index.html:528
+msgid "Targeted Reach"
+msgstr ""
+
+#: templates/index.html:531
+msgid ""
+"Every website has a purpose. We help achieve it\n"
+"                    through analytics, strategy, and promotion — so that "
+"you are\n"
+"                    not just online, but actually getting real results."
+msgstr ""
+
+#: templates/index.html:541
+msgid "Tailored Solutions"
+msgstr ""
+
+#: templates/index.html:544
+msgid ""
+"There are no one-size-fits-all solutions. We adapt our\n"
+"                    approach to your budget, tasks, and niche, creating\n"
+"                    meaningful solutions that truly matter."
 msgstr ""
 
 #: templates/prolearn.html:8 templates/skillpoint.html:8
@@ -377,57 +411,57 @@ msgstr ""
 msgid "Number of Pages:"
 msgstr ""
 
-#: templates/prolearn.html:142 templates/skillpoint.html:142
-#: templates/trendcity.html:147
+#: templates/prolearn.html:143 templates/skillpoint.html:143
+#: templates/trendcity.html:148
 msgid "Project Indicators"
 msgstr ""
 
-#: templates/prolearn.html:144 templates/skillpoint.html:144
-#: templates/trendcity.html:149
+#: templates/prolearn.html:146 templates/skillpoint.html:146
+#: templates/trendcity.html:151
 msgid "Rise App boosts project sales"
 msgstr ""
 
-#: templates/prolearn.html:155
+#: templates/prolearn.html:157
 msgid "UX/UI Design"
 msgstr ""
 
-#: templates/prolearn.html:158
+#: templates/prolearn.html:160
 msgid "The interface allows easy course search and navigation."
 msgstr ""
 
-#: templates/prolearn.html:168
+#: templates/prolearn.html:170
 msgid "Adaptability"
 msgstr ""
 
-#: templates/prolearn.html:171
+#: templates/prolearn.html:173
 msgid "The site adapts seamlessly, increasing mobile traffic."
 msgstr ""
 
-#: templates/prolearn.html:182
+#: templates/prolearn.html:184
 msgid "Speed Optimization"
 msgstr ""
 
-#: templates/prolearn.html:186
+#: templates/prolearn.html:188
 msgid ""
 "Page response in a fraction of a second thanks to modern\n"
 "              technologies."
 msgstr ""
 
-#: templates/prolearn.html:198
+#: templates/prolearn.html:200
 msgid "Feature Convenience"
 msgstr ""
 
-#: templates/prolearn.html:202
+#: templates/prolearn.html:204
 msgid ""
 "Includes a personal account, a review section, and a\n"
 "              certification system."
 msgstr ""
 
-#: templates/prolearn.html:213
+#: templates/prolearn.html:215
 msgid "Conversion Growth"
 msgstr ""
 
-#: templates/prolearn.html:216
+#: templates/prolearn.html:218
 msgid ""
 "Simplified navigation increases registrations and\n"
 "              purchases."
@@ -479,53 +513,49 @@ msgid ""
 "              complete confidentiality."
 msgstr ""
 
-#: templates/skillpoint.html:155 templates/trendcity.html:160
+#: templates/skillpoint.html:157 templates/trendcity.html:162
 msgid "Sales Growth"
 msgstr ""
 
-#: templates/skillpoint.html:158 templates/trendcity.html:163
-#, python-format
+#: templates/skillpoint.html:160 templates/trendcity.html:165
 msgid ""
-"Increases sales by 30%% thanks to an intuitive and\n"
-"              user-friendly interface tailored to customer needs."
+"Increases sales thanks to an intuitive and user-friendly\n"
+"              interface tailored to customer needs."
 msgstr ""
 
-#: templates/skillpoint.html:170 templates/trendcity.html:175
+#: templates/skillpoint.html:172 templates/trendcity.html:177
 msgid "UI Design"
 msgstr ""
 
-#: templates/skillpoint.html:173 templates/trendcity.html:178
+#: templates/skillpoint.html:175 templates/trendcity.html:180
 msgid ""
 "An intuitive interface with filters, categories, and\n"
 "              recommendations that simplify product search and selection."
 msgstr ""
 
-#: templates/skillpoint.html:185 templates/trendcity.html:190
+#: templates/skillpoint.html:187 templates/trendcity.html:192
 msgid "Responsive Design"
 msgstr ""
 
-#: templates/skillpoint.html:188 templates/trendcity.html:193
-#, python-format
-msgid ""
-"Increased mobile traffic by 50%% thanks to a responsive\n"
-"              design."
+#: templates/skillpoint.html:190 templates/trendcity.html:195
+msgid "Increased mobile traffic thanks to a responsive design."
 msgstr ""
 
-#: templates/skillpoint.html:201 templates/trendcity.html:206
+#: templates/skillpoint.html:202 templates/trendcity.html:207
 msgid "Conversion Rate Improvement"
 msgstr ""
 
-#: templates/skillpoint.html:205 templates/trendcity.html:210
+#: templates/skillpoint.html:206 templates/trendcity.html:211
 msgid ""
 "Makes the selection process easier for customers through\n"
 "              convenient navigation and a structured catalog."
 msgstr ""
 
-#: templates/skillpoint.html:217 templates/trendcity.html:222
+#: templates/skillpoint.html:218 templates/trendcity.html:223
 msgid "Product Placement"
 msgstr ""
 
-#: templates/skillpoint.html:220 templates/trendcity.html:225
+#: templates/skillpoint.html:221 templates/trendcity.html:226
 msgid ""
 "Detailed product information, including prices, ratings, and\n"
 "              a quick order feature, helps increase purchase numbers."

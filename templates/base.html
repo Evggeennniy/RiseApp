@@ -15,14 +15,17 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}?v=4.0"
+      href="{{ url_for('static', filename='css/styles.css') }}?v=5.0"
     />
     <script
-      src="{{ url_for('static', filename='js/scripts.min.js') }}?v=3.0"
+      src="{{ url_for('static', filename='js/scripts.js') }}?v=4.0"
       defer
     ></script>
   </head>
   <body>
-    {% block content %} {% endblock %}
+    <!-- prettier-ignore -->
+    {% block content %} {% endblock %} 
+    {% include 'form-finder.html' %} 
+    {% include 'get-up-btn.html' %}
   </body>
 </html>
