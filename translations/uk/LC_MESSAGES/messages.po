@@ -56,8 +56,8 @@ msgid "Poftfolio"
 msgstr "Портфоліо"
 
 #: templates/index.html:28
-msgid "RISE APP PROVIDES SERVICES SINCE 2022"
-msgstr "RISE APP надає послуги з 2022 року"
+msgid "RISE APP SINCE 2022"
+msgstr "RISE APP З 2022 РОКУ"
 
 #: templates/index.html:32
 msgid "Real results first"
