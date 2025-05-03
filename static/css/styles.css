@@ -1576,7 +1576,7 @@ a {
 #form-finder {
   display: block;
   position: fixed;
-  bottom: 50px;
+  bottom: 70px;
   right: 50px;
   border: none;
   border-radius: 140px;
@@ -1596,7 +1596,7 @@ a {
 
 #get-up-btn {
   position: fixed;
-  bottom: 50px;
+  bottom: 70px;
   left: 50px;
   background-color: transparent;
   border: 0;
@@ -1682,5 +1682,17 @@ a {
   .footer .footer__wrapper {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+
+.grecaptcha-badge {
+    bottom: 0 !important;
+    z-index: 12;
+}
+
+@media (max-width: 575px) {
+  .grecaptcha-badge {
+    display: none;
   }
 }

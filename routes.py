@@ -96,8 +96,7 @@ def init_routers(app):
         # Проверка reCAPTCHA токена
         token = request.form.get("g-recaptcha-response")
         if not token:
-            flash("⚠️ Не удалось проверить reCAPTCHA. Повторите попытку.")
-            return redirect(url_for('index'))
+            return abort(404)
 
         request_info = get_request_info(request)
         remote_ip = request_info.get('user_ip')
@@ -112,12 +111,11 @@ def init_routers(app):
             r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=payload, timeout=5)
             result = r.json()
         except Exception:
-            return redirect(url_for('index'))
+            return abort(404)
 
         score = result.get("score", 0)
         if not result.get("success") or score < 0.5:
-            print(payload, result)
-            # return abort(404)
+            abort(404)
 
         log = f"""
 🚀 Got a request by:

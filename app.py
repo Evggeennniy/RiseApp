@@ -26,7 +26,7 @@ bot_token = os.getenv("TG_BOT_TOKEN")
 move_group_id = os.getenv("TG_MOVE_GROUP_ID")
 notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
 recaptcha_key = os.getenv("RECAPTCHA_SITE_KEY")
-recaptcha_secret_key = os.getenv("RECAPTCHA_SITE_KEY")
+recaptcha_secret_key = os.getenv("RECAPTCHA_SECRET_KEY")
 
 
 def setup(app=Flask(__name__)):
