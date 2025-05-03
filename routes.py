@@ -13,11 +13,13 @@ from models import db, User, MarketingLink
 def init_routers(app):
     @app.route('/')
     def index():
-        origin_id = request.args.get("origin")
-        if request.args.get("origin"):
-            marked_link = MarketingLink.query.get(origin_id)
-            marked_link.visits += 1
-            db.session.commit()
+        request_info = get_request_info(request)
+        if is_allowed_to_action(request_info):
+            origin_id = request.args.get("origin")
+            if request.args.get("origin"):
+                marked_link = MarketingLink.query.get(origin_id)
+                marked_link.visits += 1
+                db.session.commit()
 
         return render_template('index.html', lang=get_locale(), recaptcha_key=recaptcha_key)
 
