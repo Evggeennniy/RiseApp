@@ -93,10 +93,12 @@ def init_routers(app):
 
     @app.route('/send-message', methods=['POST'])
     def send_message():
-        if request.method != 'POST':
-            return
-
+        # Проверка reCAPTCHA токена
         token = request.form.get("g-recaptcha-response")
+        if not token:
+            flash("⚠️ Не удалось проверить reCAPTCHA. Повторите попытку.")
+            return redirect(url_for('index'))
+
         remote_ip = request.remote_addr
 
         payload = {
@@ -105,13 +107,18 @@ def init_routers(app):
             "remoteip": remote_ip
         }
 
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=payload)
-        result = r.json()
+        try:
+            r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=payload, timeout=5)
+            result = r.json()
+        except Exception:
+            return redirect(url_for('index'))
 
-        score = result.get("score", "0")
+        score = result.get("score", 0)
         if not result.get("success") or score < 0.5:
-            return abort(404)
+            print(result)
+            # return abort(404)
 
+        # Обработка данных формы
         request_info = get_request_info(request)
 
         log = f"""
@@ -132,5 +139,7 @@ def init_routers(app):
 -------------------------------
 👨🏻‍💻 RiseApp Team
     """
+
         send_telegram_message(notify_group_id, log, bot_token)
+        flash("✅ Ваше сообщение успешно отправлено!")
         return redirect(url_for('index'))
