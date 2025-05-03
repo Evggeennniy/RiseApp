@@ -99,7 +99,8 @@ def init_routers(app):
             flash("⚠️ Не удалось проверить reCAPTCHA. Повторите попытку.")
             return redirect(url_for('index'))
 
-        remote_ip = request.remote_addr
+        request_info = get_request_info(request)
+        remote_ip = request_info.get('user_ip')
 
         payload = {
             "secret": recaptcha_secret_key,
@@ -115,11 +116,8 @@ def init_routers(app):
 
         score = result.get("score", 0)
         if not result.get("success") or score < 0.5:
-            print(result)
+            print(payload, result)
             # return abort(404)
-
-        # Обработка данных формы
-        request_info = get_request_info(request)
 
         log = f"""
 🚀 Got a request by:
