@@ -86,7 +86,8 @@ FORBIDDEN_HEADERS = [
     "phantomjs",
     "selenium",
     "scrapy",
-    "mechanize"
+    "mechanize",
+    "anonimus"
 ]
 
 
