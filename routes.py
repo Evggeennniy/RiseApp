@@ -1,7 +1,7 @@
 import uuid
 import requests
 from flask import request, render_template, url_for, redirect, abort, flash
-from utils.request_tools import get_request_info
+from utils.request_tools import get_request_info, is_allowed_to_action
 from flask_login import login_user
 from utils.telegram_tools import send_telegram_message
 from app import get_locale, move_group_id, bot_token, notify_group_id, recaptcha_secret_key, recaptcha_key
@@ -75,6 +75,8 @@ def init_routers(app):
             response.set_cookie('uuid', str(request_uuid))
 
         request_info = get_request_info(request)
+        if not is_allowed_to_action(request_info):
+            return response
 
         log = f"""
 📊 Cought a move by:
@@ -93,7 +95,6 @@ def init_routers(app):
 
     @app.route('/send-message', methods=['POST'])
     def send_message():
-        # Проверка reCAPTCHA токена
         token = request.form.get("g-recaptcha-response")
         if not token:
             return abort(404)
@@ -114,7 +115,8 @@ def init_routers(app):
             return abort(404)
 
         score = result.get("score", 0)
-        if not result.get("success") or score < 0.5:
+        request_info = get_request_info(request)
+        if not result.get("success") or score < 0.5 or not is_allowed_to_action(request_info):
             abort(404)
 
         log = f"""

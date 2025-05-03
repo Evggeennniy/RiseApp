@@ -40,3 +40,66 @@ def get_request_info(request) -> dict:
         'user_location': user_location,
         'user_agent': user_agent
     }
+
+
+FORBIDDEN_LOCATIONS = {
+    'United Kingdom',
+    'United States',
+    'Russia'
+}
+FORBIDDEN_HEADERS = [
+    "bot",
+    "crawl",
+    "spider",
+    "scrape",
+    "scanner",
+    "checker",
+    "fetch",
+    "parser",
+    "monitor",
+    "watcher",
+    "listener",
+    "agent",
+    "ai",
+    "assistant",
+    "automa",
+    "notifier",
+    "dispatcher",
+    "client",
+    "python",
+    "curl",
+    "requests",
+    "axios",
+    "http",
+    "headless",
+    "node-fetch",
+    "go-http",
+    "wget",
+    "libwww",
+    "Postman",
+    "Java/",
+    "Java-Client",
+    "httpclient",
+    "urlgrabber",
+    "HttpClient",
+    "fetcher",
+    "phantomjs",
+    "selenium",
+    "scrapy",
+    "mechanize"
+]
+
+
+def is_allowed_to_action(req_data):
+    user_location = req_data.get('user_location').lower()
+    user_agent = req_data.get('user_agent').lower()
+
+    for header in FORBIDDEN_HEADERS:
+        if header in user_agent:
+            return False
+
+    for location in FORBIDDEN_LOCATIONS:
+        if location in user_location:
+            return False
+
+    return True
