@@ -3,6 +3,7 @@ from models import db, User, MarketingLink
 from flask_login import current_user
 from flask_admin import AdminIndexView, expose
 from flask_admin.contrib.sqla import ModelView
+from werkzeug.security import generate_password_hash
 
 
 class MyAdminIndexView(AdminIndexView):
@@ -28,6 +29,9 @@ class SecureUserModelView(SecureModelView):
         'password': 'Пароль',
         'is_admin': 'Админ'
     }
+
+    def on_model_change(self, form, model, is_created):
+        model.password = generate_password_hash(model.password)
 
 
 class SecureMarketingModelView(SecureModelView):
