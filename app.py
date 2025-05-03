@@ -28,22 +28,20 @@ notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
 recaptcha_key = os.getenv("RECAPTCHA_SITE_KEY")
 recaptcha_secret_key = os.getenv("RECAPTCHA_SITE_KEY")
 
-app = Flask(__name__)
-admin = Admin(app, name='Адмін-панель', template_mode='bootstrap4', index_view=MyAdminIndexView())
-login_manager = LoginManager(app)
-login_manager.init_app(app)
-login_manager.login_view = 'login'
 
-
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
-
-
-def setup(app):
+def setup(app=Flask(__name__)):
     from routes import init_routers
     from admin import init_admin_panel
     from models import db
+
+    admin = Admin(app, name='Адмін-панель', template_mode='bootstrap4', index_view=MyAdminIndexView())
+    login_manager = LoginManager(app)
+    login_manager.init_app(app)
+    login_manager.login_view = 'login'
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
 
     app.secret_key = os.getenv("SECRET_KEY")
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
@@ -61,8 +59,3 @@ def setup(app):
         db.create_all()
 
     return app
-
-
-if __name__ == '__main__':
-    app = setup(app)
-    app.run(debug=True, host='0.0.0.0', port=5000)
