@@ -49,9 +49,6 @@ class SecureMarketingModelView(SecureModelView):
         'link': {
             'readonly': True
         },
-        'visits': {
-            'readonly': True
-        },
     }
 
     def on_model_change(self, form, model, is_created):
