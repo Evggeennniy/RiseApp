@@ -1,113 +1,61 @@
 import os
-import uuid
-import requests
 from dotenv import load_dotenv
-from flask import Flask, request, render_template, url_for, send_from_directory, redirect, make_response
-from utils.request_tools import get_request_info
-from utils.telegram_tools import send_telegram_message
+from flask import Flask, request
 from flask_babel import Babel, _
 
-load_dotenv()
+from flask_migrate import Migrate
+from flask_admin import Admin
+from flask_wtf.csrf import CSRFProtect
+from flask_login import LoginManager
 
-app = Flask(__name__)
-bot_token = os.getenv("TG_BOT_TOKEN")
-move_group_id = os.getenv("TG_MOVE_GROUP_ID")
-notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
-
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
-app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+from admin import MyAdminIndexView
+from models import User
 
 
 def get_locale():
     lang = request.args.get('lang')
     if not lang:
-        lang = request.accept_languages.best_match(['ru', 'uk', 'en'])
+        lang = request.accept_languages.best_match(['uk', 'ru', 'en'])
 
-    return lang
-
-
-babel = Babel()
-babel.init_app(app, locale_selector=get_locale)
+    return lang or 'en'
 
 
-@app.after_request
-def after_request_handler(response):
-    if request.path.startswith('/static') \
-            or request.path.startswith('/favicon.ico') \
-            or request.path.startswith('/send-message'):
-        return response
+load_dotenv()
 
-    request_uuid = request.cookies.get('uuid')
-    if not request_uuid:
-        request_uuid = uuid.uuid4()
-        response.set_cookie('uuid', str(request_uuid))
-
-    request_info = get_request_info(request)
-
-    log = f"""
-📊 Cought a move by:
--------------------------------
-🔗 Link: {request.url}
-🆔 ID: {request_uuid}
-🌍 IP: {request_info.get('user_ip')}
-📌 Location: {request_info.get('user_location')}
-🖥️ Device: {request_info.get('user_agent')}
--------------------------------
-"""
-
-    send_telegram_message(move_group_id, log, bot_token)
-
-    return response
+bot_token = os.getenv("TG_BOT_TOKEN")
+move_group_id = os.getenv("TG_MOVE_GROUP_ID")
+notify_group_id = os.getenv("TG_NOTIFY_GROUP_ID")
+recaptcha_key = os.getenv("RECAPTCHA_SITE_KEY")
+recaptcha_secret_key = os.getenv("RECAPTCHA_SECRET_KEY")
 
 
-@app.route('/send-message', methods=['POST'])
-def send_message():
-    if request.method != 'POST':
-        return
+def setup(app=Flask(__name__)):
+    from routes import init_routers
+    from admin import init_admin_panel
+    from models import db
 
-    request_info = get_request_info(request)
+    admin = Admin(app, name='Адмін-панель', template_mode='bootstrap4', index_view=MyAdminIndexView())
+    login_manager = LoginManager(app)
+    login_manager.init_app(app)
+    login_manager.login_view = 'login'
 
-    log = f"""
-🚀 Got a request by:
--------------------------------
-👤 Name: {request.form.get('person_name', 'Undefined')}
-📱 Phone: {request.form.get('person_phone', 'Undefined')}
-📱 Email: {request.form.get('person_email', 'Undefined')}
-💬 Message: {request.form.get('person_note', 'Undefined')}
--------------------------------
-📊 About the request:
--------------------------------
-🔗 Link: {request.url}
-🆔 ID: {request.cookies.get('uuid')}
-🌍 IP: {request_info.get('user_ip')}
-📌 Location: {request_info.get('user_location')}
-🖥️ Device: {request_info.get('user_agent')}
--------------------------------
-👨🏻‍💻 RiseApp Team
-"""
-    send_telegram_message(notify_group_id, message, bot_token)
-    return redirect(url_for('index'))
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
 
+    app.secret_key = os.getenv("SECRET_KEY")
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
+    app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
 
-@app.route('/')
-def index():
-    return render_template('index.html', lang=get_locale())
+    Babel().init_app(app, locale_selector=get_locale)
+    CSRFProtect(app)
+    db.init_app(app)
+    Migrate(app, db)
+    init_routers(app)
+    init_admin_panel(admin, db)
 
+    with app.app_context():
+        db.create_all()
 
-@app.route('/trendcity')
-def project_1():
-    return render_template('trendcity.html', lang=get_locale())
-
-
-@app.route('/prolearn')
-def project_2():
-    return render_template('prolearn.html', lang=get_locale())
-
-
-@app.route('/skillpoint')
-def project_3():
-    return render_template('skillpoint.html', lang=get_locale())
-
-
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    return app

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-01-27 20:24+0200\n"
-"PO-Revision-Date: 2025-01-27 21:04+0200\n"
+"POT-Creation-Date: 2025-04-29 11:12+0300\n"
+"PO-Revision-Date: 2025-04-29 11:12+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -20,267 +20,339 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 
 #: templates/form.html:6
-msgid "Let's make your service a reality"
-msgstr "Давайте сделаем ваш сервис реальностью"
+msgid "We will make your service a reality"
+msgstr "Мы воплотим ваш сервис в реальность"
 
 #: templates/form.html:10
 msgid "contact us!"
-msgstr "Свяжитесь с нами!"
+msgstr "свяжитесь с нами!"
 
 #: templates/form.html:14
 msgid "Let your business idea become a reality!"
-msgstr "Пусть ваша бизнес-идея станет реальностью!"
+msgstr "Позвольте вашей бизнес-идее стать реальностью!"
 
-#: templates/form.html:61
+#: templates/form.html:60
 msgid "Name"
 msgstr "Имя"
 
-#: templates/form.html:99
+#: templates/form.html:97
 msgid "Phone number"
 msgstr "Номер телефона"
 
-#: templates/form.html:159
+#: templates/form.html:156
 msgid "Email"
 msgstr "Электронная почта"
 
-#: templates/form.html:170
+#: templates/form.html:166
 msgid "Message"
 msgstr "Сообщение"
 
-#: templates/form.html:176
+#: templates/form.html:172
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/header.html:20
+#: templates/header.html:39
 msgid "Poftfolio"
 msgstr "Портфолио"
 
-#: templates/index.html:17
-msgid "Web Solutions"
-msgstr "Веб-решения"
+#: templates/index.html:28
+msgid "RISE APP SINCE 2022"
+msgstr "RISE APP С 2022 ГОДА"
 
-#: templates/index.html:19
-msgid "That Will Increase Your Income"
-msgstr "Что Приумножат Ваш Доход"
+#: templates/index.html:32
+msgid "Real results first"
+msgstr "Сначала результат"
 
-#: templates/index.html:21
-msgid "Established since 2022"
-msgstr "Основано в 2022 году"
-
-#: templates/index.html:23
-msgid "Inquiry"
-msgstr "Консультация"
-
-#: templates/index.html:39
-msgid "Plan"
-msgstr "План"
+#: templates/index.html:35
+msgid "payment later"
+msgstr "потом оплата"
 
 #: templates/index.html:41
-msgid "We will develop a holistic client-centered plan"
-msgstr "Мы разработаем комплексный, ориентированный на клиента план"
+msgid "Get in touch"
+msgstr "Связаться с нами"
 
-#: templates/index.html:52
-msgid "Design"
-msgstr "Дизайн"
+#: templates/index.html:56
+msgid "Zero Risks"
+msgstr "Ноль рисков"
 
-#: templates/index.html:54
+#: templates/index.html:58
 msgid ""
-"Our talented designers provides creative, interactive &\n"
-"                  interesting designs"
-msgstr "Наши талантливые дизайнеры создают креативные, интерактивные и интересные дизайны"
-
-#: templates/index.html:66
-msgid "Front-End"
-msgstr "Фронтенд"
+"We receive payment only after you are fully satisfied with\n"
+"              the result."
+msgstr ""
+"Мы принимаем оплату только после того, как вы полностью "
+"удовлетворены результатом."
 
 #: templates/index.html:68
+msgid "Everything You Need"
+msgstr "Всё, что вам нужно"
+
+#: templates/index.html:70
 msgid ""
-"Creating an adaptive interface and accessible for any\n"
-"                  device"
-msgstr "Создание адаптивного интерфейса, доступного для любого устройства"
+"We plan, launch, and promote your product with minimal\n"
+"              investment."
+msgstr ""
+"Мы планируем, запускаем и продвигаем ваш продукт с минимальными "
+"затратами."
 
 #: templates/index.html:80
-msgid "Back End"
-msgstr "Бэкенд"
+msgid "Quality Leader"
+msgstr "Лидер качества"
 
 #: templates/index.html:82
 msgid ""
-"Continuous refinement of server and troubleshoot on any\n"
-"                  complexity"
-msgstr "Постоянное совершенствование сервера и устранение проблем любой сложности"
+"We use modern and flexible technologies to ensure full\n"
+"              control and top performance."
+msgstr ""
+"Мы используем современные гибкие технологии для полного контроля "
+"и высокой производительности."
 
-#: templates/index.html:95
-msgid "Devops Method"
-msgstr "Метод DevOps"
+#: templates/index.html:102
+msgid "Web Development"
+msgstr "Веб-разработка"
 
-#: templates/index.html:98
+#: templates/index.html:105
+msgid "Business Services"
+msgstr "Бизнес-услуги"
+
+#: templates/index.html:108
+msgid "Marketing"
+msgstr "Маркетинг"
+
+#: templates/index.html:112
+msgid "IT solutions for your business"
+msgstr "IT-решения для вашего бизнеса"
+
+#: templates/index.html:113
+msgid "— our specialization."
+msgstr "— наша специализация."
+
+#: templates/index.html:116
 msgid ""
-"Effective system of server security, IT operations and\n"
-"                  software development"
-msgstr "Эффективная система безопасности серверов, ИТ-операций и разработки программного обеспечения"
+"We provide key services for a safe, efficient, and\n"
+"            high-quality product launch that fits your budget and future\n"
+"            goals."
+msgstr ""
+"Мы предоставляем ключевые услуги для безопасного, эффективного и "
+"качественного запуска продукта, соответствующего вашему бюджету и целям."
 
-#: templates/index.html:110
+#: templates/index.html:121
+msgid "Get in Touch"
+msgstr "Связаться"
+
+#: templates/index.html:133
+msgid "UX/UI Web Design"
+msgstr "UX/UI Веб-дизайн"
+
+#: templates/index.html:136
+msgid ""
+"We adapt your product for all necessary device types. Your\n"
+"                clients will always feel comfortable with you."
+msgstr ""
+"Мы адаптируем ваш продукт под все необходимые устройства, чтобы "
+"ваши клиенты всегда чувствовали комфорт."
+
+#: templates/index.html:149
+msgid "Software Development"
+msgstr "Разработка ПО"
+
+#: templates/index.html:152
+msgid ""
+"We develop flexible systems and architectures for maximum\n"
+"                speed and reliability."
+msgstr ""
+"Мы создаём гибкие системы и архитектуры для максимальной скорости "
+"и надёжности."
+
+#: templates/index.html:165
 msgid "Hosting"
 msgstr "Хостинг"
 
-#: templates/index.html:112
+#: templates/index.html:168
 msgid ""
-"We offer various types of hosting and exclusive domains\n"
-"                  based on client's needs"
-msgstr "Различные виды хостинга и эксклюзивные домены в зависимости от потребностей клиента"
+"We secure your hosting and build the best solutions for\n"
+"                various needs."
+msgstr ""
+"Мы обеспечиваем защиту вашего хостинга и разрабатываем лучшие решения "
+"для разных задач."
 
-#: templates/index.html:126
-msgid "stages of development"
-msgstr "Этапы разработки"
+#: templates/index.html:183
+msgid "Product Management"
+msgstr "Продукт-менеджмент"
 
-#: templates/index.html:129
-msgid "From Concept to Launch: Your Website, Perfected"
-msgstr "От концепции до запуска: ваш сайт, усовершенствованный"
-
-#: templates/index.html:142
-msgid "UI/UX Design & Development"
-msgstr "Дизайн и разработка UI/UX"
-
-#: templates/index.html:145
+#: templates/index.html:186
 msgid ""
-"Crafting a seamless and visually stunning interface.\n"
-"                    Adaptive layout for all devices."
-msgstr "Создание безупречного и визуально впечатляющего интерфейса. Адаптивный макет для всех устройств."
+"We build a clear product development strategy and manage\n"
+"                processes to achieve maximum results."
+msgstr ""
+"Мы создаём чёткую стратегию развития продукта и управляем процессами "
+"для достижения максимальных результатов."
 
-#: templates/index.html:160
-msgid "Programming & Integration"
-msgstr "Программирование и интеграция"
+#: templates/index.html:199
+msgid "Planning, USP/MVP"
+msgstr "Планирование, USP/MVP"
 
-#: templates/index.html:163
+#: templates/index.html:202
 msgid ""
-"Bringing your website to life with powerful\n"
-"                    functionality, seamless service integration and API\n"
-"                    setup"
-msgstr "Оживляем ваш сайт с мощным функционалом, плавной интеграцией сервисов и настройкой API."
+"We create a unique value proposition and develop a minimum\n"
+"                viable product for a fast market launch. "
+msgstr "Мы создаём уникальное торговое предложение и разрабатываем минимально жизнеспособный продукт для быстрого выхода на рынок."
 
-#: templates/index.html:179
-msgid "Testing, Hosting & Deployment"
-msgstr "Тестирование, хостинг и деплоймент"
+#: templates/index.html:215
+msgid "Hypothesis Testing"
+msgstr "Тестирование гипотез"
 
-#: templates/index.html:182
+#: templates/index.html:218
 msgid ""
-"Ensuring stability, security, and a flawless launch.\n"
-"                    Bug fixes & Hosting setup & performance monitoring"
-msgstr "Обеспечение стабильности, безопасности и безупречного запуска. Исправление ошибок, настройка хостинга и мониторинг производительности."
+"We validate your ideas through rapid experiments to reduce\n"
+"                risks and find the best solutions. "
+msgstr ""
+"Мы проверяем ваши идеи через быстрые эксперименты, чтобы снизить риски "
+"и найти лучшие решения."
 
-#: templates/index.html:213
-msgid "New Ukrainian marketplace"
-msgstr "Новый украинский маркетплейс"
+#: templates/index.html:233
+msgid "Marketing Strategy"
+msgstr "Маркетинговая стратегия"
 
-#: templates/index.html:227
-msgid "Ukrainian online school"
-msgstr "Украинская онлайн школа"
-
-#: templates/index.html:241
-msgid "Online hiring of tutors"
-msgstr "Онлайн найм репетиторов"
-
-#: templates/index.html:263
-msgid "About RiseApp"
-msgstr "О RiseApp"
-
-#: templates/index.html:274
-msgid "Evidence and reliability"
-msgstr "Доказательства и надёжность"
-
-#: templates/index.html:277
+#: templates/index.html:236
 msgid ""
-"We are working on the web development market for two reasons\n"
-"              that are the best solution for any task."
-msgstr "Rise app на рынке веб-разработки предоставляет лучшие решения для любых задач."
+"We develop comprehensive promotion strategies to attract\n"
+"                your target audience."
+msgstr ""
+"Мы разрабатываем комплексные стратегии продвижения для привлечения "
+"вашей целевой аудитории."
 
-#: templates/index.html:290
-msgid "Individual approach"
-msgstr "Индивидуальный подход"
+#: templates/index.html:249
+msgid "Advertising and Promotion"
+msgstr "Реклама и продвижение"
 
-#: templates/index.html:293
+#: templates/index.html:252
 msgid ""
-"We approach each project with attention to detail and take\n"
-"              into account all of the client's needs."
-msgstr "Мы подходим к каждому проекту с вниманием к деталям и учитываем все потребности клиента."
+"We set up effective advertising campaigns and help scale\n"
+"                your business through multiple channels. "
+msgstr ""
+"Мы настраиваем эффективные рекламные кампании и помогаем масштабировать "
+"ваш бизнес через различные каналы."
 
-#: templates/index.html:306
-msgid "Modern technologies"
-msgstr "Современные технологии"
+#: templates/index.html:265
+msgid "Content Marketing"
+msgstr "Контент-маркетинг"
 
-#: templates/index.html:309
+#: templates/index.html:268
 msgid ""
-"We use the latest technologies to create relevant\n"
-"              websites."
-msgstr "Мы используем новейшие технологии для создания актуальных сайтов."
+"We create high-quality content to attract, engage, and\n"
+"                convert your audience into loyal customers. "
+msgstr ""
+"Мы создаём качественный контент для привлечения, вовлечения и "
+"превращения вашей аудитории в лояльных клиентов."
 
-#: templates/index.html:314
-msgid "Customer reviews"
-msgstr "Отзывы клиентов"
-
-#: templates/index.html:324
+#: templates/index.html:333
 msgid ""
-"This team was easy and pleasant to work with. They really\n"
-"                know what they are doing. My website now looks stylish "
-"and\n"
-"                functions perfectly."
-msgstr "С этой командой было легко и приятно работать. Они действительно знают, что делают. Мой сайт теперь выглядит стильно и функционирует идеально."
+"I had a great experience — the team planned everything\n"
+"              carefully and adapted to the situation. I'm very satisfied with\n"
+"              the result."
+msgstr ""
+"У меня был отличный опыт — команда тщательно спланировала всё и "
+"адаптировалась к ситуации. Я очень доволен результатом."
 
-#: templates/index.html:363
+#: templates/index.html:379
 msgid "Anastasia Karpova"
 msgstr "Анастасия Карпова"
 
-#: templates/index.html:366
-msgid "Order Ukrainian marketplace"
-msgstr "Заказать украинский маркетплейс"
+#: templates/index.html:382
+msgid "Ukrainian marketplace"
+msgstr "Украинский маркетплейс"
 
-#: templates/index.html:379
+#: templates/index.html:389
+msgid "Customer"
+msgstr "Отзывы"
+
+#: templates/index.html:390
+msgid "reviews"
+msgstr "клиентов"
+
+#: templates/index.html:394
 msgid ""
-"Excellent service and great attitude towards customers!\n"
-"                Everything was done on time If you need a quality "
-"website, do\n"
-"                not hesitate - order here!"
-msgstr "Отличный сервис и замечательное отношение к клиентам! Всё было сделано вовремя. Если вам нужен качественный сайт, не сомневайтесь — заказывайте здесь!"
+"This isn’t my first time using their service — the best\n"
+"              price-to-quality ratio. Great team!"
+msgstr ""
+"Я не впервые пользуюсь их услугами — лучшее соотношение цены и качества. "
+"Отличная команда!"
 
-#: templates/index.html:418
+#: templates/index.html:432
 msgid "Vasyl Korelin"
-msgstr "Василь Корелин"
-
-#: templates/index.html:421
-msgid "Photo gallery of the city of Sumy"
-msgstr "Фотогалерея города Сумы"
+msgstr "Василий Корелин"
 
 #: templates/index.html:434
-msgid ""
-"Thanks to Rise, customers can easily find products and\n"
-"                place orders. They took into account all their wishes, "
-"were\n"
-"                always in touch, and made quick changes. We recommend it."
-msgstr "Благодаря Rise клиенты легко находят товары и размещают заказы. Учли все пожелания, всегда были на связи и быстро вносили изменения. Рекомендуем."
+msgid "Photo gallery"
+msgstr "Фотогалерея"
 
-#: templates/index.html:473
+#: templates/index.html:448
+msgid ""
+"We started working together in 2023. They know how to plan\n"
+"              projects effectively within budget. Continuing our cooperation!"
+msgstr ""
+"Мы начали работать вместе в 2023 году. Они умеют эффективно планировать "
+"проекты в рамках бюджета. Продолжаем сотрудничество!"
+
+#: templates/index.html:494
 msgid "VirginCity Company"
 msgstr "Компания VirginCity"
 
-#: templates/index.html:476
-msgid "Website of a chain of hardware stores"
-msgstr "Сайт сети магазинов бытовой техники"
+#: templates/index.html:497
+msgid "Construction retail website"
+msgstr "Сайт строительного ритейла"
 
-#: templates/index.html:499
-msgid "Contacts"
-msgstr "Контакты"
+#: templates/index.html:509
+msgid "Our Philosophy"
+msgstr "Наша философия"
 
-#: templates/index.html:500
-msgid "For a free consultation"
-msgstr "Для бесплатной консультации"
+#: templates/index.html:516
+msgid "Technology is Accessibility"
+msgstr "Технологии — это доступность"
 
-#: templates/index.html:502
-msgid "contact us by any method convenient for you"
-msgstr "свяжитесь с нами любым удобным способом"
+#: templates/index.html:519
+msgid ""
+"We do what we love, and we believe that everyone has\n"
+"                    the right to dream and bring their ideas to life."
+msgstr ""
+"Мы занимаемся тем, что любим, и верим, что каждый имеет право мечтать "
+"и воплощать свои идеи в жизнь."
+
+#: templates/index.html:528
+msgid "Targeted Reach"
+msgstr "Точное охват"
+
+#: templates/index.html:531
+msgid ""
+"Every website has a purpose. We help achieve it\n"
+"                    through analytics, strategy, and promotion — so that you are\n"
+"                    not just online, but actually getting real results."
+msgstr ""
+"У каждого сайта есть своя цель. Мы помогаем её достигнуть с помощью аналитики, "
+"стратегии и продвижения — чтобы вы не просто присутствовали в сети, а реально "
+"получали результат."
+
+#: templates/index.html:541
+msgid "Tailored Solutions"
+msgstr "Индивидуальные решения"
+
+#: templates/index.html:544
+msgid ""
+"There are no one-size-fits-all solutions. We adapt our\n"
+"                    approach to your budget, tasks, and niche, creating\n"
+"                    meaningful solutions that truly matter."
+msgstr ""
+"Не существует универсальных решений. Мы адаптируем наш подход к вашему бюджету, "
+"задачам и нише, создавая действительно значимые решения."
+
+#: templates/index.html:567
+msgid "successful projects completed"
+msgstr "успешно завершенных проектов"
 
 #: templates/prolearn.html:8 templates/skillpoint.html:8
 msgid "Project of the 24th year"
-msgstr "Проект 24-го года"
+msgstr "Проект 2024 года"
 
 #: templates/prolearn.html:9
 msgid "ProLearn"
@@ -288,25 +360,27 @@ msgstr "ProLearn"
 
 #: templates/prolearn.html:10
 msgid "Ukrainian Online School"
-msgstr "Украинская онлайн школа"
+msgstr "Украинская онлайн-школа"
 
 #: templates/prolearn.html:12
 msgid ""
 "A modern Ukrainian online course platform for quickly\n"
-"            mastering new professions. The platform offers over 200 "
-"courses in\n"
+"            mastering new professions. The platform offers over 200 courses in\n"
 "            programming, design, marketing, and other fields."
-msgstr "Современная украинская онлайн-платформа для быстрого освоения новых профессий. Платформа предлагает более 200 курсов в области программирования, дизайна, маркетинга и других направлений."
+msgstr ""
+"Современная украинская платформа онлайн-курсов для быстрого освоения новых профессий. "
+"На платформе представлено более 200 курсов по программированию, дизайну, маркетингу и другим направлениям."
 
 #: templates/prolearn.html:31
 msgid "Accessibility and Clarity"
-msgstr "Доступность и ясность"
+msgstr "Доступность и понятность"
 
 #: templates/prolearn.html:34
 msgid ""
 "Creating an intuitive interface so users can easily find the\n"
 "              right courses."
-msgstr "Создание интуитивно понятного интерфейса, чтобы пользователи могли легко найти нужные курсы."
+msgstr ""
+"Создание интуитивного интерфейса, чтобы пользователи легко находили нужные курсы."
 
 #: templates/prolearn.html:39
 msgid "Motivation to Learn"
@@ -316,7 +390,8 @@ msgstr "Мотивация к обучению"
 msgid ""
 "An engaging design that highlights course advantages through\n"
 "              visual presentation and clear information blocks."
-msgstr "Захватывающий дизайн, который подчеркивает преимущества курсов через визуальное представление и ясные информационные блоки."
+msgstr ""
+"Привлекательный дизайн, подчёркивающий преимущества курсов через визуальные элементы и понятные информационные блоки."
 
 #: templates/prolearn.html:46
 msgid "Trust in the Platform"
@@ -325,115 +400,97 @@ msgstr "Доверие к платформе"
 #: templates/prolearn.html:48
 msgid ""
 "Emphasizing the professionalism of instructors and the\n"
-"              reliability of certificates by adding reviews and "
-"statistics."
-msgstr "Подчеркивание профессионализма преподавателей и надежности сертификатов через добавление отзывов и статистики."
+"              reliability of certificates by adding reviews and statistics."
+msgstr ""
+"Подчёркиваем профессионализм преподавателей и надёжность сертификатов через добавление отзывов и статистики."
 
-#: templates/prolearn.html:71 templates/skillpoint.html:71
-#: templates/trendcity.html:75
+#: templates/prolearn.html:71 templates/skillpoint.html:71 templates/trendcity.html:75
 msgid "Development Cost:"
 msgstr "Стоимость разработки:"
 
-#: templates/prolearn.html:81 templates/skillpoint.html:81
-#: templates/trendcity.html:85
+#: templates/prolearn.html:81 templates/skillpoint.html:81 templates/trendcity.html:85
 msgid "Development Time:"
-msgstr "Время разработки:"
+msgstr "Срок разработки:"
 
-#: templates/prolearn.html:83 templates/skillpoint.html:83
-#: templates/trendcity.html:87
+#: templates/prolearn.html:83 templates/skillpoint.html:83 templates/trendcity.html:87
 msgid "days"
 msgstr "дней"
 
-#: templates/prolearn.html:91 templates/skillpoint.html:91
-#: templates/trendcity.html:95
+#: templates/prolearn.html:91 templates/skillpoint.html:91 templates/trendcity.html:95
 msgid "SEO Optimization:"
 msgstr "SEO-оптимизация:"
 
-#: templates/prolearn.html:93 templates/skillpoint.html:93
-#: templates/trendcity.html:97
+#: templates/prolearn.html:93 templates/skillpoint.html:93 templates/trendcity.html:97
 msgid "Included"
 msgstr "Включено"
 
-#: templates/prolearn.html:101 templates/skillpoint.html:101
-#: templates/trendcity.html:105
+#: templates/prolearn.html:101 templates/skillpoint.html:101 templates/trendcity.html:105
 msgid "Technical Support:"
 msgstr "Техническая поддержка:"
 
-#: templates/prolearn.html:103 templates/skillpoint.html:103
-#: templates/trendcity.html:107
+#: templates/prolearn.html:103 templates/skillpoint.html:103 templates/trendcity.html:107
 msgid "months"
 msgstr "месяцев"
 
-#: templates/prolearn.html:110 templates/skillpoint.html:110
-#: templates/trendcity.html:114
+#: templates/prolearn.html:110 templates/skillpoint.html:110 templates/trendcity.html:114
 msgid "Admin Panel:"
 msgstr "Административная панель:"
 
-#: templates/prolearn.html:111 templates/skillpoint.html:111
-#: templates/trendcity.html:115
+#: templates/prolearn.html:111 templates/skillpoint.html:111 templates/trendcity.html:115
 msgid "Yes"
 msgstr "Да"
 
-#: templates/prolearn.html:119 templates/skillpoint.html:119
-#: templates/trendcity.html:123
+#: templates/prolearn.html:119 templates/skillpoint.html:119 templates/trendcity.html:123
 msgid "Number of Pages:"
 msgstr "Количество страниц:"
 
-#: templates/prolearn.html:142 templates/skillpoint.html:142
-#: templates/trendcity.html:147
+#: templates/prolearn.html:143 templates/skillpoint.html:143 templates/trendcity.html:148
 msgid "Project Indicators"
 msgstr "Показатели проекта"
 
-#: templates/prolearn.html:144 templates/skillpoint.html:144
-#: templates/trendcity.html:149
+#: templates/prolearn.html:146 templates/skillpoint.html:146 templates/trendcity.html:151
 msgid "Rise App boosts project sales"
-msgstr "Rise App увеличивает продажи проекта"
+msgstr "Rise App увеличивает продажи проектов"
 
-#: templates/prolearn.html:155
+#: templates/prolearn.html:157
 msgid "UX/UI Design"
-msgstr "UX/UI дизайн"
+msgstr "UX/UI Дизайн"
 
-#: templates/prolearn.html:158
+#: templates/prolearn.html:160
 msgid "The interface allows easy course search and navigation."
-msgstr "Интерфейс позволяет легко искать курсы и навигировать."
+msgstr "Интерфейс позволяет легко находить и просматривать курсы."
 
-#: templates/prolearn.html:168
+#: templates/prolearn.html:170
 msgid "Adaptability"
 msgstr "Адаптивность"
 
-#: templates/prolearn.html:171
+#: templates/prolearn.html:173
 msgid "The site adapts seamlessly, increasing mobile traffic."
 msgstr "Сайт адаптируется без проблем, увеличивая мобильный трафик."
 
-#: templates/prolearn.html:182
+#: templates/prolearn.html:184
 msgid "Speed Optimization"
 msgstr "Оптимизация скорости"
 
-#: templates/prolearn.html:186
-msgid ""
-"Page response in a fraction of a second thanks to modern\n"
-"              technologies."
-msgstr "Ответ страницы за доли секунды благодаря современным технологиям."
+#: templates/prolearn.html:188
+msgid "Page response in a fraction of a second thanks to modern\n              technologies."
+msgstr "Мгновенный отклик страниц благодаря современным технологиям."
 
-#: templates/prolearn.html:198
+#: templates/prolearn.html:200
 msgid "Feature Convenience"
 msgstr "Удобство функционала"
 
-#: templates/prolearn.html:202
-msgid ""
-"Includes a personal account, a review section, and a\n"
-"              certification system."
+#: templates/prolearn.html:204
+msgid "Includes a personal account, a review section, and a\n              certification system."
 msgstr "Включает личный кабинет, раздел отзывов и систему сертификации."
 
-#: templates/prolearn.html:213
+#: templates/prolearn.html:215
 msgid "Conversion Growth"
-msgstr "Рост конверсий"
+msgstr "Рост конверсии"
 
-#: templates/prolearn.html:216
-msgid ""
-"Simplified navigation increases registrations and\n"
-"              purchases."
-msgstr "Упрощённая навигация увеличивает количество регистраций и покупок."
+#: templates/prolearn.html:218
+msgid "Simplified navigation increases registrations and\n              purchases."
+msgstr "Упрощенная навигация увеличивает количество регистраций и покупок."
 
 #: templates/skillpoint.html:9
 msgid "SkillPoint"
@@ -441,99 +498,79 @@ msgstr "SkillPoint"
 
 #: templates/skillpoint.html:10
 msgid "Online Tutor Selection"
-msgstr "Онлайн выбор репетитора"
+msgstr "Онлайн-подбор репетиторов"
 
 #: templates/skillpoint.html:12
-msgid ""
-"A concise page structure facilitates easy perception of\n"
-"            information, and adaptiveness allows comfortable interaction "
-"on both\n"
-"            computers and mobile devices."
-msgstr "Лаконичная структура страницы облегчает восприятие информации, а адаптивность позволяет комфортно взаимодействовать как на компьютере, так и на мобильных устройствах."
+msgid "A concise page structure facilitates easy perception of\n            information, and adaptiveness allows comfortable interaction on both\n            computers and mobile devices."
+msgstr "Лаконичная структура страниц облегчает восприятие информации, а адаптивность обеспечивает комфортное взаимодействие как на компьютерах, так и на мобильных устройствах."
 
 #: templates/skillpoint.html:30
 msgid "Interactive Platform"
 msgstr "Интерактивная платформа"
 
 #: templates/skillpoint.html:32
-msgid ""
-"A modern design created to make the learning process\n"
-"              engaging and effective."
-msgstr "Современный дизайн, созданный для того, чтобы процесс обучения был увлекательным и эффективным."
+msgid "A modern design created to make the learning process\n              engaging and effective."
+msgstr "Современный дизайн, созданный для увлекательного и эффективного процесса обучения."
 
 #: templates/skillpoint.html:38
 msgid "Thoughtful UX/UI Design"
-msgstr "Продуманный UX/UI дизайн"
+msgstr "Продуманный UX/UI Дизайн"
 
 #: templates/skillpoint.html:41
-msgid ""
-"Intuitive navigation, comfort, and ease of use for all age\n"
-"              groups."
-msgstr "Интуитивная навигация, комфорт и лёгкость в использовании для всех возрастных групп."
+msgid "Intuitive navigation, comfort, and ease of use for all age\n              groups."
+msgstr "Интуитивная навигация, комфорт и простота использования для всех возрастных групп."
 
 #: templates/skillpoint.html:46
 msgid "User Data Protection"
 msgstr "Защита данных пользователей"
 
 #: templates/skillpoint.html:48
-msgid ""
-"A security system that protects personal data, ensuring\n"
-"              complete confidentiality."
-msgstr "Система безопасности, защищающая персональные данные, обеспечивая полную конфиденциальность."
+msgid "A security system that protects personal data, ensuring\n              complete confidentiality."
+msgstr "Система безопасности, которая защищает персональные данные и обеспечивает полную конфиденциальность."
 
-#: templates/skillpoint.html:155 templates/trendcity.html:160
+#: templates/skillpoint.html:157 templates/trendcity.html:162
 msgid "Sales Growth"
 msgstr "Рост продаж"
 
-#: templates/skillpoint.html:158 templates/trendcity.html:163
-#, python-format
-msgid ""
-"Increases sales thanks to an intuitive and user-friendly\n"
-"              interface tailored to customer needs."
-msgstr "Увеличивает продажи благодаря интуитивно понятному и удобному интерфейсу, ориентированному на потребности клиентов."
+#: templates/skillpoint.html:160 templates/trendcity.html:165
+msgid "Increases sales thanks to an intuitive and user-friendly\n              interface tailored to customer needs."
+msgstr "Повышение продаж благодаря интуитивному и удобному интерфейсу, адаптированному к потребностям клиентов."
 
-#: templates/skillpoint.html:170 templates/trendcity.html:175
+#: templates/skillpoint.html:172 templates/trendcity.html:177
 msgid "UI Design"
-msgstr "UI дизайн"
+msgstr "UI Дизайн"
 
-#: templates/skillpoint.html:173 templates/trendcity.html:178
-msgid ""
-"An intuitive interface with filters, categories, and\n"
-"              recommendations that simplify product search and selection."
-msgstr "Интуитивно понятный интерфейс с фильтрами, категориями и рекомендациями, которые упрощают поиск и выбор товаров."
+#: templates/skillpoint.html:175 templates/trendcity.html:180
+msgid "An intuitive interface with filters, categories, and\n              recommendations that simplify product search and selection."
+msgstr "Интуитивный интерфейс с фильтрами, категориями и рекомендациями, упрощающий поиск и выбор товаров."
 
-#: templates/skillpoint.html:185 templates/trendcity.html:190
+#: templates/skillpoint.html:187 templates/trendcity.html:192
 msgid "Responsive Design"
 msgstr "Адаптивный дизайн"
 
-#: templates/skillpoint.html:188 templates/trendcity.html:193
-#, python-format
+#: templates/skillpoint.html:190 templates/trendcity.html:195
 msgid "Increased mobile traffic thanks to a responsive design."
-msgstr "Увеличил мобильный трафик благодаря адаптивному дизайну."
+msgstr "Рост мобильного трафика благодаря адаптивному дизайну."
 
-#: templates/skillpoint.html:201 templates/trendcity.html:206
+#: templates/skillpoint.html:202 templates/trendcity.html:207
 msgid "Conversion Rate Improvement"
-msgstr "Улучшение конверсии"
+msgstr "Улучшение коэффициента конверсии"
 
-#: templates/skillpoint.html:205 templates/trendcity.html:210
-msgid ""
-"Makes the selection process easier for customers through\n"
-"              convenient navigation and a structured catalog."
-msgstr "Упрощает процесс выбора для клиентов благодаря удобной навигации и структурированному каталогу."
+#: templates/skillpoint.html:206 templates/trendcity.html:211
+msgid "Makes the selection process easier for customers through\n              convenient navigation and a structured catalog."
+msgstr "Облегчает процесс выбора для клиентов благодаря удобной навигации и структурированному каталогу."
 
-#: templates/skillpoint.html:217 templates/trendcity.html:222
+#: templates/skillpoint.html:218 templates/trendcity.html:223
 msgid "Product Placement"
 msgstr "Размещение товаров"
 
-#: templates/skillpoint.html:220 templates/trendcity.html:225
-msgid ""
-"Detailed product information, including prices, ratings, and\n"
-"              a quick order feature, helps increase purchase numbers."
-msgstr "Подробная информация о товарах, включая цены, рейтинги и функцию быстрого заказа, способствует увеличению количества покупок."
+#: templates/skillpoint.html:221 templates/trendcity.html:226
+msgid "Detailed product information, including prices, ratings, and\n              a quick order feature, helps increase purchase numbers."
+msgstr "Детальная информация о товарах, включая цены, рейтинги и возможность быстрой покупки, способствует увеличению количества заказов."
 
 #: templates/trendcity.html:8
 msgid "Project 24th year"
-msgstr "Проект 24-го года"
+msgstr "Проект 2024 года"
 
 #: templates/trendcity.html:9
 msgid "Trend City"
@@ -544,39 +581,29 @@ msgid "Ukrainian Marketplace"
 msgstr "Украинский маркетплейс"
 
 #: templates/trendcity.html:12
-msgid ""
-"A marketplace aimed at connecting buyers and sellers in a\n"
-"            unified space, providing a wide selection of products and "
-"services\n"
-"            from local and national brands."
-msgstr "Маркетплейс, направленный на соединение покупателей и продавцов в едином пространстве, предоставляя широкий выбор товаров и услуг от местных и национальных брендов."
+msgid "A marketplace aimed at connecting buyers and sellers in a\n            unified space, providing a wide selection of products and services\n            from local and national brands."
+msgstr "Маркетплейс, соединяющий покупателей и продавцов в едином пространстве, предлагая широкий выбор товаров и услуг от локальных и национальных брендов."
 
 #: templates/trendcity.html:31
 msgid "User-Friendly Interface"
 msgstr "Удобный интерфейс"
 
 #: templates/trendcity.html:34
-msgid ""
-"Easy navigation, modern and stylish design, adaptive for\n"
-"              mobile and desktop devices."
-msgstr "Лёгкая навигация, современный и стильный дизайн, адаптивный для мобильных и десктопных устройств."
+msgid "Easy navigation, modern and stylish design, adaptive for\n              mobile and desktop devices."
+msgstr "Простая навигация, современный и стильный дизайн, адаптивность для мобильных и настольных устройств."
 
 #: templates/trendcity.html:40
 msgid "Personalization Features"
 msgstr "Функции персонализации"
 
 #: templates/trendcity.html:43
-msgid ""
-"Product recommendations based on user preferences, purchase\n"
-"              history, and viewed items."
+msgid "Product recommendations based on user preferences, purchase\n              history, and viewed items."
 msgstr "Рекомендации товаров на основе предпочтений пользователей, истории покупок и просмотренных товаров."
 
 #: templates/trendcity.html:49
 msgid "Collaboration Opportunities"
-msgstr "Cотрудничество"
+msgstr "Возможности для сотрудничества"
 
 #: templates/trendcity.html:52
-msgid ""
-"Helping Ukrainian entrepreneurs enter the online market,\n"
-"              offering special conditions for new sellers."
-msgstr "Помогаем украинским предпринимателям выйти на онлайн-рынок, предлагая специальные условия для новых продавцов."
+msgid "Helping Ukrainian entrepreneurs enter the online market,\n              offering special conditions for new sellers."
+msgstr "Помощь украинским предпринимателям в выходе на онлайн-рынок, предлагая специальные условия для новых продавцов."

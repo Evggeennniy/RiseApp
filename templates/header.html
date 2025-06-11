@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__wrapper container">
-    <div class="header__company">
+    <a class="header__company" href="{{ url_for('index', lang=lang) }}">
       <img
         src="{{ url_for('static', filename='img/logotype.png') }}"
         alt="logotype"
@@ -10,19 +10,20 @@
         <span class="company-name font--bold">Rise</span
         ><span class="company-name">App</span>
       </h2>
-    </div>
+    </a>
     <div class="header__mobnav-button">
       <div class="header__mobnav-stick"></div>
       <div class="header__mobnav-stick"></div>
     </div>
     <nav class="header__nav">
-      <a class="nav__link nav__link-portfolio nav__link--white"
-        >{{ _('Poftfolio') }}</a
-      >
       <div class="nav__lang">
-        <a class="nav__lang-switcher lang-toggle" ontouchstart=""
-          >{{ lang | upper }}</a
-        >
+        <a class="nav__lang-switcher lang-toggle" ontouchstart="">
+          {{ lang | upper }}
+          <img
+            src="{{ url_for('static', filename='img/arrow_down_icon.svg') }}"
+            alt="123"
+          />
+        </a>
         <div class="nav__lang-menu-wrapper">
           <ul class="nav__lang-menu">
             <li class="nav__lang-item">
@@ -37,6 +38,9 @@
           </ul>
         </div>
       </div>
+      <a class="nav__link nav__link-portfolio nav__link--white"
+        >{{ _('Poftfolio') }}</a
+      >
     </nav>
   </div>
 </header>
