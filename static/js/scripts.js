@@ -1,18 +1,3 @@
-// ANIMANIONS
-const animatedSlideItem = document.querySelectorAll(".animated-slide");
-function checkFade() {
-  animatedSlideItem.forEach((item) => {
-    const rect = item.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (rect.top <= windowHeight * 0.85) {
-      item.classList.add("active");
-    }
-  });
-}
-window.addEventListener("scroll", checkFade);
-window.addEventListener("load", checkFade);
-
 // NAVIGATION
 const navButton = document.querySelector(".nav__link-portfolio");
 const portfolioBlock = document.querySelector(".portfolio");
